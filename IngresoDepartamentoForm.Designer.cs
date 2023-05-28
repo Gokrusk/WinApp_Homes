@@ -28,20 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.dataSetVenta1 = new WinApp_Homes.DataSetVenta();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetVenta1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dataSetVenta1
+            // 
+            this.dataSetVenta1.DataSetName = "DataSetVenta";
+            this.dataSetVenta1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // IngresoDepartamentoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(58)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(1179, 629);
             this.Name = "IngresoDepartamentoForm";
             this.Text = "IngresoDepartamentoForm";
             this.Load += new System.EventHandler(this.IngresoDepartamentoForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetVenta1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private DataSetVenta dataSetVenta1;
     }
 }
