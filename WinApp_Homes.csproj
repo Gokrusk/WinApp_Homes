@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClDepartamento.cs" />
     <Compile Include="DataSetVenta.cs">
       <DependentUpon>DataSetVenta.xsd</DependentUpon>
     </Compile>
