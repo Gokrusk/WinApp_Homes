@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WinApp_Homes
 {
-    public partial class MenuForm : Form
+    public partial class MenuFormAdmin : Form
     {
-        public MenuForm()
+        public MenuFormAdmin()
         {
             InitializeComponent();
         }
@@ -25,7 +25,7 @@ namespace WinApp_Homes
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Registr obj = new RegistroClientes();
+            RegistroClientForm obj = new RegistroClientForm();
             obj.ShowDialog();
         }
     }

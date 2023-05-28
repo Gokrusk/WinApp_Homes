@@ -1,6 +1,6 @@
 ﻿namespace WinApp_Homes
 {
-    partial class MenuForm
+    partial class MenuFormAdmin
     {
         /// <summary>
         /// Required designer variable.

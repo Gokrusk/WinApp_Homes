@@ -35,4 +35,5 @@ C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.csproj.Co
 C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.exe
 C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.pdb
 C:\Users\nigel\workspace\WinApp_Homes\obj\Debug\WinApp_Homes.IngresoDepartamentoForm.resources
-C:\Users\nigel\workspace\WinApp_Homes\obj\Debug\WinApp_Homes.RegistroClientes.resources
+C:\Users\nigel\workspace\WinApp_Homes\obj\Debug\WinApp_Homes.MenuFormAdmin.resources
+C:\Users\nigel\workspace\WinApp_Homes\obj\Debug\WinApp_Homes.RegistroClientForm.resources
