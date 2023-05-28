@@ -16,5 +16,10 @@ namespace WinApp_Homes
         {
             InitializeComponent();
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bienvenido a nuestra aplicación!", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
     }
 }
