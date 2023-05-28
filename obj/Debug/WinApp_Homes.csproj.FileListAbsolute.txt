@@ -1,0 +1,11 @@
+C:\Users\nigel\workspace\app-inf-1-csharp\WinApp_Homes\bin\Debug\WinApp_Homes.exe.config
+C:\Users\nigel\workspace\app-inf-1-csharp\WinApp_Homes\bin\Debug\WinApp_Homes.exe
+C:\Users\nigel\workspace\app-inf-1-csharp\WinApp_Homes\bin\Debug\WinApp_Homes.pdb
+C:\Users\nigel\workspace\app-inf-1-csharp\WinApp_Homes\obj\Debug\WinApp_Homes.csproj.AssemblyReference.cache
+C:\Users\nigel\workspace\app-inf-1-csharp\WinApp_Homes\obj\Debug\WinApp_Homes.csproj.SuggestedBindingRedirects.cache
+C:\Users\nigel\workspace\app-inf-1-csharp\WinApp_Homes\obj\Debug\WinApp_Homes.Form1.resources
+C:\Users\nigel\workspace\app-inf-1-csharp\WinApp_Homes\obj\Debug\WinApp_Homes.Properties.Resources.resources
+C:\Users\nigel\workspace\app-inf-1-csharp\WinApp_Homes\obj\Debug\WinApp_Homes.csproj.GenerateResource.cache
+C:\Users\nigel\workspace\app-inf-1-csharp\WinApp_Homes\obj\Debug\WinApp_Homes.csproj.CoreCompileInputs.cache
+C:\Users\nigel\workspace\app-inf-1-csharp\WinApp_Homes\obj\Debug\WinApp_Homes.exe
+C:\Users\nigel\workspace\app-inf-1-csharp\WinApp_Homes\obj\Debug\WinApp_Homes.pdb
