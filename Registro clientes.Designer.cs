@@ -291,6 +291,7 @@
             this.BtnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(169)))), ((int)(((byte)(143)))));
             this.BtnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGuardar.ForeColor = System.Drawing.Color.White;
             this.BtnGuardar.Location = new System.Drawing.Point(651, 127);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(212, 51);
@@ -303,6 +304,7 @@
             this.BtnCancelar.BackColor = System.Drawing.Color.Red;
             this.BtnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCancelar.ForeColor = System.Drawing.Color.White;
             this.BtnCancelar.Location = new System.Drawing.Point(651, 195);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(212, 51);
