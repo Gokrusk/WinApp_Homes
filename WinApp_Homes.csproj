@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSetVenta.cs">
+      <DependentUpon>DataSetVenta.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetVenta.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
