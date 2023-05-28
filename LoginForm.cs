@@ -19,7 +19,7 @@ namespace WinApp_Homes
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Bienvenido a nuestra aplicación", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show("Bienvenido a nuestra aplicación!", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     }
 }
