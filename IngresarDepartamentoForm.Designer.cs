@@ -28,12 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.dataSetVentaCasas1 = new WinApp_Homes.DataSetVentaCasas();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetVentaCasas1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dataSetVentaCasas1
+            // 
+            this.dataSetVentaCasas1.DataSetName = "DataSetVentaCasas";
+            this.dataSetVentaCasas1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // IngresarDepartamentoForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "IngresarDepartamentoForm";
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(58)))), ((int)(((byte)(63)))));
+            this.ClientSize = new System.Drawing.Size(1179, 629);
+            this.Name = "IngresarDepartamentoForm";
+            this.Text = "Nuevo Departamento";
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetVentaCasas1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private DataSetVentaCasas dataSetVentaCasas1;
     }
 }
