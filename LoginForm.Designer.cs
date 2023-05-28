@@ -69,7 +69,7 @@
             // BtnLogin
             // 
             this.BtnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(169)))), ((int)(((byte)(143)))));
-            this.BtnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(169)))), ((int)(((byte)(143)))));
+            this.BtnLogin.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLogin.ForeColor = System.Drawing.Color.White;

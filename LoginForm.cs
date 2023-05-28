@@ -37,7 +37,7 @@ namespace WinApp_Homes
                     {
                         if (data[0]["pass"].ToString() == TxtPsw.Text)
                         {
-                            Form1 obj = new Form1();
+                            MenuFormAdmin obj = new MenuFormAdmin();
                             obj.ShowDialog();
                         }
                         else
