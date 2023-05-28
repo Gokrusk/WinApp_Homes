@@ -16,5 +16,10 @@ namespace WinApp_Homes
         {
             InitializeComponent();
         }
+
+        private void IngresoDepartamentoForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -13,5 +13,10 @@ namespace WinApp_Homes {
         public RegistroClientes() {
             InitializeComponent();
         }
+
+        private void RegistroClientes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

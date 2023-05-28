@@ -16,5 +16,10 @@ namespace WinApp_Homes
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

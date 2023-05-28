@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(1179, 629);
             this.Name = "IngresoDepartamentoForm";
             this.Text = "IngresoDepartamentoForm";
+            this.Load += new System.EventHandler(this.IngresoDepartamentoForm_Load);
             this.ResumeLayout(false);
 
         }
