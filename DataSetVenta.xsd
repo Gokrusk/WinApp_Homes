@@ -72,6 +72,14 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="TblUsuarios" msprop:Generator_RowEvHandlerName="TblUsuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="TblUsuariosRowDeleted" msprop:Generator_RowDeletingName="TblUsuariosRowDeleting" msprop:Generator_RowEvArgName="TblUsuariosRowChangeEvent" msprop:Generator_TablePropName="TblUsuarios" msprop:Generator_RowChangedName="TblUsuariosRowChanged" msprop:Generator_RowChangingName="TblUsuariosRowChanging" msprop:Generator_TableClassName="TblUsuariosDataTable" msprop:Generator_RowClassName="TblUsuariosRow" msprop:Generator_TableVarName="tableTblUsuarios" msprop:Generator_UserTableName="TblUsuarios">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="usuario" msprop:Generator_ColumnPropNameInRow="usuario" msprop:Generator_ColumnPropNameInTable="usuarioColumn" msprop:Generator_ColumnVarNameInTable="columnusuario" msprop:Generator_UserColumnName="usuario" type="xs:string" minOccurs="0" />
+              <xs:element name="pass" msprop:Generator_ColumnPropNameInRow="pass" msprop:Generator_ColumnPropNameInTable="passColumn" msprop:Generator_ColumnVarNameInTable="columnpass" msprop:Generator_UserColumnName="pass" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1">
