@@ -9,14 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WinApp_Homes {
-    public partial class RegistroClientes : Form {
-        public RegistroClientes() {
+    public partial class RegistroClientForm: Form {
+        public RegistroClientForm() {
             InitializeComponent();
-        }
-
-        private void RegistroClientes_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -1,5 +1,7 @@
-﻿namespace WinApp_Homes {
-    partial class RegistroClientes {
+﻿namespace WinApp_Homes
+{
+    partial class RegistroClientForm
+    {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -9,8 +11,10 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing) {
-            if (disposing && (components != null)) {
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -22,7 +26,8 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.GbxRegistro = new System.Windows.Forms.GroupBox();
@@ -65,9 +70,9 @@
             this.lblTitulo.Location = new System.Drawing.Point(26, 23);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(151, 39);
+            this.lblTitulo.Size = new System.Drawing.Size(150, 32);
             this.lblTitulo.TabIndex = 2;
-            this.lblTitulo.Text = "Clientes";
+            this.lblTitulo.Text = "CLIENTES";
             // 
             // GbxRegistro
             // 
@@ -97,7 +102,7 @@
             // 
             this.txtCorreo.Location = new System.Drawing.Point(213, 286);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(326, 31);
+            this.txtCorreo.Size = new System.Drawing.Size(326, 26);
             this.txtCorreo.TabIndex = 20;
             // 
             // CbxCiudad
@@ -157,7 +162,7 @@
             "Zamora"});
             this.CbxCiudad.Location = new System.Drawing.Point(118, 229);
             this.CbxCiudad.Name = "CbxCiudad";
-            this.CbxCiudad.Size = new System.Drawing.Size(150, 30);
+            this.CbxCiudad.Size = new System.Drawing.Size(150, 25);
             this.CbxCiudad.TabIndex = 19;
             // 
             // DtpFecha
@@ -165,7 +170,7 @@
             this.DtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpFecha.Location = new System.Drawing.Point(445, 169);
             this.DtpFecha.Name = "DtpFecha";
-            this.DtpFecha.Size = new System.Drawing.Size(135, 31);
+            this.DtpFecha.Size = new System.Drawing.Size(135, 26);
             this.DtpFecha.TabIndex = 18;
             this.DtpFecha.Value = new System.DateTime(2023, 5, 28, 10, 35, 34, 0);
             // 
@@ -178,7 +183,7 @@
             "Femenino"});
             this.CbxSexo.Location = new System.Drawing.Point(101, 170);
             this.CbxSexo.Name = "CbxSexo";
-            this.CbxSexo.Size = new System.Drawing.Size(121, 30);
+            this.CbxSexo.Size = new System.Drawing.Size(121, 25);
             this.CbxSexo.TabIndex = 17;
             // 
             // LblSexo
@@ -189,7 +194,7 @@
             this.LblSexo.Location = new System.Drawing.Point(42, 172);
             this.LblSexo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblSexo.Name = "LblSexo";
-            this.LblSexo.Size = new System.Drawing.Size(63, 23);
+            this.LblSexo.Size = new System.Drawing.Size(52, 18);
             this.LblSexo.TabIndex = 13;
             this.LblSexo.Text = "Sexo:";
             // 
@@ -197,21 +202,21 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(391, 110);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(143, 31);
+            this.textBox2.Size = new System.Drawing.Size(143, 26);
             this.textBox2.TabIndex = 12;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(125, 110);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(143, 31);
+            this.textBox1.Size = new System.Drawing.Size(143, 26);
             this.textBox1.TabIndex = 11;
             // 
             // TxtCedula
             // 
             this.TxtCedula.Location = new System.Drawing.Point(118, 52);
             this.TxtCedula.Name = "TxtCedula";
-            this.TxtCedula.Size = new System.Drawing.Size(143, 31);
+            this.TxtCedula.Size = new System.Drawing.Size(143, 26);
             this.TxtCedula.TabIndex = 10;
             // 
             // LblCorreo
@@ -222,7 +227,7 @@
             this.LblCorreo.Location = new System.Drawing.Point(42, 289);
             this.LblCorreo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblCorreo.Name = "LblCorreo";
-            this.LblCorreo.Size = new System.Drawing.Size(200, 23);
+            this.LblCorreo.Size = new System.Drawing.Size(164, 18);
             this.LblCorreo.TabIndex = 9;
             this.LblCorreo.Text = "Correo electrónico:";
             // 
@@ -234,7 +239,7 @@
             this.LblFechaNa.Location = new System.Drawing.Point(259, 172);
             this.LblFechaNa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblFechaNa.Name = "LblFechaNa";
-            this.LblFechaNa.Size = new System.Drawing.Size(218, 23);
+            this.LblFechaNa.Size = new System.Drawing.Size(179, 18);
             this.LblFechaNa.TabIndex = 8;
             this.LblFechaNa.Text = "Fecha de nacimiento:";
             // 
@@ -246,7 +251,7 @@
             this.LblCiudad.Location = new System.Drawing.Point(42, 231);
             this.LblCiudad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblCiudad.Name = "LblCiudad";
-            this.LblCiudad.Size = new System.Drawing.Size(86, 23);
+            this.LblCiudad.Size = new System.Drawing.Size(69, 18);
             this.LblCiudad.TabIndex = 7;
             this.LblCiudad.Text = "Ciudad:";
             // 
@@ -258,7 +263,7 @@
             this.LblApellido.Location = new System.Drawing.Point(309, 113);
             this.LblApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblApellido.Name = "LblApellido";
-            this.LblApellido.Size = new System.Drawing.Size(95, 23);
+            this.LblApellido.Size = new System.Drawing.Size(77, 18);
             this.LblApellido.TabIndex = 6;
             this.LblApellido.Text = "Apellido:";
             // 
@@ -270,7 +275,7 @@
             this.LblNombre.Location = new System.Drawing.Point(42, 113);
             this.LblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblNombre.Name = "LblNombre";
-            this.LblNombre.Size = new System.Drawing.Size(95, 23);
+            this.LblNombre.Size = new System.Drawing.Size(76, 18);
             this.LblNombre.TabIndex = 5;
             this.LblNombre.Text = "Nombre:";
             // 
@@ -282,7 +287,7 @@
             this.LblCedula.Location = new System.Drawing.Point(42, 55);
             this.LblCedula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblCedula.Name = "LblCedula";
-            this.LblCedula.Size = new System.Drawing.Size(85, 23);
+            this.LblCedula.Size = new System.Drawing.Size(69, 18);
             this.LblCedula.TabIndex = 4;
             this.LblCedula.Text = "Cédula:";
             // 
@@ -296,7 +301,7 @@
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(212, 51);
             this.BtnGuardar.TabIndex = 4;
-            this.BtnGuardar.Text = "Guardar";
+            this.BtnGuardar.Text = "GUARDAR";
             this.BtnGuardar.UseVisualStyleBackColor = false;
             // 
             // BtnCancelar
@@ -309,15 +314,15 @@
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(212, 51);
             this.BtnCancelar.TabIndex = 5;
-            this.BtnCancelar.Text = "Cancelar";
+            this.BtnCancelar.Text = "CANCELAR";
             this.BtnCancelar.UseVisualStyleBackColor = false;
             // 
-            // RegistroClientes
+            // RegistroClientForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(58)))), ((int)(((byte)(63)))));
-            this.ClientSize = new System.Drawing.Size(882, 503);
+            this.ClientSize = new System.Drawing.Size(884, 511);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.GbxRegistro);
@@ -326,10 +331,9 @@
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MaximumSize = new System.Drawing.Size(900, 550);
             this.MinimumSize = new System.Drawing.Size(900, 550);
-            this.Name = "RegistroClientes";
+            this.Name = "RegistroClientForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registro_clientes";
-            this.Load += new System.EventHandler(this.RegistroClientes_Load);
+            this.Text = "Registro de Clientes";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.GbxRegistro.ResumeLayout(false);
