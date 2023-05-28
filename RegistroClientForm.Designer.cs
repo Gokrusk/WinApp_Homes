@@ -70,9 +70,9 @@
             this.lblTitulo.Location = new System.Drawing.Point(26, 23);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(121, 32);
+            this.lblTitulo.Size = new System.Drawing.Size(150, 32);
             this.lblTitulo.TabIndex = 2;
-            this.lblTitulo.Text = "Clientes";
+            this.lblTitulo.Text = "CLIENTES";
             // 
             // GbxRegistro
             // 
@@ -301,7 +301,7 @@
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(212, 51);
             this.BtnGuardar.TabIndex = 4;
-            this.BtnGuardar.Text = "Guardar";
+            this.BtnGuardar.Text = "GUARDAR";
             this.BtnGuardar.UseVisualStyleBackColor = false;
             // 
             // BtnCancelar
@@ -314,10 +314,10 @@
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(212, 51);
             this.BtnCancelar.TabIndex = 5;
-            this.BtnCancelar.Text = "Cancelar";
+            this.BtnCancelar.Text = "CANCELAR";
             this.BtnCancelar.UseVisualStyleBackColor = false;
             // 
-            // RegistroClientes
+            // RegistroClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -331,7 +331,7 @@
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MaximumSize = new System.Drawing.Size(900, 550);
             this.MinimumSize = new System.Drawing.Size(900, 550);
-            this.Name = "RegistroClientes";
+            this.Name = "RegistroClientForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de Clientes";
             this.panel1.ResumeLayout(false);
