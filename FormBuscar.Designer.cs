@@ -79,20 +79,20 @@
             "Tipo ",
             "Ubicación ",
             " "});
-            this.comboBox1.Location = new System.Drawing.Point(195, 121);
+            this.comboBox1.Location = new System.Drawing.Point(146, 121);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 26);
+            this.comboBox1.Size = new System.Drawing.Size(175, 26);
             this.comboBox1.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(16, 129);
+            this.label2.Location = new System.Drawing.Point(48, 129);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(173, 18);
+            this.label2.Size = new System.Drawing.Size(92, 18);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Campo de Búsqueda";
+            this.label2.Text = "Filtrar por:";
             // 
             // BtnBuscar
             // 
