@@ -12,13 +12,7 @@ using System.Windows.Forms;
 
 namespace WinApp_Homes {
     public partial class RegistroClientForm: Form {
-        private string Cedula;
-        private string Nombre;
-        private string Apellido;
-        private char Sexo;
-        private DateTime FechaNacimiento;
-        private string Ciudad;
-        private string CorreoElec;
+        ClCliente ClienteObj = new ClCliente();
 
         private bool ModCed;
         private bool ModNom;
@@ -81,10 +75,10 @@ namespace WinApp_Homes {
             if (e.KeyChar == (char)Keys.Enter) {
                 try {
                     LblInfoCed.Text = "";
-                    Cedula = TxtCedula.Text;
+                    ClienteObj.Cedula = TxtCedula.Text;
 
-                    if(Cedula != "") {
-                        if (ValidarCedula(Cedula)) {
+                    if(ClienteObj.Cedula != "") {
+                        if (ValidarCedula(ClienteObj.Cedula)) {
                             TxtCedula.ForeColor = Color.Black;
                             TxtNombre.Enabled = true;
                             ModCed = true;
@@ -110,16 +104,16 @@ namespace WinApp_Homes {
             if (e.KeyChar == (char)Keys.Enter) {
                 try {
                     LblInfoNom.Text = "";
-                    Nombre = TxtNombre.Text;
+                    ClienteObj.Nombre = TxtNombre.Text;
 
-                    if (TxtNombre.Text.Contains(" ")) {
+                    if (ClienteObj.Nombre.Contains(" ")) {
                         LblInfoNom.Text = "No se permite espacios";
                         TxtNombre.Clear();
 
-                    } else if (TxtNombre.Text == "") {
+                    } else if (ClienteObj.Nombre == "") {
                         LblInfoNom.Text = "Dato requerido";
 
-                    } else if (TxtNombre.Text.Any(char.IsDigit) || Regex.IsMatch(TxtNombre.Text, @"[^\w]")) {
+                    } else if (ClienteObj.Nombre.Any(char.IsDigit) || Regex.IsMatch(ClienteObj.Nombre, @"[^\w]")) {
                         LblInfoNom.Text = "Ingrese únicamente el nombre";
                         TxtNombre.Clear();
 
@@ -145,16 +139,16 @@ namespace WinApp_Homes {
             if (e.KeyChar == (char)Keys.Enter) {
                 try {
                     LblInfoApe.Text = "";
-                    Apellido = TxtApellido.Text;
+                    ClienteObj.Apellido = TxtApellido.Text;
 
-                    if (TxtApellido.Text.Contains(" ")) {
+                    if (ClienteObj.Apellido.Contains(" ")) {
                         LblInfoApe.Text = "No se permite espacios";
                         TxtApellido.Clear();
 
-                    } else if (TxtApellido.Text == "") {
+                    } else if (ClienteObj.Apellido == "") {
                         LblInfoApe.Text = "Dato requerido";
 
-                    } else if (TxtApellido.Text.Any(char.IsDigit) || Regex.IsMatch(TxtApellido.Text, @"[^\w]")) {
+                    } else if (ClienteObj.Apellido.Any(char.IsDigit) || Regex.IsMatch(ClienteObj.Apellido, @"[^\w]")) {
                         LblInfoApe.Text = "Ingrese únicamente el apellido";
                         TxtApellido.Clear();
 
@@ -173,9 +167,9 @@ namespace WinApp_Homes {
 
         private void CbxSexo_SelectedIndexChanged(object sender, EventArgs e) {
             if(CbxSexo.SelectedIndex == 0) {
-                Sexo = 'M';
+                ClienteObj.Sexo = 'M';
             }else {
-                Sexo = 'F';
+                ClienteObj.Sexo = 'F';
             }
 
             TxtCorreo.Focus();
@@ -186,12 +180,12 @@ namespace WinApp_Homes {
             DtpFecha.MaxDate = DateTime.Today.AddYears(-18);
             DtpFecha.MinDate = DateTime.Today.AddYears(-100);
 
-            FechaNacimiento = DtpFecha.Value;
+            ClienteObj.FechaNacimiento = DtpFecha.Value;
             CbxCiudad.Enabled = true;
         }
 
         private void CbxCiudad_SelectedIndexChanged(object sender, EventArgs e) {
-            Ciudad = CbxCiudad.SelectedItem.ToString();
+            ClienteObj.Ciudad = CbxCiudad.SelectedItem.ToString();
 
             TxtCorreo.Enabled = true;
             TxtCorreo.Focus();
@@ -205,9 +199,9 @@ namespace WinApp_Homes {
             if (e.KeyChar == (char)Keys.Enter) {
                 try {
                     LblInfoCorr.Text = "";
-                    CorreoElec = TxtCorreo.Text;
+                    ClienteObj.CorreoElec = TxtCorreo.Text;
 
-                    if (ValidarCorreo(CorreoElec)) {
+                    if (ValidarCorreo(ClienteObj.CorreoElec)) {
                         TxtCorreo.ForeColor = Color.Black;
                         BtnGuardar.Enabled = true;
                         BtnGuardar.Focus();
@@ -227,16 +221,17 @@ namespace WinApp_Homes {
         private void BtnGuardar_Click(object sender, EventArgs e) {
             try {
                 if (ModCed && ModNom && ModApe && ModCor) {
+                    dataSetVenta1.Clear();
                     dataSetVenta1.Tables["TblCliente"].ReadXml(PathFile + "clientes.xml");
                     object[] dataClient = new object[7];
 
-                    dataClient[0] = Cedula;
-                    dataClient[1] = Nombre;
-                    dataClient[2] = Apellido;
-                    dataClient[3] = Sexo;
-                    dataClient[4] = Ciudad;
-                    dataClient[5] = FechaNacimiento;
-                    dataClient[6] = CorreoElec;
+                    dataClient[0] = ClienteObj.Cedula;
+                    dataClient[1] = ClienteObj.Nombre;
+                    dataClient[2] = ClienteObj.Apellido;
+                    dataClient[3] = ClienteObj.Sexo;
+                    dataClient[4] = ClienteObj.Ciudad;
+                    dataClient[5] = ClienteObj.FechaNacimiento;
+                    dataClient[6] = ClienteObj.CorreoElec;
 
                     dataSetVenta1.TblCliente.Rows.Add(dataClient);
                     dataSetVenta1.Tables["TblCliente"].WriteXml(PathFile + "clientes.xml");
