@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,11 +24,27 @@ namespace WinApp_Homes
             dataSetVenta.ReadXml(PathFile + "\\inmuebles.xml");
         }
 
+        static string RemoverTildes(string texto)
+        {
+            string normalizedString = texto.Normalize(NormalizationForm.FormD);
+            StringBuilder stringBuilder = new StringBuilder();
+
+            foreach (char c in normalizedString)
+            {
+                if (CharUnicodeInfo.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark)
+                    stringBuilder.Append(c);
+            }
+
+            return stringBuilder.ToString();
+        }
+
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
             dataSetVenta.Clear();
             dataSetVenta.ReadXml(PathFile + "\\inmuebles.xml");
             string item = comboBox1.SelectedItem.ToString();
+            item = RemoverTildes(item);
+
             DataRow[] data;
             data = dataSetVenta.TblInmueble.Select(item + "='" + TxtItem.Text + "'");
 
@@ -46,7 +63,6 @@ namespace WinApp_Homes
             }
 
             dataGridView1.DataSource = dataTable;
-
 
         }
     }
