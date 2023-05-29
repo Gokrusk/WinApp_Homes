@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ayuda</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta lang="en" />    
+
+    <style>
+      /* STYLING all elements */
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      /* STYLING NAVIGATION */
+      #navbar {
+        position: fixed;
+        min-width: 290px;
+        top: 0px;
+        left: 0px;
+        width: 300px;
+        height: 100%;
+        font-family: sans-serif;
+        border-right: 1px solid rgba(0, 22, 22, 0.4);
+      }
+
+      .nav-header {
+        width: 100%;
+        height: 10%;
+        padding: 15px;
+        text-align: center;
+        font-size: 2rem;
+        box-shadow: 0 3px 2px #ddd;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+      }
+
+      #nav {
+        width: 100%;
+        height: 90%;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+
+      .nav-link {
+        width: 100%;
+        height: auto;
+        text-align: left;
+        text-decoration: none;
+        color: #000;
+      }
+
+      /* .nav-link:hover{
+	font-style: italic;
+} */
+
+      .nav-link li {
+        list-style: none;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        padding: 15px 0 15px 15px;
+        font-size: 1.2rem;
+        border-bottom: 1px dotted #333;
+      }
+
+      .nav-link li:first-child {
+        border-top: 1px dotted #333;
+      }
+
+      .nav-link li:hover {
+        background-color: #eee;
+      }
+
+      /* STYLING MAIN CONTENT */
+      #main-doc {
+        position: absolute;
+        margin-left: 300px;
+        width: 500px;
+        min-width: calc(100% - 300px);
+        max-width: calc(100% - 290px);
+        height: 100%;
+        padding: 20px 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+
+      .main-section {
+        width: 100%;
+        height: auto;
+        margin: 5px;
+        padding: 20px 10px 20px 10px;
+      }
+
+      .main-section > header {
+        font-size: 2rem;
+        font-family: sans-serif;
+      }
+
+      .main-section > header:hover {
+        text-decoration: underline;
+      }
+
+      p {
+        width: 100%;
+        height: auto;
+        font-size: 1rem;
+        padding: 5px;
+        line-height: 20px;
+        word-spacing: 2.1px;
+        letter-spacing: 0.8px;
+        text-align: justify;
+        margin: 0.3rem 0 0.3rem 0.1rem;
+        font-family: sans-serif;
+      }
+
+      code {
+        width: 99%;
+        background: #f7f7f7;
+        font-size: 1.1rem;
+        display: inline-block;
+        margin: 0.9rem 0.3rem 0.9rem 0.3rem;
+        padding: 15px;
+        white-space: pre;
+      }
+
+      .main-section > ul {
+        margin: 1rem 0 1rem 3%;
+      }
+
+      .main-section > ul > li {
+        width: 100%;
+        height: auto;
+        font-size: 1rem;
+        padding: 10px;
+        line-height: 20px;
+        word-spacing: 2.1px;
+        letter-spacing: 0.8px;
+        text-align: justify;
+        font-family: sans-serif;
+      }
+
+      .main-section > ul > li > ul > li {
+        margin-left: 1rem;
+        width: 100%;
+        height: auto;
+        font-size: 1rem;
+        padding: 10px;
+        line-height: 20px;
+        word-spacing: 2.1px;
+        letter-spacing: 0.8px;
+        text-align: justify;
+        font-family: sans-serif;
+      }
+
+      /*MEDIA QUERY*/
+      @media screen and (max-width: 700px) {
+        #navbar {
+          min-width: 100%;
+          width: 100%;
+          height: 200px;
+          position: static;
+          box-shadow: 0px 3px 2px #ccc;
+          box-sizing: border-box;
+        }
+
+        .nav-header {
+          padding: 0;
+          height: 40px;
+          font-size: 1.8rem;
+        }
+
+        #navbar > #nav {
+          height: 160px;
+        }
+
+        .nav-link li {
+          font-size: 1rem;
+        }
+
+        #main-doc {
+          position: static;
+          min-width: 100%;
+          max-width: 100%;
+          height: 80%;
+          margin-left: 0px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <header class="nav-header">Venta de Casas</header>
+
+      <div id="nav">
+        <ul>
+          <a href="#introduction" class="nav-link">
+            <li>Introducción</li>
+          </a>
+
+          <a href="#login" class="nav-link">
+            <li>Inicio de Sesión</li>
+          </a>
+
+          <a href="#register_client" class="nav-link">
+            <li>Registro de Inmuebles</li>
+          </a>
+
+          <a href="#register_home" class="nav-link">
+            <li>Registro de Clientes</li>
+          </a>
+
+          <a href="#search_home" class="nav-link">
+            <li>Busqueda de Inmueble</li>
+          </a>
+        </ul>
+      </div>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="introduction">
+        <header>Introducción</header>
+
+        <p>
+          JavaScript is a cross-platform, object-oriented scripting language. It
+          is a small and lightweight language. Inside a host environment (for
+          example, a web browser), JavaScript can be connected to the objects of
+          its environment to provide programmatic control over them.
+        </p>
+
+        <p>
+          JavaScript contains a standard library of objects, such as Array,
+          Date, and Math, and a core set of language elements such as operators,
+          control structures, and statements. Core JavaScript can be extended
+          for a variety of purposes by supplementing it with additional objects;
+          for example:
+        </p>
+
+        <ul>
+          <li>
+            Client-side JavaScript extends the core language by supplying
+            objects to control a browser and its Document Object Model (DOM).
+            For example, client-side extensions allow an application to place
+            elements on an HTML form and respond to user events such as mouse
+            clicks, form input, and page navigation.
+          </li>
+
+          <li>
+            Server-side JavaScript extends the core language by supplying
+            objects relevant to running JavaScript on a server. For example,
+            server-side extensions allow an application to communicate with a
+            database, provide continuity of information from one invocation to
+            another of the application, or perform file manipulations on a
+            server.
+          </li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="login">
+        <header>Inicio de Sesión</header>
+
+        <p>This guide assumes you have the following basic background:</p>
+
+        <ul>
+          <li>
+            A general understanding of the Internet and the World Wide Web
+            (WWW).
+          </li>
+          <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+          <li>
+            Some programming experience. If you are new to programming, try one
+            of the tutorials linked on the main page about JavaScript.
+          </li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="register_client">
+        <header>Registro de Clientes</header>
+
+        <p>
+          JavaScript and Java are similar in some ways but fundamentally
+          different in some others. The JavaScript language resembles Java but
+          does not have Java's static typing and strong type checking.
+          JavaScript follows most Java expression syntax, naming conventions and
+          basic control-flow constructs which was the reason why it was renamed
+          from LiveScript to JavaScript.
+        </p>
+
+        <p>
+          In contrast to Java's compile-time system of classes built by
+          declarations, JavaScript supports a runtime system based on a small
+          number of data types representing numeric, Boolean, and string values.
+          JavaScript has a prototype-based object model instead of the more
+          common class-based object model. The prototype-based model provides
+          dynamic inheritance; that is, what is inherited can vary for
+          individual objects. JavaScript also supports functions without any
+          special declarative requirements. Functions can be properties of
+          objects, executing as loosely typed methods.
+        </p>
+
+        <p>
+          JavaScript is a very free-form language compared to Java. You do not
+          have to declare all variables, classes, and methods. You do not have
+          to be concerned with whether methods are public, private, or
+          protected, and you do not have to implement interfaces. Variables,
+          parameters, and function return types are not explicitly typed.
+        </p>
+      </section>
+
+      <section class="main-section" id="register_home">
+        <header>Registro de Inmuebles</header>
+
+        <p>
+          To get started with writing JavaScript, open the Scratchpad and write
+          your first "Hello world" JavaScript code:
+        </p>
+
+        <code
+          >function greetMe(yourName) { alert("Hello " + yourName); }
+          greetMe("World");</code
+        >
+
+        <p>
+          Select the code in the pad and hit Ctrl+R to watch it unfold in your
+          browser!
+        </p>
+      </section>
+
+      <section class="main-section" id="search_home">
+        <header>Busqueda de Inmueble</header>
+
+        <p>
+          You use variables as symbolic names for values in your application.
+          The names of variables, called identifiers, conform to certain rules.
+        </p>
+
+        <p>
+          A JavaScript identifier must start with a letter, underscore (_), or
+          dollar sign ($); subsequent characters can also be digits (0-9).
+          Because JavaScript is case sensitive, letters include the characters
+          "A" through "Z" (uppercase) and the characters "a" through "z"
+          (lowercase).
+        </p>
+
+        <p>
+          You can use ISO 8859-1 or Unicode letters such as å and ü in
+          identifiers. You can also use the Unicode escape sequences as
+          characters in identifiers. Some examples of legal names are
+          Number_hits, temp99, and _name.
+        </p>
+      </section>
+
+      
+
+      
+
+      <section class="main-section" id="reference">
+        <header>Contacto</header>
+
+        <ul>
+          <li>Fernando Alejandro Novillo Aguirre - 7196</li>
+          <li>Nigell Marcel Jama Oyarvide - 7046</li>
+          <li>Cristhian Paul Chimbo Ortiz - 7168</li>
+          <li>Kevin Hernan Tapia Sanmartin  - 7097</li>
+          <li>Cielo de Los Ángeles Morillo Obando  - 7097</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
