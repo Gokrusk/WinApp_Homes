@@ -28,5 +28,11 @@ namespace WinApp_Homes
             RegistroClientForm obj = new RegistroClientForm();
             obj.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormBuscar obj = new FormBuscar();
+            obj.ShowDialog();
+        }
     }
 }
