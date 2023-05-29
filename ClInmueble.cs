@@ -13,9 +13,9 @@ namespace WinApp_Homes
             this.estadoVenta = "DISPONIBLE";
         }
 
-        public void GenerarCodigo()
+        public void GenerarCodigo(int num)
         {
-            this.codigo = this.tipo.Substring(0, 3) + '_' + this.nombre.Substring(0,4);
+            this.codigo = this.tipo + '_' + num.ToString();
         }
 
         public string codigo { get; set; }

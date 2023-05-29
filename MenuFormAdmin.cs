@@ -19,7 +19,7 @@ namespace WinApp_Homes
 
         private void button1_Click(object sender, EventArgs e)
         {
-            IngresoDepartamentoForm obj = new IngresoDepartamentoForm();
+            IngresoInmuebleForm obj = new IngresoInmuebleForm();
             obj.ShowDialog();
         }
 
