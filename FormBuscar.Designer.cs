@@ -35,15 +35,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tblInmuebleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSetVenta = new WinApp_Homes.DataSetVenta();
-            this.TxtItem = new System.Windows.Forms.TextBox();
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ubicacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreInmuebleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblInmuebleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetVenta = new WinApp_Homes.DataSetVenta();
+            this.TxtItem = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblInmuebleBindingSource)).BeginInit();
@@ -125,24 +125,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(853, 255);
             this.dataGridView1.TabIndex = 6;
             // 
-            // tblInmuebleBindingSource
-            // 
-            this.tblInmuebleBindingSource.DataMember = "TblInmueble";
-            this.tblInmuebleBindingSource.DataSource = this.dataSetVenta;
-            // 
-            // dataSetVenta
-            // 
-            this.dataSetVenta.DataSetName = "DataSetVenta";
-            this.dataSetVenta.EnforceConstraints = false;
-            this.dataSetVenta.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // TxtItem
-            // 
-            this.TxtItem.Location = new System.Drawing.Point(382, 121);
-            this.TxtItem.Name = "TxtItem";
-            this.TxtItem.Size = new System.Drawing.Size(118, 26);
-            this.TxtItem.TabIndex = 7;
-            // 
             // codigoDataGridViewTextBoxColumn
             // 
             this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
@@ -178,6 +160,25 @@
             this.nombreInmuebleDataGridViewTextBoxColumn.DataPropertyName = "NombreInmueble";
             this.nombreInmuebleDataGridViewTextBoxColumn.HeaderText = "Nombre de Inmueble";
             this.nombreInmuebleDataGridViewTextBoxColumn.Name = "nombreInmuebleDataGridViewTextBoxColumn";
+            // 
+            // tblInmuebleBindingSource
+            // 
+            this.tblInmuebleBindingSource.DataMember = "TblInmueble";
+            this.tblInmuebleBindingSource.DataSource = this.dataSetVenta;
+            // 
+            // dataSetVenta
+            // 
+            this.dataSetVenta.DataSetName = "DataSetVenta";
+            this.dataSetVenta.EnforceConstraints = false;
+            this.dataSetVenta.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // TxtItem
+            // 
+            this.TxtItem.Location = new System.Drawing.Point(382, 121);
+            this.TxtItem.Name = "TxtItem";
+            this.TxtItem.Size = new System.Drawing.Size(118, 26);
+            this.TxtItem.TabIndex = 7;
+            this.TxtItem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtItem_KeyPress);
             // 
             // FormBuscar
             // 
