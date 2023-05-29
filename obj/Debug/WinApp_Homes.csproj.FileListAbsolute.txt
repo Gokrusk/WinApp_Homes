@@ -29,7 +29,6 @@ C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.csproj.Su
 C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.Form1.resources
 C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.LoginForm.resources
 C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.Properties.Resources.resources
-C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.RegistroClientes.resources
 C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.csproj.GenerateResource.cache
 C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.csproj.CoreCompileInputs.cache
 C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.exe
@@ -37,6 +36,11 @@ C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.pdb
 C:\Users\nigel\workspace\WinApp_Homes\obj\Debug\WinApp_Homes.IngresoDepartamentoForm.resources
 C:\Users\nigel\workspace\WinApp_Homes\obj\Debug\WinApp_Homes.MenuFormAdmin.resources
 C:\Users\nigel\workspace\WinApp_Homes\obj\Debug\WinApp_Homes.RegistroClientForm.resources
+<<<<<<< HEAD
+C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.IngresoDepartamentoForm.resources
+C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.MenuFormAdmin.resources
+C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.RegistroClientForm.resources
+=======
 C:\Users\ferch\Documents\fernando_deberes\espoch\5TO_SEMESTRE\Aplicaciones\Parcial2\WinAppTrabajoGrupal\bin\Debug\WinApp_Homes.exe.config
 C:\Users\ferch\Documents\fernando_deberes\espoch\5TO_SEMESTRE\Aplicaciones\Parcial2\WinAppTrabajoGrupal\bin\Debug\WinApp_Homes.exe
 C:\Users\ferch\Documents\fernando_deberes\espoch\5TO_SEMESTRE\Aplicaciones\Parcial2\WinAppTrabajoGrupal\bin\Debug\WinApp_Homes.pdb
@@ -52,3 +56,4 @@ C:\Users\ferch\Documents\fernando_deberes\espoch\5TO_SEMESTRE\Aplicaciones\Parci
 C:\Users\ferch\Documents\fernando_deberes\espoch\5TO_SEMESTRE\Aplicaciones\Parcial2\WinAppTrabajoGrupal\obj\Debug\WinApp_Homes.csproj.CoreCompileInputs.cache
 C:\Users\ferch\Documents\fernando_deberes\espoch\5TO_SEMESTRE\Aplicaciones\Parcial2\WinAppTrabajoGrupal\obj\Debug\WinApp_Homes.exe
 C:\Users\ferch\Documents\fernando_deberes\espoch\5TO_SEMESTRE\Aplicaciones\Parcial2\WinAppTrabajoGrupal\obj\Debug\WinApp_Homes.pdb
+>>>>>>> ecb7c6526a67bf14c3b5aee9e7915c95b4af1522
