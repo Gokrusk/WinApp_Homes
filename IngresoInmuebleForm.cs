@@ -133,6 +133,7 @@ namespace WinApp_Homes
 
         private void GuardarImagenesXML()
         {
+            dataSetVenta1.Clear();
             dataSetVenta1.Tables["TblFoto"].ReadXml(PathFile + "imagenes.xml");
 
             object[] dataFoto = new object[2];
