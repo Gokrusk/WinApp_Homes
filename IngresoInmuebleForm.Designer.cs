@@ -298,7 +298,7 @@
             this.dataSetVenta1.DataSetName = "DataSetVenta";
             this.dataSetVenta1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // IngresoDepartamentoForm
+            // IngresoInmuebleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -307,7 +307,7 @@
             this.Controls.Add(this.GbxInmueble);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "IngresoDepartamentoForm";
+            this.Name = "IngresoInmuebleForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "IngresoDepartamentoForm";
             this.Load += new System.EventHandler(this.IngresoDepartamentoForm_Load);
