@@ -73,7 +73,7 @@
             this.BtnLogin.FlatAppearance.BorderSize = 0;
             this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLogin.ForeColor = System.Drawing.Color.Black;
+            this.BtnLogin.ForeColor = System.Drawing.Color.White;
             this.BtnLogin.Location = new System.Drawing.Point(430, 294);
             this.BtnLogin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnLogin.Name = "BtnLogin";
@@ -127,6 +127,7 @@
             // dataSetVenta1
             // 
             this.dataSetVenta1.DataSetName = "DataSetVenta";
+            this.dataSetVenta1.EnforceConstraints = false;
             this.dataSetVenta1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tblUsuariosBindingSource
