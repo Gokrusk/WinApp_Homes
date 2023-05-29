@@ -256,8 +256,9 @@ namespace WinApp_Homes {
                         TxtCorreo.ForeColor = Color.Red;
                     }
                 }
-            } catch (Exception) {
-                MessageBox.Show("Ha ocurrido un error, por favor inténtelo más tarde.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 

@@ -2,6 +2,7 @@
 *.cache
 *.exe
 *.pdb
+*.txt
 # obj\Debug\.cache
 # obj\Debug\.exe
 # obj\Debug\.pdb
