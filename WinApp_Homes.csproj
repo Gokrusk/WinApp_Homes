@@ -86,6 +86,12 @@
     <Compile Include="MenuFormAdmin.Designer.cs">
       <DependentUpon>MenuFormAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificarClienteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarClienteForm.Designer.cs">
+      <DependentUpon>ModificarClienteForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModificarInmuebleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuFormAdmin.resx">
       <DependentUpon>MenuFormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarClienteForm.resx">
+      <DependentUpon>ModificarClienteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarInmuebleForm.resx">
       <DependentUpon>ModificarInmuebleForm.cs</DependentUpon>
