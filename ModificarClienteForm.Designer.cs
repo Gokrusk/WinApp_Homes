@@ -30,7 +30,7 @@
             this.LblCedulaBus = new System.Windows.Forms.Label();
             this.GbxDatos = new System.Windows.Forms.GroupBox();
             this.BtnCancelar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnGuardar = new System.Windows.Forms.Button();
             this.LblInfoCorr = new System.Windows.Forms.Label();
             this.LblInfoApe = new System.Windows.Forms.Label();
             this.LblInfoNom = new System.Windows.Forms.Label();
@@ -114,7 +114,7 @@
             // GbxDatos
             // 
             this.GbxDatos.Controls.Add(this.BtnCancelar);
-            this.GbxDatos.Controls.Add(this.button1);
+            this.GbxDatos.Controls.Add(this.BtnGuardar);
             this.GbxDatos.Controls.Add(this.LblInfoCorr);
             this.GbxDatos.Controls.Add(this.LblInfoApe);
             this.GbxDatos.Controls.Add(this.LblInfoNom);
@@ -152,20 +152,21 @@
             this.BtnCancelar.TabIndex = 25;
             this.BtnCancelar.Text = "CANCELAR";
             this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
-            // button1
+            // BtnGuardar
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(198)))), ((int)(((byte)(73)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(641, 35);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 43);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "GUARDAR";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(198)))), ((int)(((byte)(73)))));
+            this.BtnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGuardar.ForeColor = System.Drawing.Color.White;
+            this.BtnGuardar.Location = new System.Drawing.Point(641, 35);
+            this.BtnGuardar.Name = "BtnGuardar";
+            this.BtnGuardar.Size = new System.Drawing.Size(155, 43);
+            this.BtnGuardar.TabIndex = 24;
+            this.BtnGuardar.Text = "GUARDAR";
+            this.BtnGuardar.UseVisualStyleBackColor = false;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // LblInfoCorr
             // 
@@ -200,7 +201,6 @@
             this.TxtCorreo.Name = "TxtCorreo";
             this.TxtCorreo.Size = new System.Drawing.Size(326, 26);
             this.TxtCorreo.TabIndex = 20;
-            this.TxtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCorreo_KeyPress);
             // 
             // CbxCiudad
             // 
@@ -261,7 +261,6 @@
             this.CbxCiudad.Name = "CbxCiudad";
             this.CbxCiudad.Size = new System.Drawing.Size(150, 25);
             this.CbxCiudad.TabIndex = 19;
-            this.CbxCiudad.SelectedIndexChanged += new System.EventHandler(this.CbxCiudad_SelectedIndexChanged);
             // 
             // DtpFecha
             // 
@@ -271,7 +270,6 @@
             this.DtpFecha.Size = new System.Drawing.Size(135, 26);
             this.DtpFecha.TabIndex = 18;
             this.DtpFecha.Value = new System.DateTime(2023, 5, 28, 10, 35, 34, 0);
-            this.DtpFecha.ValueChanged += new System.EventHandler(this.DtpFecha_ValueChanged);
             // 
             // CbxSexo
             // 
@@ -284,7 +282,6 @@
             this.CbxSexo.Name = "CbxSexo";
             this.CbxSexo.Size = new System.Drawing.Size(121, 25);
             this.CbxSexo.TabIndex = 17;
-            this.CbxSexo.SelectedIndexChanged += new System.EventHandler(this.CbxSexo_SelectedIndexChanged);
             // 
             // LblSexo
             // 
@@ -305,7 +302,6 @@
             this.TxtApellido.Name = "TxtApellido";
             this.TxtApellido.Size = new System.Drawing.Size(143, 26);
             this.TxtApellido.TabIndex = 12;
-            this.TxtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtApellido_KeyPress);
             // 
             // TxtNombre
             // 
@@ -314,7 +310,6 @@
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(143, 26);
             this.TxtNombre.TabIndex = 11;
-            this.TxtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre_KeyPress);
             // 
             // LblCorreo
             // 
@@ -451,7 +446,7 @@
         private System.Windows.Forms.Label LblApellido;
         private System.Windows.Forms.Label LblNombre;
         private System.Windows.Forms.Label LblCedula;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.Button BtnCancelar;
         private DataSetVenta dataSetVenta1;
         private DataSetVenta dataSetVenta2;

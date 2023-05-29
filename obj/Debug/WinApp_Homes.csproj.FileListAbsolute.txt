@@ -38,3 +38,4 @@ C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.pdb
 C:\Users\ferch\Documents\fernando_deberes\espoch\5TO_SEMESTRE\Aplicaciones\Parcial2\WinAppTrabajoGrupal\obj\Debug\WinApp_Homes.FormBuscar.resources
 >>>>>>> 04761d3cbd41e647e14be8df18da48d8a7cc17ca
 C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.ModificarClienteForm.resources
+C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.VentaForm.resources
