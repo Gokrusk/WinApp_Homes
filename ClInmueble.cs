@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace WinApp_Homes
 {
-    internal class ClDepartamento
+    internal class ClInmueble
     {
-        public ClDepartamento()
+        public ClInmueble()
         {
             this.estadoVenta = "DISPONIBLE";
         }

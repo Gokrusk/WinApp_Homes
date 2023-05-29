@@ -68,15 +68,16 @@
             // 
             // BtnLogin
             // 
-            this.BtnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(169)))), ((int)(((byte)(143)))));
+            this.BtnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(198)))), ((int)(((byte)(73)))));
             this.BtnLogin.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BtnLogin.FlatAppearance.BorderSize = 0;
             this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLogin.ForeColor = System.Drawing.Color.White;
-            this.BtnLogin.Location = new System.Drawing.Point(408, 294);
+            this.BtnLogin.ForeColor = System.Drawing.Color.Black;
+            this.BtnLogin.Location = new System.Drawing.Point(430, 294);
             this.BtnLogin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnLogin.Name = "BtnLogin";
-            this.BtnLogin.Size = new System.Drawing.Size(212, 51);
+            this.BtnLogin.Size = new System.Drawing.Size(155, 43);
             this.BtnLogin.TabIndex = 2;
             this.BtnLogin.Text = "INICIAR SESIÓN";
             this.BtnLogin.UseVisualStyleBackColor = false;
