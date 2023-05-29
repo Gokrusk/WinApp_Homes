@@ -10,8 +10,10 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WinApp_Homes {
-    public partial class RegistroClientForm: Form {
+namespace WinApp_Homes
+{
+    public partial class RegistroClientForm : Form
+    {
         ClCliente ClienteObj = new ClCliente();
 
         private bool ModCed;
@@ -21,13 +23,16 @@ namespace WinApp_Homes {
 
         string PathFile = Application.StartupPath + "\\assets\\files\\";
 
-        public RegistroClientForm() {
+        public RegistroClientForm()
+        {
             InitializeComponent();
             TxtCedula.Focus();
         }
 
-        private bool ValidarCedula(string Cedula) {
-            if (Cedula.Length != 10 || !int.TryParse(Cedula, out int n)) {
+        private bool ValidarCedula(string Cedula)
+        {
+            if (Cedula.Length != 10 || !int.TryParse(Cedula, out int n))
+            {
                 LblInfoCed.Text = "Número inválido";
                 TxtCedula.Clear();
                 return false;
@@ -35,7 +40,8 @@ namespace WinApp_Homes {
 
             int sum = 0;
 
-            for (int i = 0; i < 9; i++) {
+            for (int i = 0; i < 9; i++)
+            {
                 int digit = int.Parse(Cedula[i].ToString());
                 int coef = (i % 2 == 0) ? 2 : 1;
                 int product = digit * coef;
@@ -48,14 +54,16 @@ namespace WinApp_Homes {
             if (lastDigit == calculatedDigit)
                 return true;
 
-            else {
+            else
+            {
                 LblInfoCed.Text = "Cédula inválida";
                 TxtCedula.Clear();
                 return false;
             }
         }
 
-        public static bool ValidarCorreo(string Correo) {
+        public static bool ValidarCorreo(string Correo)
+        {
             string formato = @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$";
 
             Match match = Regex.Match(Correo, formato);
@@ -63,112 +71,153 @@ namespace WinApp_Homes {
             return match.Success;
         }
 
-        public void MensajeError() {
+        public void MensajeError()
+        {
             MessageBox.Show("Por favor ingrese de nuevo el dato.", "Ha ocurrido un error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void TxtCedula_TextChanged(object sender, EventArgs e) {
+        private void TxtCedula_TextChanged(object sender, EventArgs e)
+        {
             ModCed = false;
         }
 
-        private void TxtCedula_KeyPress(object sender, KeyPressEventArgs e) {
-            if (e.KeyChar == (char)Keys.Enter) {
-                try {
+        private void TxtCedula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                try
+                {
                     LblInfoCed.Text = "";
                     ClienteObj.Cedula = TxtCedula.Text;
 
-                    if(ClienteObj.Cedula != "") {
-                        if (ValidarCedula(ClienteObj.Cedula)) {
+                    if (ClienteObj.Cedula != "")
+                    {
+                        if (ValidarCedula(ClienteObj.Cedula))
+                        {
                             TxtCedula.ForeColor = Color.Black;
                             TxtNombre.Enabled = true;
                             ModCed = true;
                             TxtNombre.Focus();
                         }
 
-                    }else {
+                    }
+                    else
+                    {
                         LblInfoCed.Text = "Dato requerido";
                     }
 
-                } catch (Exception) {
+                }
+                catch (Exception)
+                {
                     MensajeError();
                     TxtCedula.Clear();
                 }
             }
         }
 
-        private void TxtNombre_TextChanged(object sender, EventArgs e) {
+        private void TxtNombre_TextChanged(object sender, EventArgs e)
+        {
             ModNom = false;
         }
 
-        private void TxtNombre_KeyPress(object sender, KeyPressEventArgs e) {
-            if (e.KeyChar == (char)Keys.Enter) {
-                try {
+        private void TxtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                try
+                {
                     LblInfoNom.Text = "";
                     ClienteObj.Nombre = TxtNombre.Text;
 
-                    if (ClienteObj.Nombre.Contains(" ")) {
+                    if (ClienteObj.Nombre.Contains(" "))
+                    {
                         LblInfoNom.Text = "No se permite espacios";
                         TxtNombre.Clear();
 
-                    } else if (ClienteObj.Nombre == "") {
+                    }
+                    else if (ClienteObj.Nombre == "")
+                    {
                         LblInfoNom.Text = "Dato requerido";
 
-                    } else if (ClienteObj.Nombre.Any(char.IsDigit) || Regex.IsMatch(ClienteObj.Nombre, @"[^\w]")) {
+                    }
+                    else if (ClienteObj.Nombre.Any(char.IsDigit) || Regex.IsMatch(ClienteObj.Nombre, @"[^\w]"))
+                    {
                         LblInfoNom.Text = "Ingrese únicamente el nombre";
                         TxtNombre.Clear();
 
-                    } else {
+                    }
+                    else
+                    {
                         TxtNombre.ForeColor = Color.Black;
                         TxtApellido.Enabled = true;
                         ModNom = true;
                         TxtApellido.Focus();
                     }
 
-                } catch (Exception) {
+                }
+                catch (Exception)
+                {
                     MensajeError();
                     TxtNombre.Clear();
                 }
             }
         }
 
-        private void TxtApellido_TextChanged(object sender, EventArgs e) {
+        private void TxtApellido_TextChanged(object sender, EventArgs e)
+        {
             ModApe = false;
         }
 
-        private void TxtApellido_KeyPress(object sender, KeyPressEventArgs e) {
-            if (e.KeyChar == (char)Keys.Enter) {
-                try {
+        private void TxtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                try
+                {
                     LblInfoApe.Text = "";
                     ClienteObj.Apellido = TxtApellido.Text;
 
-                    if (ClienteObj.Apellido.Contains(" ")) {
+                    if (ClienteObj.Apellido.Contains(" "))
+                    {
                         LblInfoApe.Text = "No se permite espacios";
                         TxtApellido.Clear();
 
-                    } else if (ClienteObj.Apellido == "") {
+                    }
+                    else if (ClienteObj.Apellido == "")
+                    {
                         LblInfoApe.Text = "Dato requerido";
 
-                    } else if (ClienteObj.Apellido.Any(char.IsDigit) || Regex.IsMatch(ClienteObj.Apellido, @"[^\w]")) {
+                    }
+                    else if (ClienteObj.Apellido.Any(char.IsDigit) || Regex.IsMatch(ClienteObj.Apellido, @"[^\w]"))
+                    {
                         LblInfoApe.Text = "Ingrese únicamente el apellido";
                         TxtApellido.Clear();
 
-                    } else {
+                    }
+                    else
+                    {
                         TxtApellido.ForeColor = Color.Black;
                         CbxSexo.Enabled = true;
                         ModApe = true;
                     }
 
-                } catch (Exception) {
+                }
+                catch (Exception)
+                {
                     MensajeError();
                     TxtApellido.Clear();
                 }
             }
         }
 
-        private void CbxSexo_SelectedIndexChanged(object sender, EventArgs e) {
-            if(CbxSexo.SelectedIndex == 0) {
+        private void CbxSexo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CbxSexo.SelectedIndex == 0)
+            {
                 ClienteObj.Sexo = 'M';
-            }else {
+            }
+            else
+            {
                 ClienteObj.Sexo = 'F';
             }
 
@@ -176,7 +225,8 @@ namespace WinApp_Homes {
             DtpFecha.Enabled = true;
         }
 
-        private void DtpFecha_ValueChanged(object sender, EventArgs e) {
+        private void DtpFecha_ValueChanged(object sender, EventArgs e)
+        {
             DtpFecha.MaxDate = DateTime.Today.AddYears(-18);
             DtpFecha.MinDate = DateTime.Today.AddYears(-100);
 
@@ -184,43 +234,56 @@ namespace WinApp_Homes {
             CbxCiudad.Enabled = true;
         }
 
-        private void CbxCiudad_SelectedIndexChanged(object sender, EventArgs e) {
+        private void CbxCiudad_SelectedIndexChanged(object sender, EventArgs e)
+        {
             ClienteObj.Ciudad = CbxCiudad.SelectedItem.ToString();
 
             TxtCorreo.Enabled = true;
             TxtCorreo.Focus();
         }
 
-        private void TxtCorreo_TextChanged(object sender, EventArgs e) {
+        private void TxtCorreo_TextChanged(object sender, EventArgs e)
+        {
             ModCor = false;
         }
 
-        private void TxtCorreo_KeyPress(object sender, KeyPressEventArgs e) {
-            if (e.KeyChar == (char)Keys.Enter) {
-                try {
+        private void TxtCorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                try
+                {
                     LblInfoCorr.Text = "";
                     ClienteObj.CorreoElec = TxtCorreo.Text;
 
-                    if (ValidarCorreo(ClienteObj.CorreoElec)) {
+                    if (ValidarCorreo(ClienteObj.CorreoElec))
+                    {
                         TxtCorreo.ForeColor = Color.Black;
                         BtnGuardar.Enabled = true;
                         BtnGuardar.Focus();
                         ModCor = true;
-                    } else {
+                    }
+                    else
+                    {
                         LblInfoCorr.Text = "Correo invalido";
                         TxtCorreo.Clear();
                     }
 
-                } catch (Exception) {
+                }
+                catch (Exception)
+                {
                     MensajeError();
                     TxtCorreo.Clear();
                 }
             }
         }
 
-        private void BtnGuardar_Click(object sender, EventArgs e) {
-            try {
-                if (ModCed && ModNom && ModApe && ModCor) {
+        private void BtnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ModCed && ModNom && ModApe && ModCor)
+                {
                     dataSetVenta1.Clear();
                     dataSetVenta1.Tables["TblCliente"].ReadXml(PathFile + "clientes.xml");
                     object[] dataClient = new object[7];
@@ -238,32 +301,40 @@ namespace WinApp_Homes {
 
                     MessageBox.Show("Cliente registrado correctamente.", "Registro guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                } else {
+                }
+                else
+                {
                     MessageBox.Show("Por favor asegúrese de dar Enter al modificar un dato para su respectiva validación.", "Dato no validado", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    if (!ModCed) {
+                    if (!ModCed)
+                    {
                         TxtCedula.ForeColor = Color.Red;
                     }
 
-                    if (!ModNom) {
+                    if (!ModNom)
+                    {
                         TxtNombre.ForeColor = Color.Red;
                     }
 
-                    if (!ModApe) {
+                    if (!ModApe)
+                    {
                         TxtApellido.ForeColor = Color.Red;
                     }
 
-                    if (!ModCor) {
+                    if (!ModCor)
+                    {
                         TxtCorreo.ForeColor = Color.Red;
                     }
                 }
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
 
-        private void BtnCancelar_Click(object sender, EventArgs e) {
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

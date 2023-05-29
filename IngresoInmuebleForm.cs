@@ -112,7 +112,7 @@ namespace WinApp_Homes
         {
             dataSetVenta1.Clear();
             InmuebleObj.descripcion = TxtDesc.Text;
-            InmuebleObj.ubicacion = TxtUbi.Text;
+            InmuebleObj.ubicacion = CbxUbi.SelectedItem.ToString();
 
             dataSetVenta1.Tables["TblInmueble"].ReadXml(PathFile + "inmuebles.xml");
             object[] dataInmu = new object[7];
@@ -182,7 +182,7 @@ namespace WinApp_Homes
                     if (precio > 0)
                     {
                         InmuebleObj.precio = precio;
-                        TxtUbi.Focus();
+                        CbxUbi.Focus();
                     }
                     else
                     {
