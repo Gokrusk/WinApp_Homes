@@ -16,7 +16,7 @@ namespace WinApp_Homes
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ModificarClienteForm());
+            Application.Run(new LoginForm());
         }
     }
 }

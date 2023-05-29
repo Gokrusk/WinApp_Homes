@@ -58,5 +58,15 @@ namespace WinApp_Homes
             VentaForm obj = new VentaForm();
             obj.ShowDialog();
         }
+
+        private void btnModificarCli_Click(object sender, EventArgs e) {
+            ModificarClienteForm ModificarCliObj = new ModificarClienteForm();
+            ModificarCliObj.ShowDialog();
+        }
+
+        private void BtnReportes_Click(object sender, EventArgs e) {
+            ReportesForm ReportesObj = new ReportesForm();
+            ReportesObj.ShowDialog();
+        }
     }
 }
