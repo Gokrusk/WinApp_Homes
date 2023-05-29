@@ -40,9 +40,9 @@ namespace WinApp_Homes {
         
         private global::System.Data.DataRelation relationFK_TblInmueble_TblVenta;
         
-        private global::System.Data.DataRelation relationFK_TblCliente_TblVenta;
-        
         private global::System.Data.DataRelation relationFK_TblInmueble_TblFoto;
+        
+        private global::System.Data.DataRelation relationFK_TblCliente_TblVenta;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -324,8 +324,8 @@ namespace WinApp_Homes {
             }
             this.relationFK_TblInmueble_TblDisponible = this.Relations["FK_TblInmueble_TblDisponible"];
             this.relationFK_TblInmueble_TblVenta = this.Relations["FK_TblInmueble_TblVenta"];
-            this.relationFK_TblCliente_TblVenta = this.Relations["FK_TblCliente_TblVenta"];
             this.relationFK_TblInmueble_TblFoto = this.Relations["FK_TblInmueble_TblFoto"];
+            this.relationFK_TblCliente_TblVenta = this.Relations["FK_TblCliente_TblVenta"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -334,7 +334,7 @@ namespace WinApp_Homes {
             this.DataSetName = "DataSetVenta";
             this.Prefix = "";
             this.Namespace = "http://tempuri.org/DataSetVenta.xsd";
-            this.EnforceConstraints = true;
+            this.EnforceConstraints = false;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableTblFoto = new TblFotoDataTable();
             base.Tables.Add(this.tableTblFoto);
@@ -356,14 +356,14 @@ namespace WinApp_Homes {
                         this.tableTblInmueble.CodigoColumn}, new global::System.Data.DataColumn[] {
                         this.tableTblVenta.CodigoInmuebleColumn}, false);
             this.Relations.Add(this.relationFK_TblInmueble_TblVenta);
-            this.relationFK_TblCliente_TblVenta = new global::System.Data.DataRelation("FK_TblCliente_TblVenta", new global::System.Data.DataColumn[] {
-                        this.tableTblCliente.CedulaColumn}, new global::System.Data.DataColumn[] {
-                        this.tableTblVenta.CedulaColumn}, false);
-            this.Relations.Add(this.relationFK_TblCliente_TblVenta);
             this.relationFK_TblInmueble_TblFoto = new global::System.Data.DataRelation("FK_TblInmueble_TblFoto", new global::System.Data.DataColumn[] {
                         this.tableTblInmueble.CodigoColumn}, new global::System.Data.DataColumn[] {
                         this.tableTblFoto.CodigoInmuebleColumn}, false);
             this.Relations.Add(this.relationFK_TblInmueble_TblFoto);
+            this.relationFK_TblCliente_TblVenta = new global::System.Data.DataRelation("FK_TblCliente_TblVenta", new global::System.Data.DataColumn[] {
+                        this.tableTblCliente.CedulaColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTblVenta.CedulaColumn}, false);
+            this.Relations.Add(this.relationFK_TblCliente_TblVenta);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -903,6 +903,13 @@ namespace WinApp_Homes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public TblClienteRow FindByCedula(string Cedula) {
+                return ((TblClienteRow)(this.Rows.Find(new object[] {
+                            Cedula})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 TblClienteDataTable cln = ((TblClienteDataTable)(base.Clone()));
                 cln.InitVars();
@@ -945,7 +952,8 @@ namespace WinApp_Homes {
                 this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmail);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnCedula}, false));
+                                this.columnCedula}, true));
+                this.columnCedula.AllowDBNull = false;
                 this.columnCedula.Unique = true;
             }
             
@@ -1237,6 +1245,13 @@ namespace WinApp_Homes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public TblInmuebleRow FindByCodigo(string Codigo) {
+                return ((TblInmuebleRow)(this.Rows.Find(new object[] {
+                            Codigo})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 TblInmuebleDataTable cln = ((TblInmuebleDataTable)(base.Clone()));
                 cln.InitVars();
@@ -1279,7 +1294,8 @@ namespace WinApp_Homes {
                 this.columnNombreInmueble = new global::System.Data.DataColumn("NombreInmueble", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNombreInmueble);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnCodigo}, false));
+                                this.columnCodigo}, true));
+                this.columnCodigo.AllowDBNull = false;
                 this.columnCodigo.Unique = true;
             }
             
@@ -1797,6 +1813,14 @@ namespace WinApp_Homes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public TblVentaRow FindByCodigoInmuebleCedula(string CodigoInmueble, string Cedula) {
+                return ((TblVentaRow)(this.Rows.Find(new object[] {
+                            CodigoInmueble,
+                            Cedula})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 TblVentaDataTable cln = ((TblVentaDataTable)(base.Clone()));
                 cln.InitVars();
@@ -1826,6 +1850,11 @@ namespace WinApp_Homes {
                 base.Columns.Add(this.columnMensualidad);
                 this.columnCedula = new global::System.Data.DataColumn("Cedula", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCedula);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnCodigoInmueble,
+                                this.columnCedula}, true));
+                this.columnCodigoInmueble.AllowDBNull = false;
+                this.columnCedula.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2313,12 +2342,7 @@ namespace WinApp_Homes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Cedula {
                 get {
-                    try {
-                        return ((string)(this[this.tableTblCliente.CedulaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cedula\' in table \'TblCliente\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableTblCliente.CedulaColumn]));
                 }
                 set {
                     this[this.tableTblCliente.CedulaColumn] = value;
@@ -2423,18 +2447,6 @@ namespace WinApp_Homes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsCedulaNull() {
-                return this.IsNull(this.tableTblCliente.CedulaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetCedulaNull() {
-                this[this.tableTblCliente.CedulaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsNombreNull() {
                 return this.IsNull(this.tableTblCliente.NombreColumn);
             }
@@ -2535,12 +2547,7 @@ namespace WinApp_Homes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Codigo {
                 get {
-                    try {
-                        return ((string)(this[this.tableTblInmueble.CodigoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Codigo\' in table \'TblInmueble\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableTblInmueble.CodigoColumn]));
                 }
                 set {
                     this[this.tableTblInmueble.CodigoColumn] = value;
@@ -2641,18 +2648,6 @@ namespace WinApp_Homes {
                 set {
                     this[this.tableTblInmueble.NombreInmuebleColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsCodigoNull() {
-                return this.IsNull(this.tableTblInmueble.CodigoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetCodigoNull() {
-                this[this.tableTblInmueble.CodigoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2861,12 +2856,7 @@ namespace WinApp_Homes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string CodigoInmueble {
                 get {
-                    try {
-                        return ((string)(this[this.tableTblVenta.CodigoInmuebleColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CodigoInmueble\' in table \'TblVenta\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableTblVenta.CodigoInmuebleColumn]));
                 }
                 set {
                     this[this.tableTblVenta.CodigoInmuebleColumn] = value;
@@ -2893,12 +2883,7 @@ namespace WinApp_Homes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Cedula {
                 get {
-                    try {
-                        return ((string)(this[this.tableTblVenta.CedulaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cedula\' in table \'TblVenta\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableTblVenta.CedulaColumn]));
                 }
                 set {
                     this[this.tableTblVenta.CedulaColumn] = value;
@@ -2929,18 +2914,6 @@ namespace WinApp_Homes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsCodigoInmuebleNull() {
-                return this.IsNull(this.tableTblVenta.CodigoInmuebleColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetCodigoInmuebleNull() {
-                this[this.tableTblVenta.CodigoInmuebleColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsMensualidadNull() {
                 return this.IsNull(this.tableTblVenta.MensualidadColumn);
             }
@@ -2949,18 +2922,6 @@ namespace WinApp_Homes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetMensualidadNull() {
                 this[this.tableTblVenta.MensualidadColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsCedulaNull() {
-                return this.IsNull(this.tableTblVenta.CedulaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetCedulaNull() {
-                this[this.tableTblVenta.CedulaColumn] = global::System.Convert.DBNull;
             }
         }
         

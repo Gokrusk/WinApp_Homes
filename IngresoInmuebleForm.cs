@@ -85,7 +85,7 @@ namespace WinApp_Homes
         private int ContarTipos()
         {
             XmlDocument documento = new XmlDocument();
-            documento.Load(PathFile + "departamentos.xml");
+            documento.Load(PathFile + "inmuebles.xml");
 
             // Obtener los elementos TblInmueble
             XmlNodeList elementosTblInmueble = documento.GetElementsByTagName("TblInmueble");
@@ -122,7 +122,7 @@ namespace WinApp_Homes
             dataInmu[6] = InmuebleObj.nombre;
 
             dataSetVenta1.TblInmueble.Rows.Add(dataInmu);
-            dataSetVenta1.Tables["TblInmueble"].WriteXml(PathFile + "departamentos.xml");
+            dataSetVenta1.Tables["TblInmueble"].WriteXml(PathFile + "inmuebles.xml");
         }
 
         private void GuardarImagenesXML()
