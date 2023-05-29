@@ -66,11 +66,19 @@
             // 
             // button4
             // 
+<<<<<<< HEAD
             this.button4.Location = new System.Drawing.Point(436, 274);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(151, 57);
             this.button4.TabIndex = 3;
             this.button4.Text = "Ayuda";
+=======
+            this.button4.Location = new System.Drawing.Point(252, 253);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(151, 57);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Modificar Inmueble";
+>>>>>>> da584d72ebe0c6e9061a144fae95d524f76dce15
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 

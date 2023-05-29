@@ -38,7 +38,12 @@ namespace WinApp_Homes
 
         private void button4_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             System.Diagnostics.Process.Start(PathFile + "\\help.html");
+=======
+            IngresoInmuebleForm obj = new IngresoInmuebleForm();
+            obj.ShowDialog();
+>>>>>>> da584d72ebe0c6e9061a144fae95d524f76dce15
         }
     }
 }
