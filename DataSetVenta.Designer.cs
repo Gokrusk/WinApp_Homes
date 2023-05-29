@@ -1507,14 +1507,6 @@ namespace WinApp_Homes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TblVentaRow FindByCodigoInmuebleCedula(string CodigoInmueble, string Cedula) {
-                return ((TblVentaRow)(this.Rows.Find(new object[] {
-                            CodigoInmueble,
-                            Cedula})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 TblVentaDataTable cln = ((TblVentaDataTable)(base.Clone()));
                 cln.InitVars();
@@ -1544,9 +1536,6 @@ namespace WinApp_Homes {
                 base.Columns.Add(this.columnMensualidad);
                 this.columnCedula = new global::System.Data.DataColumn("Cedula", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCedula);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnCodigoInmueble,
-                                this.columnCedula}, true));
                 this.columnCodigoInmueble.AllowDBNull = false;
                 this.columnCedula.AllowDBNull = false;
             }

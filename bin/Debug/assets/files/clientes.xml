@@ -1,51 +1,6 @@
 <?xml version="1.0" standalone="yes"?>
 <DataSetVenta xmlns="http://tempuri.org/DataSetVenta.xsd">
   <TblCliente>
-<<<<<<< HEAD
-    <Cedula>0503959447</Cedula>
-    <Nombre>Kevin</Nombre>
-    <Apellido>Tapia</Apellido>
-    <Sexo>M</Sexo>
-    <Ciudad>Latacunga</Ciudad>
-    <FechaNacimiento>28/5/2005 0:00:00</FechaNacimiento>
-    <Email>dad@gmail.com</Email>
-  </TblCliente>
-  <TblCliente>
-    <Cedula>0503959447</Cedula>
-    <Nombre>Kevik</Nombre>
-    <Apellido>Tapia</Apellido>
-    <Sexo>M</Sexo>
-    <Ciudad>Latacunga</Ciudad>
-    <FechaNacimiento>28/5/2005 0:00:00</FechaNacimiento>
-    <Email>dad@gmail.com</Email>
-  </TblCliente>
-  <TblCliente>
-    <Cedula>0503959447</Cedula>
-    <Nombre>Kevik</Nombre>
-    <Apellido>Tapia</Apellido>
-    <Sexo>M</Sexo>
-    <Ciudad>Latacunga</Ciudad>
-    <FechaNacimiento>28/5/2005 0:00:00</FechaNacimiento>
-    <Email>dad@gmail.com</Email>
-  </TblCliente>
-  <TblCliente>
-    <Cedula>0503959447</Cedula>
-    <Nombre>Kevin</Nombre>
-    <Apellido>Tapia</Apellido>
-    <Sexo>M</Sexo>
-    <Ciudad>Latacunga</Ciudad>
-    <FechaNacimiento>28/5/2005 0:00:00</FechaNacimiento>
-    <Email>dad@gmail.com</Email>
-=======
-    <Cedula>0604401919</Cedula>
-    <Nombre>Fernando</Nombre>
-    <Apellido>novillo</Apellido>
-    <Sexo>F</Sexo>
-    <Ciudad>La Libertad</Ciudad>
-    <FechaNacimiento>28/5/2005 00:00:00</FechaNacimiento>
-    <Email>fdasfads@mgial.com</Email>
-  </TblCliente>
-  <TblCliente>
     <Cedula>0604401919</Cedula>
     <Nombre>Fernando</Nombre>
     <Apellido>novillo</Apellido>
@@ -62,6 +17,5 @@
     <Ciudad>Quito</Ciudad>
     <FechaNacimiento>15/9/2004 00:00:00</FechaNacimiento>
     <Email>fdasfads@mgial.ec</Email>
->>>>>>> 04761d3cbd41e647e14be8df18da48d8a7cc17ca
   </TblCliente>
 </DataSetVenta>

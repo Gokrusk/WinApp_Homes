@@ -52,5 +52,11 @@ namespace WinApp_Homes
         {
             System.Diagnostics.Process.Start(PathFile + "\\help.html");
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            VentaForm obj = new VentaForm();
+            obj.ShowDialog();
+        }
     }
 }
