@@ -5,7 +5,7 @@
     <Tipo>DEPARTAMENTO</Tipo>
     <Precio>5463</Precio>
     <Descripcion>eso eso es o eso</Descripcion>
-    <Ubicacion>pora hi apor alla</Ubicacion>
+    <Ubicacion>Cayambe</Ubicacion>
     <EstadoVenta>DISPONIBLE</EstadoVenta>
     <NombreInmueble>JORDI</NombreInmueble>
   </TblInmueble>
@@ -14,7 +14,7 @@
     <Tipo>OFICINA</Tipo>
     <Precio>4578845</Precio>
     <Descripcion>prueba pruebaprueba pruebaprueba pruebaprueba prueba</Descripcion>
-    <Ubicacion> prueba pruebaprueba pruebaprueba pruebaprueba prueba</Ubicacion>
+    <Ubicacion>Nueva Loja (Lago Agrio)</Ubicacion>
     <EstadoVenta>DISPONIBLE</EstadoVenta>
     <NombreInmueble>ALEJANDRo</NombreInmueble>
   </TblInmueble>

@@ -35,7 +35,7 @@ namespace WinApp_Homes
             TxtDesc.Visible = false;
             TxtNombre.Visible = false;
             TxtPrecio.Visible = false;
-            TxtUbi.Visible = false;
+            CbxUbi.Visible = false;
             TxtPrecio.Visible = false;
         }
 
@@ -44,7 +44,7 @@ namespace WinApp_Homes
             vector[0]["Tipo"] = CbxTipo.SelectedItem.ToString();
             vector[0]["Precio"] = TxtPrecio.Text;
             vector[0]["Descripcion"] = TxtDesc.Text;
-            vector[0]["Ubicacion"] = TxtUbi.Text;
+            vector[0]["Ubicacion"] = CbxUbi.SelectedItem.ToString();
             vector[0]["NombreInmueble"] = TxtNombre.Text;
 
             vector[0].AcceptChanges();
@@ -69,12 +69,11 @@ namespace WinApp_Homes
                 dataSetVenta1.ReadXml(PathFile + "inmuebles.xml");
                 vector = dataSetVenta1.TblInmueble.Select(etiqueta + textBox1.Text + "'"); //+...+ para concatenar y no hay que poner espacios
 
-
                 LblCodigo.Text = vector[0]["Codigo"].ToString();
                 CbxTipo.Text = vector[0]["Tipo"].ToString();
                 TxtPrecio.Text = vector[0]["Precio"].ToString();
                 TxtDesc.Text = vector[0]["Descripcion"].ToString();
-                TxtUbi.Text = vector[0]["Ubicacion"].ToString();
+                CbxUbi.Text = vector[0]["Ubicacion"].ToString();
                 TxtNombre.Text = vector[0]["NombreInmueble"].ToString();
 
                 LblCodigo.Visible = true;
@@ -87,7 +86,7 @@ namespace WinApp_Homes
                 TxtDesc.Visible = true;
                 TxtNombre.Visible = true;
                 TxtPrecio.Visible = true;
-                TxtUbi.Visible = true;
+                CbxUbi.Visible = true;
                 TxtPrecio.Visible = true;
             }
         }

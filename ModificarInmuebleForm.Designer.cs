@@ -39,7 +39,6 @@
             this.LblNombre = new System.Windows.Forms.Label();
             this.TxtDesc = new System.Windows.Forms.TextBox();
             this.LblDesc = new System.Windows.Forms.Label();
-            this.TxtUbi = new System.Windows.Forms.TextBox();
             this.LblUbi = new System.Windows.Forms.Label();
             this.TxtPrecio = new System.Windows.Forms.TextBox();
             this.LblPrecio = new System.Windows.Forms.Label();
@@ -48,6 +47,7 @@
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.dataSetVenta1 = new WinApp_Homes.DataSetVenta();
+            this.CbxUbi = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetVenta1)).BeginInit();
             this.SuspendLayout();
@@ -58,9 +58,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(888, 78);
+            this.panel1.Size = new System.Drawing.Size(1184, 96);
             this.panel1.TabIndex = 2;
             // 
             // label1
@@ -68,8 +68,8 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(206, 23);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(275, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(462, 32);
             this.label1.TabIndex = 2;
@@ -78,9 +78,10 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(608, 107);
+            this.textBox1.Location = new System.Drawing.Point(811, 132);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 26);
+            this.textBox1.Size = new System.Drawing.Size(207, 26);
             this.textBox1.TabIndex = 6;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
@@ -89,7 +90,8 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(33, 110);
+            this.label2.Location = new System.Drawing.Point(44, 135);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(171, 18);
             this.label2.TabIndex = 5;
@@ -102,9 +104,10 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Codigo",
             "NombreInmueble"});
-            this.comboBox1.Location = new System.Drawing.Point(234, 107);
+            this.comboBox1.Location = new System.Drawing.Point(312, 132);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(218, 26);
+            this.comboBox1.Size = new System.Drawing.Size(289, 26);
             this.comboBox1.TabIndex = 4;
             // 
             // label3
@@ -112,7 +115,8 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label3.Location = new System.Drawing.Point(63, 172);
+            this.label3.Location = new System.Drawing.Point(83, 190);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 18);
             this.label3.TabIndex = 7;
@@ -123,16 +127,18 @@
             this.LblCodigo.AutoSize = true;
             this.LblCodigo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCodigo.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.LblCodigo.Location = new System.Drawing.Point(219, 172);
+            this.LblCodigo.Location = new System.Drawing.Point(291, 190);
+            this.LblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblCodigo.Name = "LblCodigo";
             this.LblCodigo.Size = new System.Drawing.Size(0, 18);
             this.LblCodigo.TabIndex = 9;
             // 
             // TxtNombre
             // 
-            this.TxtNombre.Location = new System.Drawing.Point(185, 220);
+            this.TxtNombre.Location = new System.Drawing.Point(246, 249);
+            this.TxtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(199, 20);
+            this.TxtNombre.Size = new System.Drawing.Size(264, 22);
             this.TxtNombre.TabIndex = 34;
             // 
             // LblNombre
@@ -140,8 +146,8 @@
             this.LblNombre.AutoSize = true;
             this.LblNombre.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNombre.ForeColor = System.Drawing.Color.White;
-            this.LblNombre.Location = new System.Drawing.Point(62, 223);
-            this.LblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblNombre.Location = new System.Drawing.Point(82, 252);
+            this.LblNombre.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LblNombre.Name = "LblNombre";
             this.LblNombre.Size = new System.Drawing.Size(76, 18);
             this.LblNombre.TabIndex = 33;
@@ -149,10 +155,11 @@
             // 
             // TxtDesc
             // 
-            this.TxtDesc.Location = new System.Drawing.Point(596, 310);
+            this.TxtDesc.Location = new System.Drawing.Point(790, 230);
+            this.TxtDesc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtDesc.Multiline = true;
             this.TxtDesc.Name = "TxtDesc";
-            this.TxtDesc.Size = new System.Drawing.Size(198, 78);
+            this.TxtDesc.Size = new System.Drawing.Size(263, 151);
             this.TxtDesc.TabIndex = 32;
             // 
             // LblDesc
@@ -160,28 +167,20 @@
             this.LblDesc.AutoSize = true;
             this.LblDesc.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblDesc.ForeColor = System.Drawing.Color.White;
-            this.LblDesc.Location = new System.Drawing.Point(472, 313);
-            this.LblDesc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblDesc.Location = new System.Drawing.Point(624, 233);
+            this.LblDesc.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LblDesc.Name = "LblDesc";
             this.LblDesc.Size = new System.Drawing.Size(109, 18);
             this.LblDesc.TabIndex = 31;
             this.LblDesc.Text = "Descripción:";
-            // 
-            // TxtUbi
-            // 
-            this.TxtUbi.Location = new System.Drawing.Point(596, 172);
-            this.TxtUbi.Multiline = true;
-            this.TxtUbi.Name = "TxtUbi";
-            this.TxtUbi.Size = new System.Drawing.Size(198, 78);
-            this.TxtUbi.TabIndex = 30;
             // 
             // LblUbi
             // 
             this.LblUbi.AutoSize = true;
             this.LblUbi.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUbi.ForeColor = System.Drawing.Color.White;
-            this.LblUbi.Location = new System.Drawing.Point(472, 175);
-            this.LblUbi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblUbi.Location = new System.Drawing.Point(83, 419);
+            this.LblUbi.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LblUbi.Name = "LblUbi";
             this.LblUbi.Size = new System.Drawing.Size(93, 18);
             this.LblUbi.TabIndex = 29;
@@ -189,9 +188,10 @@
             // 
             // TxtPrecio
             // 
-            this.TxtPrecio.Location = new System.Drawing.Point(186, 310);
+            this.TxtPrecio.Location = new System.Drawing.Point(247, 360);
+            this.TxtPrecio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtPrecio.Name = "TxtPrecio";
-            this.TxtPrecio.Size = new System.Drawing.Size(199, 20);
+            this.TxtPrecio.Size = new System.Drawing.Size(264, 22);
             this.TxtPrecio.TabIndex = 28;
             // 
             // LblPrecio
@@ -199,8 +199,8 @@
             this.LblPrecio.AutoSize = true;
             this.LblPrecio.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPrecio.ForeColor = System.Drawing.Color.White;
-            this.LblPrecio.Location = new System.Drawing.Point(63, 313);
-            this.LblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblPrecio.Location = new System.Drawing.Point(83, 363);
+            this.LblPrecio.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LblPrecio.Name = "LblPrecio";
             this.LblPrecio.Size = new System.Drawing.Size(60, 18);
             this.LblPrecio.TabIndex = 27;
@@ -214,9 +214,10 @@
             "CASA",
             "DEPARTAMENTO",
             "OFICINA"});
-            this.CbxTipo.Location = new System.Drawing.Point(186, 264);
+            this.CbxTipo.Location = new System.Drawing.Point(247, 303);
+            this.CbxTipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CbxTipo.Name = "CbxTipo";
-            this.CbxTipo.Size = new System.Drawing.Size(198, 21);
+            this.CbxTipo.Size = new System.Drawing.Size(263, 24);
             this.CbxTipo.TabIndex = 26;
             // 
             // LblTipo
@@ -224,8 +225,8 @@
             this.LblTipo.AutoSize = true;
             this.LblTipo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTipo.ForeColor = System.Drawing.Color.White;
-            this.LblTipo.Location = new System.Drawing.Point(62, 267);
-            this.LblTipo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblTipo.Location = new System.Drawing.Point(82, 307);
+            this.LblTipo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LblTipo.Name = "LblTipo";
             this.LblTipo.Size = new System.Drawing.Size(42, 18);
             this.LblTipo.TabIndex = 35;
@@ -240,9 +241,10 @@
             this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGuardar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.BtnGuardar.Location = new System.Drawing.Point(272, 432);
+            this.BtnGuardar.Location = new System.Drawing.Point(363, 532);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(155, 43);
+            this.BtnGuardar.Size = new System.Drawing.Size(207, 53);
             this.BtnGuardar.TabIndex = 36;
             this.BtnGuardar.Text = "ACEPTAR";
             this.BtnGuardar.UseVisualStyleBackColor = false;
@@ -257,10 +259,10 @@
             this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEliminar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.ForeColor = System.Drawing.Color.White;
-            this.BtnEliminar.Location = new System.Drawing.Point(489, 432);
-            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.BtnEliminar.Location = new System.Drawing.Point(652, 532);
+            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(155, 43);
+            this.BtnEliminar.Size = new System.Drawing.Size(207, 53);
             this.BtnEliminar.TabIndex = 37;
             this.BtnEliminar.Text = "CANCELAR";
             this.BtnEliminar.UseVisualStyleBackColor = false;
@@ -272,12 +274,72 @@
             this.dataSetVenta1.EnforceConstraints = false;
             this.dataSetVenta1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // CbxUbi
+            // 
+            this.CbxUbi.FormattingEnabled = true;
+            this.CbxUbi.Items.AddRange(new object[] {
+            "Ambato",
+            "Atuntaqui",
+            "Azogues",
+            "Babahoyo",
+            "Balzar",
+            "Cayambe",
+            "Cuenca",
+            "Durán",
+            "El Carmen",
+            "Esmeraldas",
+            "Gualaceo",
+            "Guaranda",
+            "Guayaquil",
+            "Huaquillas",
+            "Ibarra",
+            "Jipijapa",
+            "La Libertad",
+            "La Troncal",
+            "Latacunga",
+            "Loja",
+            "Machachi",
+            "Machala",
+            "Manta",
+            "Milagro",
+            "Montalvo",
+            "Montecristi",
+            "Naranjal",
+            "Nueva Loja (Lago Agrio)",
+            "Otavalo",
+            "Pasaje",
+            "Pedro Carbo",
+            "Pelileo",
+            "Playas",
+            "Portoviejo",
+            "Puerto Francisco de Orellana",
+            "Puyo",
+            "Quevedo",
+            "Quito",
+            "Riobamba",
+            "Salinas",
+            "San Lorenzo",
+            "Santa Elena",
+            "Santa Rosa",
+            "Santo Domingo de los Colorados",
+            "Tena",
+            "Tulcán",
+            "Ventanas",
+            "Vinces",
+            "Yaguachi",
+            "Zamora"});
+            this.CbxUbi.Location = new System.Drawing.Point(247, 418);
+            this.CbxUbi.Name = "CbxUbi";
+            this.CbxUbi.Size = new System.Drawing.Size(264, 24);
+            this.CbxUbi.TabIndex = 38;
+            // 
             // ModificarInmuebleForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(58)))), ((int)(((byte)(63)))));
-            this.ClientSize = new System.Drawing.Size(884, 511);
+            this.ClientSize = new System.Drawing.Size(1179, 629);
+            this.Controls.Add(this.CbxUbi);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.LblTipo);
@@ -285,7 +347,6 @@
             this.Controls.Add(this.LblNombre);
             this.Controls.Add(this.TxtDesc);
             this.Controls.Add(this.LblDesc);
-            this.Controls.Add(this.TxtUbi);
             this.Controls.Add(this.LblUbi);
             this.Controls.Add(this.TxtPrecio);
             this.Controls.Add(this.LblPrecio);
@@ -296,6 +357,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ModificarInmuebleForm";
             this.Text = "Modificación de un Inmueble";
             this.Load += new System.EventHandler(this.ModificarInmuebleForm_Load);
@@ -320,7 +382,6 @@
         private System.Windows.Forms.Label LblNombre;
         private System.Windows.Forms.TextBox TxtDesc;
         private System.Windows.Forms.Label LblDesc;
-        private System.Windows.Forms.TextBox TxtUbi;
         private System.Windows.Forms.Label LblUbi;
         private System.Windows.Forms.TextBox TxtPrecio;
         private System.Windows.Forms.Label LblPrecio;
@@ -329,5 +390,6 @@
         private System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.Button BtnEliminar;
         private DataSetVenta dataSetVenta1;
+        private System.Windows.Forms.ComboBox CbxUbi;
     }
 }
