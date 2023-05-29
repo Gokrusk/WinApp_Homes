@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnLogin = new System.Windows.Forms.Button();
@@ -35,7 +36,11 @@
             this.TxtPsw = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.dataSetVenta1 = new WinApp_Homes.DataSetVenta();
+            this.tblUsuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetVenta1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblUsuariosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,7 +69,7 @@
             // BtnLogin
             // 
             this.BtnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(169)))), ((int)(((byte)(143)))));
-            this.BtnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(169)))), ((int)(((byte)(143)))));
+            this.BtnLogin.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLogin.ForeColor = System.Drawing.Color.White;
@@ -75,6 +80,7 @@
             this.BtnLogin.TabIndex = 2;
             this.BtnLogin.Text = "INICIAR SESIÓN";
             this.BtnLogin.UseVisualStyleBackColor = false;
+            this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // TxtUser
             // 
@@ -83,6 +89,7 @@
             this.TxtUser.Name = "TxtUser";
             this.TxtUser.Size = new System.Drawing.Size(212, 26);
             this.TxtUser.TabIndex = 3;
+            this.TxtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtUser_KeyPress);
             // 
             // TxtPsw
             // 
@@ -92,6 +99,7 @@
             this.TxtPsw.PasswordChar = '*';
             this.TxtPsw.Size = new System.Drawing.Size(212, 26);
             this.TxtPsw.TabIndex = 4;
+            this.TxtPsw.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPsw_KeyPress);
             // 
             // label2
             // 
@@ -100,9 +108,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(251, 198);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 22);
+            this.label2.Size = new System.Drawing.Size(70, 22);
             this.label2.TabIndex = 5;
-            this.label2.Text = "USUARIO";
+            this.label2.Text = "EMAIL";
             // 
             // label3
             // 
@@ -114,6 +122,16 @@
             this.label3.Size = new System.Drawing.Size(147, 22);
             this.label3.TabIndex = 6;
             this.label3.Text = "CONTRASEÑA";
+            // 
+            // dataSetVenta1
+            // 
+            this.dataSetVenta1.DataSetName = "DataSetVenta";
+            this.dataSetVenta1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblUsuariosBindingSource
+            // 
+            this.tblUsuariosBindingSource.DataMember = "TblUsuarios";
+            this.tblUsuariosBindingSource.DataSource = this.dataSetVenta1;
             // 
             // LoginForm
             // 
@@ -133,6 +151,8 @@
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetVenta1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblUsuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,5 +167,7 @@
         private System.Windows.Forms.TextBox TxtPsw;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private DataSetVenta dataSetVenta1;
+        private System.Windows.Forms.BindingSource tblUsuariosBindingSource;
     }
 }

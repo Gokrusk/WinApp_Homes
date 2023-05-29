@@ -8,9 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WinApp_Homes {
-    public partial class RegistroClientes : Form {
-        public RegistroClientes() {
+namespace WinApp_Homes
+{
+    public partial class IngresarDepartamentoForm : Form
+    {
+        public IngresarDepartamentoForm()
+        {
             InitializeComponent();
         }
     }
