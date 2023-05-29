@@ -21,61 +21,72 @@ namespace WinApp_Homes
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Bienvenido a nuestra aplicación!", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show("Bienvenido a nuestra aplicación!", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            dataSetVenta1.ReadXml(PathFile + "\\admin.xml");
-            DataRow[] data;
-            data = dataSetVenta1.TblUsuarios.Select("usuario='" + TxtUser.Text + "'");
-            if (data.Length > 0)
+            try
             {
-                if (data[0]["usuario"].ToString() == TxtUser.Text)
+
+                dataSetVenta1.ReadXml(PathFile + "\\admin.xml");
+                DataRow[] admin;
+                admin = dataSetVenta1.TblUsuarios.Select("usuario='" + TxtUser.Text + "'");
+
+                if (admin.Length > 0)
                 {
-                    if (TxtUser.Text == "administrar")
+                    if (admin[0]["usuario"].ToString() == TxtUser.Text)
                     {
-                        if (data[0]["pass"].ToString() == TxtPsw.Text)
+                        if (TxtUser.Text == "administrar")
                         {
-                            MenuFormAdmin obj = new MenuFormAdmin();
-                            obj.ShowDialog();
+                            if (admin[0]["pass"].ToString() == TxtPsw.Text)
+                            {
+                                MenuFormAdmin obj = new MenuFormAdmin();
+                                obj.ShowDialog();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Contraseña incorrecta", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                        else if (TxtUser.Text != "administrar")
+                        {
+                            dataSetVenta1.ReadXml(PathFile + "\\data.xml");
+                            DataRow[] data;
+                            data = dataSetVenta1.TblCliente.Select("Email='" + TxtUser.Text + "'");
+                            if (data[0]["Cedula"].ToString() == TxtPsw.Text)
+                            {
+                                MessageBox.Show("Abriendo menu de cliente", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Contraseña incorrecta", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("Contraseña incorrecta", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("No se encuentra el usuario", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
-                    // else if (TxtUser.Text == "nigell")
-                    // {
-                    //     if (data[0]["pass"].ToString() == TxtPsw.Text)
-                    //     {
-                    //         Form1 obj = new Form1();
-                    //         obj.ShowDialog();
-                    //     }
-                    //     else
-                    //     {
-                    //         MessageBox.Show("Contraseña incorrecta", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //     }
-                    // }
-                    // else
-                    // {
-                    //     MessageBox.Show("No se encuentra el usuario", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    // }
+                    else
+                    {
+                        MessageBox.Show("No se encuentra el usuario", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 else
                 {
                     MessageBox.Show("No se encuentra el usuario", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            else
+            catch
             {
-                MessageBox.Show("No se encuentra el usuario", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No se puede leer el archivo de registros", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void TxtUser_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == (char)Keys.Enter)
+            if (e.KeyChar == (char)Keys.Enter)
             {
                 TxtPsw.Focus();
             }
@@ -83,7 +94,7 @@ namespace WinApp_Homes
 
         private void TxtPsw_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == (char)Keys.Enter)
+            if (e.KeyChar == (char)Keys.Enter)
             {
                 BtnLogin_Click(sender, e);
             }
