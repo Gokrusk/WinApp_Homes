@@ -221,6 +221,7 @@ namespace WinApp_Homes {
         private void BtnGuardar_Click(object sender, EventArgs e) {
             try {
                 if (ModCed && ModNom && ModApe && ModCor) {
+                    dataSetVenta1.Clear();
                     dataSetVenta1.Tables["TblCliente"].ReadXml(PathFile + "clientes.xml");
                     object[] dataClient = new object[7];
 

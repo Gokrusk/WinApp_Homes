@@ -19,3 +19,19 @@ C:\Users\ferch\Documents\fernando_deberes\espoch\5TO_SEMESTRE\Aplicaciones\Parci
 C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.IngresoInmuebleForm.resources
 =======
 >>>>>>> ce9e3252c96ee073933d6f5724d03f63fbe7e38f
+C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\bin\Debug\WinApp_Homes.exe.config
+C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\bin\Debug\WinApp_Homes.exe
+C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\bin\Debug\WinApp_Homes.pdb
+C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.csproj.AssemblyReference.cache
+C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.csproj.SuggestedBindingRedirects.cache
+C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.Form1.resources
+C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.FormBuscar.resources
+C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.LoginForm.resources
+C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.MenuFormAdmin.resources
+C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.ModificarInmuebleForm.resources
+C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.Properties.Resources.resources
+C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.RegistroClientForm.resources
+C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.csproj.GenerateResource.cache
+C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.csproj.CoreCompileInputs.cache
+C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.exe
+C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.pdb
