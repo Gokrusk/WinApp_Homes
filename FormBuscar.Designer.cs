@@ -35,20 +35,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataSetVenta = new WinApp_Homes.DataSetVenta();
-            this.tblInmuebleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ubicacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreInmuebleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblInmuebleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetVenta = new WinApp_Homes.DataSetVenta();
             this.TxtItem = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblInmuebleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetVenta)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -75,10 +74,10 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
+            "Código",
             "Tipo ",
-            "Descripción ",
             "Ubicación ",
-            "Código "});
+            " "});
             this.comboBox1.Location = new System.Drawing.Point(216, 121);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 26);
@@ -117,7 +116,6 @@
             this.codigoDataGridViewTextBoxColumn,
             this.tipoDataGridViewTextBoxColumn,
             this.precioDataGridViewTextBoxColumn,
-            this.descripcionDataGridViewTextBoxColumn,
             this.ubicacionDataGridViewTextBoxColumn,
             this.estadoVentaDataGridViewTextBoxColumn,
             this.nombreInmuebleDataGridViewTextBoxColumn});
@@ -127,21 +125,10 @@
             this.dataGridView1.Size = new System.Drawing.Size(853, 255);
             this.dataGridView1.TabIndex = 6;
             // 
-            // dataSetVenta
-            // 
-            this.dataSetVenta.DataSetName = "DataSetVenta";
-            this.dataSetVenta.EnforceConstraints = false;
-            this.dataSetVenta.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblInmuebleBindingSource
-            // 
-            this.tblInmuebleBindingSource.DataMember = "TblInmueble";
-            this.tblInmuebleBindingSource.DataSource = this.dataSetVenta;
-            // 
             // codigoDataGridViewTextBoxColumn
             // 
             this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
-            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Código";
             this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
             // 
             // tipoDataGridViewTextBoxColumn
@@ -156,29 +143,34 @@
             this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
             this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
             // 
-            // descripcionDataGridViewTextBoxColumn
-            // 
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            // 
             // ubicacionDataGridViewTextBoxColumn
             // 
             this.ubicacionDataGridViewTextBoxColumn.DataPropertyName = "Ubicacion";
-            this.ubicacionDataGridViewTextBoxColumn.HeaderText = "Ubicacion";
+            this.ubicacionDataGridViewTextBoxColumn.HeaderText = "Ubicación";
             this.ubicacionDataGridViewTextBoxColumn.Name = "ubicacionDataGridViewTextBoxColumn";
             // 
             // estadoVentaDataGridViewTextBoxColumn
             // 
             this.estadoVentaDataGridViewTextBoxColumn.DataPropertyName = "EstadoVenta";
-            this.estadoVentaDataGridViewTextBoxColumn.HeaderText = "EstadoVenta";
+            this.estadoVentaDataGridViewTextBoxColumn.HeaderText = "Estado de Venta";
             this.estadoVentaDataGridViewTextBoxColumn.Name = "estadoVentaDataGridViewTextBoxColumn";
             // 
             // nombreInmuebleDataGridViewTextBoxColumn
             // 
             this.nombreInmuebleDataGridViewTextBoxColumn.DataPropertyName = "NombreInmueble";
-            this.nombreInmuebleDataGridViewTextBoxColumn.HeaderText = "NombreInmueble";
+            this.nombreInmuebleDataGridViewTextBoxColumn.HeaderText = "Nombre de Inmueble";
             this.nombreInmuebleDataGridViewTextBoxColumn.Name = "nombreInmuebleDataGridViewTextBoxColumn";
+            // 
+            // tblInmuebleBindingSource
+            // 
+            this.tblInmuebleBindingSource.DataMember = "TblInmueble";
+            this.tblInmuebleBindingSource.DataSource = this.dataSetVenta;
+            // 
+            // dataSetVenta
+            // 
+            this.dataSetVenta.DataSetName = "DataSetVenta";
+            this.dataSetVenta.EnforceConstraints = false;
+            this.dataSetVenta.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // TxtItem
             // 
@@ -186,6 +178,7 @@
             this.TxtItem.Name = "TxtItem";
             this.TxtItem.Size = new System.Drawing.Size(118, 26);
             this.TxtItem.TabIndex = 7;
+            this.TxtItem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtItem_KeyPress);
             // 
             // FormBuscar
             // 
@@ -208,8 +201,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetVenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblInmuebleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetVenta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,15 +216,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ubicacionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estadoVentaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreInmuebleDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource tblInmuebleBindingSource;
         private DataSetVenta dataSetVenta;
         private System.Windows.Forms.TextBox TxtItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ubicacionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estadoVentaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreInmuebleDataGridViewTextBoxColumn;
     }
 }
