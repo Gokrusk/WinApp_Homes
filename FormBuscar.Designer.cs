@@ -44,6 +44,7 @@
             this.tblInmuebleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetVenta = new WinApp_Homes.DataSetVenta();
             this.TxtItem = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblInmuebleBindingSource)).BeginInit();
@@ -78,7 +79,7 @@
             "Tipo ",
             "Ubicación ",
             " "});
-            this.comboBox1.Location = new System.Drawing.Point(216, 121);
+            this.comboBox1.Location = new System.Drawing.Point(195, 121);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 26);
             this.comboBox1.TabIndex = 1;
@@ -87,7 +88,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(37, 121);
+            this.label2.Location = new System.Drawing.Point(16, 129);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(173, 18);
             this.label2.TabIndex = 2;
@@ -99,7 +100,7 @@
             this.BtnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBuscar.ForeColor = System.Drawing.Color.White;
-            this.BtnBuscar.Location = new System.Drawing.Point(525, 112);
+            this.BtnBuscar.Location = new System.Drawing.Point(641, 112);
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Size = new System.Drawing.Size(155, 43);
             this.BtnBuscar.TabIndex = 5;
@@ -174,11 +175,21 @@
             // 
             // TxtItem
             // 
-            this.TxtItem.Location = new System.Drawing.Point(382, 121);
+            this.TxtItem.Location = new System.Drawing.Point(490, 121);
             this.TxtItem.Name = "TxtItem";
             this.TxtItem.Size = new System.Drawing.Size(118, 26);
             this.TxtItem.TabIndex = 7;
             this.TxtItem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtItem_KeyPress);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label3.Location = new System.Drawing.Point(350, 129);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(134, 18);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Palabra de filtro";
             // 
             // FormBuscar
             // 
@@ -186,6 +197,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(58)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(884, 511);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.TxtItem);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BtnBuscar);
@@ -225,5 +237,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ubicacionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoVentaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreInmuebleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label3;
     }
 }
