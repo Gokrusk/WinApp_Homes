@@ -1,6 +1,6 @@
 ﻿namespace WinApp_Homes
 {
-    partial class IngresoDepartamentoForm
+    partial class IngresoInmuebleForm
     {
         /// <summary>
         /// Required designer variable.

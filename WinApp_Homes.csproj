@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClDepartamento.cs" />
+    <Compile Include="ClInmueble.cs" />
     <Compile Include="DataSetVenta.cs">
       <DependentUpon>DataSetVenta.xsd</DependentUpon>
     </Compile>
@@ -61,11 +61,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="IngresoDepartamentoForm.cs">
+    <Compile Include="IngresoInmuebleForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IngresoDepartamentoForm.Designer.cs">
-      <DependentUpon>IngresoDepartamentoForm.cs</DependentUpon>
+    <Compile Include="IngresoInmuebleForm.Designer.cs">
+      <DependentUpon>IngresoInmuebleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -90,8 +90,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IngresoDepartamentoForm.resx">
-      <DependentUpon>IngresoDepartamentoForm.cs</DependentUpon>
+    <EmbeddedResource Include="IngresoInmuebleForm.resx">
+      <DependentUpon>IngresoInmuebleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

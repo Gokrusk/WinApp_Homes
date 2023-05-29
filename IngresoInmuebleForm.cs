@@ -8,19 +8,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace WinApp_Homes
 {
-    public partial class IngresoDepartamentoForm : Form
+    public partial class IngresoInmuebleForm : Form
     {
-        ClDepartamento DepartamentoObj = new ClDepartamento();
+        ClInmueble InmuebleObj = new ClInmueble();
 
         readonly string PathImage = Application.StartupPath + "\\assets\\images\\";
         readonly string PathFile = Application.StartupPath + "\\assets\\files\\";
 
         private List<string> rutasImagenes = new List<string>();
 
-        public IngresoDepartamentoForm()
+        public IngresoInmuebleForm()
         {
             InitializeComponent();
         }
@@ -37,7 +38,7 @@ namespace WinApp_Homes
             openFileDialog.Multiselect = true;
             openFileDialog.Filter = "Archivos de imagen (*.jpg, *.jpeg, *.png)|*.jpg;*.jpeg;*.png";
 
-            
+
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 foreach (string rutaArchivo in openFileDialog.FileNames)
@@ -52,7 +53,7 @@ namespace WinApp_Homes
                 string ruta = rutasImagenes.First();
                 PbxImagen.Image = Image.FromFile(ruta);
             }
-            catch(OutOfMemoryException)
+            catch (OutOfMemoryException)
             {
                 MessageBox.Show("No se pudieron procesar todas las imágenes, seleccione menos en cada carga", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -81,24 +82,44 @@ namespace WinApp_Homes
             }
         }
 
+        private int ContarTipos()
+        {
+            XmlDocument documento = new XmlDocument();
+            documento.Load(PathFile + "departamentos.xml");
+
+            // Obtener los elementos TblInmueble
+            XmlNodeList elementosTblInmueble = documento.GetElementsByTagName("TblInmueble");
+            int contador = 0;
+
+            // Contar los elementos TblInmueble del tipo deseado
+            foreach (XmlNode nodo in elementosTblInmueble)
+            {
+                // Obtener el nodo Tipo y comparar con el tipo deseado
+                XmlNode nodoTipo = nodo.SelectSingleNode("Tipo");
+                if (nodoTipo != null && nodoTipo.InnerText == InmuebleObj.tipo)
+                    contador++;
+            }
+
+            return contador;
+        }
         private void GuardarDatosXML()
         {
-            DepartamentoObj.descripcion = TxtDesc.Text;
+            InmuebleObj.descripcion = TxtDesc.Text;
 
-            DepartamentoObj.ubicacion = TxtUbi.Text;
+            InmuebleObj.ubicacion = TxtUbi.Text;
 
-            dataSetVenta1.Tables["TblInmueble"].ReadXml(PathFile + "departamentos.xml");
+            dataSetVenta1.Tables["TblInmueble"].ReadXml(PathFile + "inmuebles.xml");
             object[] dataInmu = new object[7];
 
-            DepartamentoObj.GenerarCodigo();
+            InmuebleObj.GenerarCodigo(ContarTipos());
 
-            dataInmu[0] = DepartamentoObj.codigo;
-            dataInmu[1] = DepartamentoObj.tipo;
-            dataInmu[2] = DepartamentoObj.precio;
-            dataInmu[3] = DepartamentoObj.descripcion;
-            dataInmu[4] = DepartamentoObj.ubicacion;
-            dataInmu[5] = DepartamentoObj.estadoVenta;
-            dataInmu[6] = DepartamentoObj.nombre;
+            dataInmu[0] = InmuebleObj.codigo;
+            dataInmu[1] = InmuebleObj.tipo;
+            dataInmu[2] = InmuebleObj.precio;
+            dataInmu[3] = InmuebleObj.descripcion;
+            dataInmu[4] = InmuebleObj.ubicacion;
+            dataInmu[5] = InmuebleObj.estadoVenta;
+            dataInmu[6] = InmuebleObj.nombre;
 
             dataSetVenta1.TblInmueble.Rows.Add(dataInmu);
             dataSetVenta1.Tables["TblInmueble"].WriteXml(PathFile + "departamentos.xml");
@@ -114,7 +135,7 @@ namespace WinApp_Homes
             {
                 string nombreArchivo = Path.GetFileName(rutaArchivo);
                 dataFoto[0] = nombreArchivo;
-                dataFoto[1] = DepartamentoObj.codigo;
+                dataFoto[1] = InmuebleObj.codigo;
 
                 dataSetVenta1.TblFoto.Rows.Add(dataFoto);
             }
@@ -132,14 +153,14 @@ namespace WinApp_Homes
             {
                 e.Handled = true;
 
-                DepartamentoObj.nombre = TxtNombre.Text;
+                InmuebleObj.nombre = TxtNombre.Text;
                 CbxTipo.Focus();
             }
         }
 
         private void CbxTipo_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            DepartamentoObj.tipo = CbxTipo.SelectedItem.ToString();
+            InmuebleObj.tipo = CbxTipo.SelectedItem.ToString();
         }
 
         private void TxtPrecio_KeyPress(object sender, KeyPressEventArgs e)
@@ -153,7 +174,7 @@ namespace WinApp_Homes
 
                     if (precio > 0)
                     {
-                        DepartamentoObj.precio = precio;
+                        InmuebleObj.precio = precio;
                         TxtUbi.Focus();
                     }
                     else
