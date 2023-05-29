@@ -16,7 +16,7 @@ namespace WinApp_Homes
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RegistroClientForm());
+            Application.Run(new IngresoInmuebleForm());
         }
     }
 }
