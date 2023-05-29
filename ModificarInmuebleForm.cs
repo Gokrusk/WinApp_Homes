@@ -13,24 +13,14 @@ namespace WinApp_Homes
     public partial class ModificarInmuebleForm : Form
     {
         string etiqueta;
+
+        System.Data.DataRow[] vector; //otra forma de declarar un vector
+
         readonly string PathFile = Application.StartupPath + "\\assets\\files\\";
+
         public ModificarInmuebleForm()
         {
             InitializeComponent();
-
-            dataSetVenta1.ReadXml(PathFile + "inmuebles.xml");
-
-            System.Data.DataRow[] vector, vecModificado; //otra forma de declarar un vector
-
-            vector = dataSetVenta1.TblInmueble.Select(etiqueta + txtCodigo.Text + "'"); //+...+ para concatenar y no hay que poner espacios
-            vecModificado = vecDatos;
-
-            LblCodigo.Text = vector[0]["Codigo"].ToString();
-            CbxTipo.SelectedText = vector[0]["Tipo"].ToString();
-            LblPrecio.Text = vector[0]["Preci"].ToString();
-            LblDesc.Text = vector[0]["Descripcion"].ToString();
-            LblUbi.Text = vector[0]["Ubicacion"].ToString();
-            LblNombre.Text = vector[0]["Nombre"].ToString();
         }
 
         private void ModificarInmuebleForm_Load(object sender, EventArgs e)
@@ -51,7 +41,15 @@ namespace WinApp_Homes
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
+            vector[0]["Tipo"] = CbxTipo.SelectedItem.ToString();
+            vector[0]["Precio"] = TxtPrecio.Text;
+            vector[0]["Descripcion"] = TxtDesc.Text;
+            vector[0]["Ubicacion"] = TxtUbi.Text;
+            vector[0]["NombreInmueble"] = TxtNombre.Text;
+
+            vector[0].AcceptChanges();
+            dataSetVenta1.WriteXml(PathFile + "inmuebles.xml");
+
             this.Close();
         }
 
@@ -66,7 +64,31 @@ namespace WinApp_Homes
             if(e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-                etiqueta = textBox1.Text + "='";
+                etiqueta = comboBox1.SelectedItem.ToString() + "='";
+
+                dataSetVenta1.ReadXml(PathFile + "inmuebles.xml");
+                vector = dataSetVenta1.TblInmueble.Select(etiqueta + textBox1.Text + "'"); //+...+ para concatenar y no hay que poner espacios
+
+
+                LblCodigo.Text = vector[0]["Codigo"].ToString();
+                CbxTipo.Text = vector[0]["Tipo"].ToString();
+                TxtPrecio.Text = vector[0]["Precio"].ToString();
+                TxtDesc.Text = vector[0]["Descripcion"].ToString();
+                TxtUbi.Text = vector[0]["Ubicacion"].ToString();
+                TxtNombre.Text = vector[0]["NombreInmueble"].ToString();
+
+                LblCodigo.Visible = true;
+                LblDesc.Visible = true;
+                LblNombre.Visible = true;
+                LblPrecio.Visible = true;
+                LblTipo.Visible = true;
+                LblUbi.Visible = true;
+                CbxTipo.Visible = true;
+                TxtDesc.Visible = true;
+                TxtNombre.Visible = true;
+                TxtPrecio.Visible = true;
+                TxtUbi.Visible = true;
+                TxtPrecio.Visible = true;
             }
         }
     }
