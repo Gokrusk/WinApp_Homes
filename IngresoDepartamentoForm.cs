@@ -15,8 +15,8 @@ namespace WinApp_Homes
     {
         ClDepartamento DepartamentoObj = new ClDepartamento();
 
-        string PathImage = Application.StartupPath + "\\assets\\images";
-        string PathFile = Application.StartupPath + "\\assets\\files\\";
+        readonly string PathImage = Application.StartupPath + "\\assets\\images\\";
+        readonly string PathFile = Application.StartupPath + "\\assets\\files\\";
 
         private List<string> rutasImagenes = new List<string>();
 
@@ -28,6 +28,7 @@ namespace WinApp_Homes
         private void IngresoDepartamentoForm_Load(object sender, EventArgs e)
         {
             TxtNombre.Focus();
+            CbxTipo.SelectedIndex = 0;
         }
 
         private void BtnCargar_Click(object sender, EventArgs e)
@@ -44,12 +45,33 @@ namespace WinApp_Homes
                     rutasImagenes.Add(rutaArchivo);
                     ListImagenes.Items.Add(Path.GetFileName(rutaArchivo));
                 }
-                //PbxImagen.Image = Image.FromFile(PathImage + "\\" + ListImagenes.Items[0]);
+            }
+
+            try
+            {
+                string ruta = rutasImagenes.First();
+                PbxImagen.Image = Image.FromFile(ruta);
+            }
+            catch(OutOfMemoryException)
+            {
+                MessageBox.Show("No se pudieron procesar todas las imágenes, seleccione menos en cada carga", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
+
+            GuardarImagenes();
+            GuardarDatosXML();
+            GuardarImagenesXML();
+
+            MessageBox.Show("Inmueble guardado correctamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void GuardarImagenes()
+        {
+            PbxImagen.Image = null;
+
             foreach (string rutaArchivo in rutasImagenes)
             {
                 string nombreArchivo = Path.GetFileName(rutaArchivo);
@@ -57,7 +79,10 @@ namespace WinApp_Homes
 
                 File.Copy(rutaArchivo, nuevaRutaCompleta, true);
             }
+        }
 
+        private void GuardarDatosXML()
+        {
             DepartamentoObj.descripcion = TxtDesc.Text;
 
             DepartamentoObj.ubicacion = TxtUbi.Text;
@@ -75,28 +100,30 @@ namespace WinApp_Homes
             dataInmu[5] = DepartamentoObj.estadoVenta;
             dataInmu[6] = DepartamentoObj.nombre;
 
-
             dataSetVenta1.TblInmueble.Rows.Add(dataInmu);
             dataSetVenta1.Tables["TblInmueble"].WriteXml(PathFile + "departamentos.xml");
+        }
 
+        private void GuardarImagenesXML()
+        {
             dataSetVenta1.Tables["TblFoto"].ReadXml(PathFile + "imagenes.xml");
+
             object[] dataFoto = new object[2];
+
             foreach (string rutaArchivo in rutasImagenes)
             {
                 string nombreArchivo = Path.GetFileName(rutaArchivo);
                 dataFoto[0] = nombreArchivo;
                 dataFoto[1] = DepartamentoObj.codigo;
 
-                dataSetVenta1.TblFoto.Rows.Add(dataFoto);   
+                dataSetVenta1.TblFoto.Rows.Add(dataFoto);
             }
             dataSetVenta1.Tables["TblFoto"].WriteXml(PathFile + "imagenes.xml");
-
-            MessageBox.Show("Inmueble guardado correctamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void ListImagenes_SelectedValueChanged(object sender, EventArgs e)
         {
-            PbxImagen.Image = Image.FromFile(PathImage + "\\" + ListImagenes.SelectedItem);
+            PbxImagen.Image = Image.FromFile(rutasImagenes[ListImagenes.SelectedIndex]);
         }
 
         private void TxtNombre_KeyPress(object sender, KeyPressEventArgs e)
@@ -104,11 +131,9 @@ namespace WinApp_Homes
             if(e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-                if (TxtNombre.Text.Length >= 5)
-                {
-                    DepartamentoObj.nombre = TxtNombre.Text;
-                    CbxTipo.Focus();
-                }
+
+                DepartamentoObj.nombre = TxtNombre.Text;
+                CbxTipo.Focus();
             }
         }
 
@@ -122,15 +147,44 @@ namespace WinApp_Homes
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-                float precio = float.Parse(TxtPrecio.Text);
-
-                if (precio > 0)
+                try
                 {
-                    DepartamentoObj.precio = precio;
-                    TxtUbi.Focus();
+                    float precio = float.Parse(TxtPrecio.Text);
+
+                    if (precio > 0)
+                    {
+                        DepartamentoObj.precio = precio;
+                        TxtUbi.Focus();
+                    }
+                    else
+                    {
+                        MessageBox.Show("El precio no puede ser 0 o negativo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        TxtPrecio.Clear();
+                    }
+                }
+                catch 
+                {
+                    MessageBox.Show("El precio del inmueble debe ser numérico", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    TxtPrecio.Clear();
                 }
             }
         }
 
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            string texto = "¿Está seguro de borrar las imágenes cargadas del inmueble?";
+
+            bool opcion = MessageBox.Show(texto, "ADVERTENCIA", MessageBoxButtons.YesNo) == DialogResult.Yes;
+
+            if (opcion)
+            {
+                ListImagenes.Items.Clear();
+                rutasImagenes.Clear();
+
+                PbxImagen.Image = null;
+
+                MessageBox.Show("Imágenes borradas correctamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

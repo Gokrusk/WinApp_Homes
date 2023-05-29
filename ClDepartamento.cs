@@ -15,7 +15,7 @@ namespace WinApp_Homes
 
         public void GenerarCodigo()
         {
-            this.codigo = this.tipo.Substring(0, 3) + '_' + this.nombre.Substring(0,4);
+            this.codigo = this.tipo.Substring(0, 3) + '_' + this.nombre.Substring(0,5);
         }
 
         public string codigo { get; set; }
