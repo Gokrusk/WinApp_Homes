@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace WinApp_Homes
 {
@@ -84,28 +85,33 @@ namespace WinApp_Homes
 
         private int ContarTipos()
         {
-            XmlDocument documento = new XmlDocument();
-            documento.Load(PathFile + "inmuebles.xml");
+            XmlDocument doc = new XmlDocument();
+            doc.Load(PathFile + "inmuebles.xml");
+            int con = 0;
 
-            // Obtener los elementos TblInmueble
-            XmlNodeList elementosTblInmueble = documento.GetElementsByTagName("TblInmueble");
-            int contador = 0;
-
-            // Contar los elementos TblInmueble del tipo deseado
-            foreach (XmlNode nodo in elementosTblInmueble)
+            foreach (XmlNode n1 in doc.DocumentElement.ChildNodes)
             {
-                // Obtener el nodo Tipo y comparar con el tipo deseado
-                XmlNode nodoTipo = nodo.SelectSingleNode("Tipo");
-                if (nodoTipo != null && nodoTipo.InnerText == InmuebleObj.tipo)
-                    contador++;
+                // Si tiene nodos, recorro sus hijos
+                if (n1.HasChildNodes)
+                {
+                    foreach (XmlNode n2 in n1.ChildNodes)
+                    {
+                        // Nodos hijos del coche
+                        foreach (XmlNode n3 in n2.ChildNodes)
+                        {
+                            if(n3.InnerText == InmuebleObj.tipo)
+                                con++;
+                        }
+                    }
+                }
             }
 
-            return contador;
+            return con;
         }
         private void GuardarDatosXML()
         {
+            dataSetVenta1.Clear();
             InmuebleObj.descripcion = TxtDesc.Text;
-
             InmuebleObj.ubicacion = TxtUbi.Text;
 
             dataSetVenta1.Tables["TblInmueble"].ReadXml(PathFile + "inmuebles.xml");

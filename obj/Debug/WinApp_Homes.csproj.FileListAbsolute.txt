@@ -14,3 +14,4 @@ C:\Users\ferch\Documents\fernando_deberes\espoch\5TO_SEMESTRE\Aplicaciones\Parci
 C:\Users\ferch\Documents\fernando_deberes\espoch\5TO_SEMESTRE\Aplicaciones\Parcial2\WinAppTrabajoGrupal\obj\Debug\WinApp_Homes.csproj.CoreCompileInputs.cache
 C:\Users\ferch\Documents\fernando_deberes\espoch\5TO_SEMESTRE\Aplicaciones\Parcial2\WinAppTrabajoGrupal\obj\Debug\WinApp_Homes.exe
 C:\Users\ferch\Documents\fernando_deberes\espoch\5TO_SEMESTRE\Aplicaciones\Parcial2\WinAppTrabajoGrupal\obj\Debug\WinApp_Homes.pdb
+C:\Users\ferch\Documents\fernando_deberes\espoch\5TO_SEMESTRE\Aplicaciones\Parcial2\WinAppTrabajoGrupal\obj\Debug\WinApp_Homes.FormBuscar.resources
