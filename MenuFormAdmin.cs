@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace WinApp_Homes
 {
     public partial class MenuFormAdmin : Form
-    {
+    {	
         public MenuFormAdmin()
         {
             InitializeComponent();
@@ -36,9 +36,14 @@ namespace WinApp_Homes
         }
 
         private void button4_Click(object sender, EventArgs e)
-        {
-            IngresoInmuebleForm obj = new IngresoInmuebleForm();
+        { 
+            ModificarInmuebleForm obj = new ModificarInmuebleForm();
             obj.ShowDialog();
+        }
+
+        private void MenuFormAdmin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

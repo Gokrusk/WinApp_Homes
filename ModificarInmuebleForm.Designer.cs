@@ -47,7 +47,9 @@
             this.LblTipo = new System.Windows.Forms.Label();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
+            this.dataSetVenta1 = new WinApp_Homes.DataSetVenta();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetVenta1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -263,6 +265,12 @@
             this.BtnEliminar.UseVisualStyleBackColor = false;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
+            // dataSetVenta1
+            // 
+            this.dataSetVenta1.DataSetName = "DataSetVenta";
+            this.dataSetVenta1.EnforceConstraints = false;
+            this.dataSetVenta1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // ModificarInmuebleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -292,6 +300,7 @@
             this.Load += new System.EventHandler(this.ModificarInmuebleForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetVenta1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,5 +327,6 @@
         private System.Windows.Forms.Label LblTipo;
         private System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.Button BtnEliminar;
+        private DataSetVenta dataSetVenta1;
     }
 }

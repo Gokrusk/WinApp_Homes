@@ -15,7 +15,6 @@ C:\Users\ferch\Documents\fernando_deberes\espoch\5TO_SEMESTRE\Aplicaciones\Parci
 C:\Users\ferch\Documents\fernando_deberes\espoch\5TO_SEMESTRE\Aplicaciones\Parcial2\WinAppTrabajoGrupal\obj\Debug\WinApp_Homes.exe
 C:\Users\ferch\Documents\fernando_deberes\espoch\5TO_SEMESTRE\Aplicaciones\Parcial2\WinAppTrabajoGrupal\obj\Debug\WinApp_Homes.pdb
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> ecb7c6526a67bf14c3b5aee9e7915c95b4af1522
 C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.IngresoInmuebleForm.resources
 =======
@@ -36,6 +35,5 @@ C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.csproj.Ge
 C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.csproj.CoreCompileInputs.cache
 C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.exe
 C:\Users\HP\Downloads\Aplicaciones\WinApp_Homes\obj\Debug\WinApp_Homes.pdb
-=======
 C:\Users\ferch\Documents\fernando_deberes\espoch\5TO_SEMESTRE\Aplicaciones\Parcial2\WinAppTrabajoGrupal\obj\Debug\WinApp_Homes.FormBuscar.resources
 >>>>>>> 04761d3cbd41e647e14be8df18da48d8a7cc17ca

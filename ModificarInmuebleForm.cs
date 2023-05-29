@@ -12,9 +12,17 @@ namespace WinApp_Homes
 {
     public partial class ModificarInmuebleForm : Form
     {
-        public ModificarInmuebleForm(System.Data.DataRow[] vector)
+        readonly string PathFile = Application.StartupPath + "\\assets\\files\\";
+        public ModificarInmuebleForm()
         {
             InitializeComponent();
+
+            dataSetVenta1.ReadXml(PathFile + "inmuebles.xml");
+
+            System.Data.DataRow[] vector, vecModificado; //otra forma de declarar un vector
+
+            vector = dataSetVenta1.TblInmueble.Select(etiqueta + txtCodigo.Text + "'"); //+...+ para concatenar y no hay que poner espacios
+            vecModificado = vecDatos;
 
             LblCodigo.Text = vector[0]["Codigo"].ToString();
             CbxTipo.SelectedText = vector[0]["Tipo"].ToString();
@@ -22,11 +30,6 @@ namespace WinApp_Homes
             LblDesc.Text = vector[0]["Descripcion"].ToString();
             LblUbi.Text = vector[0]["Ubicacion"].ToString();
             LblNombre.Text = vector[0]["Nombre"].ToString();
-
-            labelCod.Text = vector[0]["Codigo"].ToString();
-            textBoxNombre.Text = vector[0]["Nombre"].ToString();
-            textBoxApellido.Text = vector[0]["Apellido"].ToString();
-            numericUpDown1.Value = Convert.ToDecimal(vector[0]["Edad"]);
         }
 
         private void ModificarInmuebleForm_Load(object sender, EventArgs e)
