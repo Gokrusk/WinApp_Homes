@@ -1,6 +1,7 @@
 <?xml version="1.0" standalone="yes"?>
 <DataSetVenta xmlns="http://tempuri.org/DataSetVenta.xsd">
   <TblCliente>
+<<<<<<< HEAD
     <Cedula>0503959447</Cedula>
     <Nombre>Kevin</Nombre>
     <Apellido>Tapia</Apellido>
@@ -8,5 +9,23 @@
     <Ciudad>Latacunga</Ciudad>
     <FechaNacimiento>30/12/2001 0:00:00</FechaNacimiento>
     <Email>kevintapia@gmail.com</Email>
+=======
+    <Cedula>0604401919</Cedula>
+    <Nombre>Fernando</Nombre>
+    <Apellido>novillo</Apellido>
+    <Sexo>F</Sexo>
+    <Ciudad>La Libertad</Ciudad>
+    <FechaNacimiento>28/5/2005 00:00:00</FechaNacimiento>
+    <Email>fdasfads@mgial.com</Email>
+  </TblCliente>
+  <TblCliente>
+    <Cedula>1707216527</Cedula>
+    <Nombre>Fernando</Nombre>
+    <Apellido>novillo</Apellido>
+    <Sexo>M</Sexo>
+    <Ciudad>Quito</Ciudad>
+    <FechaNacimiento>15/9/2004 00:00:00</FechaNacimiento>
+    <Email>fdasfads@mgial.ec</Email>
+>>>>>>> 2534ac65cfe5918125904820992b3af0a495d523
   </TblCliente>
 </DataSetVenta>

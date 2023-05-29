@@ -47,14 +47,6 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TblDisponible" msprop:Generator_RowEvHandlerName="TblDisponibleRowChangeEventHandler" msprop:Generator_RowDeletedName="TblDisponibleRowDeleted" msprop:Generator_RowDeletingName="TblDisponibleRowDeleting" msprop:Generator_RowEvArgName="TblDisponibleRowChangeEvent" msprop:Generator_TablePropName="TblDisponible" msprop:Generator_RowChangedName="TblDisponibleRowChanged" msprop:Generator_UserTableName="TblDisponible" msprop:Generator_RowChangingName="TblDisponibleRowChanging" msprop:Generator_RowClassName="TblDisponibleRow" msprop:Generator_TableClassName="TblDisponibleDataTable" msprop:Generator_TableVarName="tableTblDisponible">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="CodigoInmueble" msprop:Generator_ColumnPropNameInTable="CodigoInmuebleColumn" msprop:Generator_ColumnPropNameInRow="CodigoInmueble" msprop:Generator_UserColumnName="CodigoInmueble" msprop:Generator_ColumnVarNameInTable="columnCodigoInmueble" type="xs:string" minOccurs="0" />
-              <xs:element name="Mensualidad" msprop:Generator_ColumnPropNameInTable="MensualidadColumn" msprop:Generator_ColumnPropNameInRow="Mensualidad" msprop:Generator_UserColumnName="Mensualidad" msprop:Generator_ColumnVarNameInTable="columnMensualidad" type="xs:string" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
         <xs:element name="TblVenta" msprop:Generator_RowEvHandlerName="TblVentaRowChangeEventHandler" msprop:Generator_RowDeletedName="TblVentaRowDeleted" msprop:Generator_RowDeletingName="TblVentaRowDeleting" msprop:Generator_RowEvArgName="TblVentaRowChangeEvent" msprop:Generator_TablePropName="TblVenta" msprop:Generator_RowChangedName="TblVentaRowChanged" msprop:Generator_UserTableName="TblVenta" msprop:Generator_RowChangingName="TblVentaRowChanging" msprop:Generator_RowClassName="TblVentaRow" msprop:Generator_TableClassName="TblVentaDataTable" msprop:Generator_TableVarName="tableTblVenta">
           <xs:complexType>
             <xs:sequence>
@@ -82,15 +74,9 @@
       <xs:selector xpath=".//mstns:TblInmueble" />
       <xs:field xpath="mstns:Codigo" />
     </xs:unique>
-    <xs:unique name="TblVenta_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:TblVenta" />
-      <xs:field xpath="mstns:CodigoInmueble" />
-      <xs:field xpath="mstns:Cedula" />
-    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_TblInmueble_TblDisponible" msdata:parent="TblInmueble" msdata:child="TblDisponible" msdata:parentkey="Codigo" msdata:childkey="CodigoInmueble" msprop:Generator_UserParentTable="TblInmueble" msprop:Generator_UserChildTable="TblDisponible" msprop:Generator_RelationVarName="relationFK_TblInmueble_TblDisponible" msprop:Generator_ChildPropName="GetTblDisponibleRows" msprop:Generator_ParentPropName="TblInmuebleRow" msprop:Generator_UserRelationName="FK_TblInmueble_TblDisponible" />
       <msdata:Relationship name="FK_TblInmueble_TblVenta" msdata:parent="TblInmueble" msdata:child="TblVenta" msdata:parentkey="Codigo" msdata:childkey="CodigoInmueble" msprop:Generator_UserParentTable="TblInmueble" msprop:Generator_UserChildTable="TblVenta" msprop:Generator_RelationVarName="relationFK_TblInmueble_TblVenta" msprop:Generator_ChildPropName="GetTblVentaRows" msprop:Generator_ParentPropName="TblInmuebleRow" msprop:Generator_UserRelationName="FK_TblInmueble_TblVenta" />
       <msdata:Relationship name="FK_TblInmueble_TblFoto" msdata:parent="TblInmueble" msdata:child="TblFoto" msdata:parentkey="Codigo" msdata:childkey="CodigoInmueble" msprop:Generator_UserParentTable="TblInmueble" msprop:Generator_UserChildTable="TblFoto" msprop:Generator_RelationVarName="relationFK_TblInmueble_TblFoto" msprop:Generator_ChildPropName="GetTblFotoRows" msprop:Generator_ParentPropName="TblInmuebleRow" msprop:Generator_UserRelationName="FK_TblInmueble_TblFoto" />
       <msdata:Relationship name="FK_TblCliente_TblVenta" msdata:parent="TblCliente" msdata:child="TblVenta" msdata:parentkey="Cedula" msdata:childkey="Cedula" msprop:Generator_UserParentTable="TblCliente" msprop:Generator_UserChildTable="TblVenta" msprop:Generator_RelationVarName="relationFK_TblCliente_TblVenta" msprop:Generator_ChildPropName="GetTblVentaRows" msprop:Generator_ParentPropName="TblClienteRow" msprop:Generator_UserRelationName="FK_TblCliente_TblVenta" />

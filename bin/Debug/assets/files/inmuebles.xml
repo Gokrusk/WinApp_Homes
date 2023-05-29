@@ -1,3 +1,21 @@
 <?xml version="1.0" standalone="yes"?>
 <DataSetVenta xmlns="http://tempuri.org/DataSetVenta.xsd">
+  <TblInmueble>
+    <Codigo>CASA_0</Codigo>
+    <Tipo>DEPARTAMENTO</Tipo>
+    <Precio>5463</Precio>
+    <Descripcion>eso eso es o eso</Descripcion>
+    <Ubicacion>Cayambe</Ubicacion>
+    <EstadoVenta>DISPONIBLE</EstadoVenta>
+    <NombreInmueble>JORDI</NombreInmueble>
+  </TblInmueble>
+  <TblInmueble>
+    <Codigo>CASA_1</Codigo>
+    <Tipo>OFICINA</Tipo>
+    <Precio>4578845</Precio>
+    <Descripcion>prueba pruebaprueba pruebaprueba pruebaprueba prueba</Descripcion>
+    <Ubicacion>Nueva Loja (Lago Agrio)</Ubicacion>
+    <EstadoVenta>DISPONIBLE</EstadoVenta>
+    <NombreInmueble>ALEJANDRo</NombreInmueble>
+  </TblInmueble>
 </DataSetVenta>
