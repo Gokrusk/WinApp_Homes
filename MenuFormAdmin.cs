@@ -34,5 +34,11 @@ namespace WinApp_Homes
             FormBuscar obj = new FormBuscar();
             obj.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            IngresoInmuebleForm obj = new IngresoInmuebleForm();
+            obj.ShowDialog();
+        }
     }
 }

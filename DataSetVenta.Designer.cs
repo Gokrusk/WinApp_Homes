@@ -30,13 +30,9 @@ namespace WinApp_Homes {
         
         private TblInmuebleDataTable tableTblInmueble;
         
-        private TblDisponibleDataTable tableTblDisponible;
-        
         private TblVentaDataTable tableTblVenta;
         
         private TblUsuariosDataTable tableTblUsuarios;
-        
-        private global::System.Data.DataRelation relationFK_TblInmueble_TblDisponible;
         
         private global::System.Data.DataRelation relationFK_TblInmueble_TblVenta;
         
@@ -80,9 +76,6 @@ namespace WinApp_Homes {
                 }
                 if ((ds.Tables["TblInmueble"] != null)) {
                     base.Tables.Add(new TblInmuebleDataTable(ds.Tables["TblInmueble"]));
-                }
-                if ((ds.Tables["TblDisponible"] != null)) {
-                    base.Tables.Add(new TblDisponibleDataTable(ds.Tables["TblDisponible"]));
                 }
                 if ((ds.Tables["TblVenta"] != null)) {
                     base.Tables.Add(new TblVentaDataTable(ds.Tables["TblVenta"]));
@@ -135,16 +128,6 @@ namespace WinApp_Homes {
         public TblInmuebleDataTable TblInmueble {
             get {
                 return this.tableTblInmueble;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public TblDisponibleDataTable TblDisponible {
-            get {
-                return this.tableTblDisponible;
             }
         }
         
@@ -244,9 +227,6 @@ namespace WinApp_Homes {
                 if ((ds.Tables["TblInmueble"] != null)) {
                     base.Tables.Add(new TblInmuebleDataTable(ds.Tables["TblInmueble"]));
                 }
-                if ((ds.Tables["TblDisponible"] != null)) {
-                    base.Tables.Add(new TblDisponibleDataTable(ds.Tables["TblDisponible"]));
-                }
                 if ((ds.Tables["TblVenta"] != null)) {
                     base.Tables.Add(new TblVentaDataTable(ds.Tables["TblVenta"]));
                 }
@@ -304,12 +284,6 @@ namespace WinApp_Homes {
                     this.tableTblInmueble.InitVars();
                 }
             }
-            this.tableTblDisponible = ((TblDisponibleDataTable)(base.Tables["TblDisponible"]));
-            if ((initTable == true)) {
-                if ((this.tableTblDisponible != null)) {
-                    this.tableTblDisponible.InitVars();
-                }
-            }
             this.tableTblVenta = ((TblVentaDataTable)(base.Tables["TblVenta"]));
             if ((initTable == true)) {
                 if ((this.tableTblVenta != null)) {
@@ -322,7 +296,6 @@ namespace WinApp_Homes {
                     this.tableTblUsuarios.InitVars();
                 }
             }
-            this.relationFK_TblInmueble_TblDisponible = this.Relations["FK_TblInmueble_TblDisponible"];
             this.relationFK_TblInmueble_TblVenta = this.Relations["FK_TblInmueble_TblVenta"];
             this.relationFK_TblInmueble_TblFoto = this.Relations["FK_TblInmueble_TblFoto"];
             this.relationFK_TblCliente_TblVenta = this.Relations["FK_TblCliente_TblVenta"];
@@ -342,16 +315,10 @@ namespace WinApp_Homes {
             base.Tables.Add(this.tableTblCliente);
             this.tableTblInmueble = new TblInmuebleDataTable();
             base.Tables.Add(this.tableTblInmueble);
-            this.tableTblDisponible = new TblDisponibleDataTable();
-            base.Tables.Add(this.tableTblDisponible);
             this.tableTblVenta = new TblVentaDataTable();
             base.Tables.Add(this.tableTblVenta);
             this.tableTblUsuarios = new TblUsuariosDataTable();
             base.Tables.Add(this.tableTblUsuarios);
-            this.relationFK_TblInmueble_TblDisponible = new global::System.Data.DataRelation("FK_TblInmueble_TblDisponible", new global::System.Data.DataColumn[] {
-                        this.tableTblInmueble.CodigoColumn}, new global::System.Data.DataColumn[] {
-                        this.tableTblDisponible.CodigoInmuebleColumn}, false);
-            this.Relations.Add(this.relationFK_TblInmueble_TblDisponible);
             this.relationFK_TblInmueble_TblVenta = new global::System.Data.DataRelation("FK_TblInmueble_TblVenta", new global::System.Data.DataColumn[] {
                         this.tableTblInmueble.CodigoColumn}, new global::System.Data.DataColumn[] {
                         this.tableTblVenta.CodigoInmuebleColumn}, false);
@@ -381,12 +348,6 @@ namespace WinApp_Homes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializeTblInmueble() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeTblDisponible() {
             return false;
         }
         
@@ -465,9 +426,6 @@ namespace WinApp_Homes {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void TblInmuebleRowChangeEventHandler(object sender, TblInmuebleRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void TblDisponibleRowChangeEventHandler(object sender, TblDisponibleRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void TblVentaRowChangeEventHandler(object sender, TblVentaRowChangeEvent e);
@@ -1383,270 +1341,6 @@ namespace WinApp_Homes {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "TblInmuebleDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class TblDisponibleDataTable : global::System.Data.TypedTableBase<TblDisponibleRow> {
-            
-            private global::System.Data.DataColumn columnCodigoInmueble;
-            
-            private global::System.Data.DataColumn columnMensualidad;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TblDisponibleDataTable() {
-                this.TableName = "TblDisponible";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal TblDisponibleDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected TblDisponibleDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn CodigoInmuebleColumn {
-                get {
-                    return this.columnCodigoInmueble;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn MensualidadColumn {
-                get {
-                    return this.columnMensualidad;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TblDisponibleRow this[int index] {
-                get {
-                    return ((TblDisponibleRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event TblDisponibleRowChangeEventHandler TblDisponibleRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event TblDisponibleRowChangeEventHandler TblDisponibleRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event TblDisponibleRowChangeEventHandler TblDisponibleRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event TblDisponibleRowChangeEventHandler TblDisponibleRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddTblDisponibleRow(TblDisponibleRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TblDisponibleRow AddTblDisponibleRow(TblInmuebleRow parentTblInmuebleRowByFK_TblInmueble_TblDisponible, string Mensualidad) {
-                TblDisponibleRow rowTblDisponibleRow = ((TblDisponibleRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null,
-                        Mensualidad};
-                if ((parentTblInmuebleRowByFK_TblInmueble_TblDisponible != null)) {
-                    columnValuesArray[0] = parentTblInmuebleRowByFK_TblInmueble_TblDisponible[0];
-                }
-                rowTblDisponibleRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTblDisponibleRow);
-                return rowTblDisponibleRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                TblDisponibleDataTable cln = ((TblDisponibleDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new TblDisponibleDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal void InitVars() {
-                this.columnCodigoInmueble = base.Columns["CodigoInmueble"];
-                this.columnMensualidad = base.Columns["Mensualidad"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            private void InitClass() {
-                this.columnCodigoInmueble = new global::System.Data.DataColumn("CodigoInmueble", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCodigoInmueble);
-                this.columnMensualidad = new global::System.Data.DataColumn("Mensualidad", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMensualidad);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TblDisponibleRow NewTblDisponibleRow() {
-                return ((TblDisponibleRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new TblDisponibleRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(TblDisponibleRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.TblDisponibleRowChanged != null)) {
-                    this.TblDisponibleRowChanged(this, new TblDisponibleRowChangeEvent(((TblDisponibleRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.TblDisponibleRowChanging != null)) {
-                    this.TblDisponibleRowChanging(this, new TblDisponibleRowChangeEvent(((TblDisponibleRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.TblDisponibleRowDeleted != null)) {
-                    this.TblDisponibleRowDeleted(this, new TblDisponibleRowChangeEvent(((TblDisponibleRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.TblDisponibleRowDeleting != null)) {
-                    this.TblDisponibleRowDeleting(this, new TblDisponibleRowChangeEvent(((TblDisponibleRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveTblDisponibleRow(TblDisponibleRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSetVenta ds = new DataSetVenta();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "TblDisponibleDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2724,17 +2418,6 @@ namespace WinApp_Homes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TblDisponibleRow[] GetTblDisponibleRows() {
-                if ((this.Table.ChildRelations["FK_TblInmueble_TblDisponible"] == null)) {
-                    return new TblDisponibleRow[0];
-                }
-                else {
-                    return ((TblDisponibleRow[])(base.GetChildRows(this.Table.ChildRelations["FK_TblInmueble_TblDisponible"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public TblVentaRow[] GetTblVentaRows() {
                 if ((this.Table.ChildRelations["FK_TblInmueble_TblVenta"] == null)) {
                     return new TblVentaRow[0];
@@ -2753,88 +2436,6 @@ namespace WinApp_Homes {
                 else {
                     return ((TblFotoRow[])(base.GetChildRows(this.Table.ChildRelations["FK_TblInmueble_TblFoto"])));
                 }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class TblDisponibleRow : global::System.Data.DataRow {
-            
-            private TblDisponibleDataTable tableTblDisponible;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal TblDisponibleRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableTblDisponible = ((TblDisponibleDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string CodigoInmueble {
-                get {
-                    try {
-                        return ((string)(this[this.tableTblDisponible.CodigoInmuebleColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CodigoInmueble\' in table \'TblDisponible\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableTblDisponible.CodigoInmuebleColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Mensualidad {
-                get {
-                    try {
-                        return ((string)(this[this.tableTblDisponible.MensualidadColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Mensualidad\' in table \'TblDisponible\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableTblDisponible.MensualidadColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TblInmuebleRow TblInmuebleRow {
-                get {
-                    return ((TblInmuebleRow)(this.GetParentRow(this.Table.ParentRelations["FK_TblInmueble_TblDisponible"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_TblInmueble_TblDisponible"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsCodigoInmuebleNull() {
-                return this.IsNull(this.tableTblDisponible.CodigoInmuebleColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetCodigoInmuebleNull() {
-                this[this.tableTblDisponible.CodigoInmuebleColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsMensualidadNull() {
-                return this.IsNull(this.tableTblDisponible.MensualidadColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetMensualidadNull() {
-                this[this.tableTblDisponible.MensualidadColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3084,40 +2685,6 @@ namespace WinApp_Homes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public TblInmuebleRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class TblDisponibleRowChangeEvent : global::System.EventArgs {
-            
-            private TblDisponibleRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TblDisponibleRowChangeEvent(TblDisponibleRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TblDisponibleRow Row {
                 get {
                     return this.eventRow;
                 }
