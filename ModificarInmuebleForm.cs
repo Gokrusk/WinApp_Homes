@@ -12,6 +12,7 @@ namespace WinApp_Homes
 {
     public partial class ModificarInmuebleForm : Form
     {
+        string etiqueta;
         readonly string PathFile = Application.StartupPath + "\\assets\\files\\";
         public ModificarInmuebleForm()
         {
@@ -58,6 +59,15 @@ namespace WinApp_Homes
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                etiqueta = textBox1.Text + "='";
+            }
         }
     }
 }
