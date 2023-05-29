@@ -3,6 +3,7 @@
 *.exe
 *.pdb
 *.txt
+*.suo
 # obj\Debug\.cache
 # obj\Debug\.exe
 # obj\Debug\.pdb
