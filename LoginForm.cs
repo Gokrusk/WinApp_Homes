@@ -29,7 +29,7 @@ namespace WinApp_Homes
             try
             {
 
-                dataSetVenta1.ReadXml(PathFile + "\\admin.xml");
+                dataSetVenta1.ReadXml(PathFile + "admin.xml");
                 DataRow[] admin;
                 admin = dataSetVenta1.TblUsuarios.Select("usuario='" + TxtUser.Text + "'");
 
@@ -51,7 +51,7 @@ namespace WinApp_Homes
                         }
                         else if (TxtUser.Text != "administrar")
                         {
-                            dataSetVenta1.ReadXml(PathFile + "\\data.xml");
+                            dataSetVenta1.ReadXml(PathFile + "data.xml");
                             DataRow[] data;
                             data = dataSetVenta1.TblCliente.Select("Email='" + TxtUser.Text + "'");
                             if (data[0]["Cedula"].ToString() == TxtPsw.Text)
