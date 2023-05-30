@@ -41,8 +41,11 @@ namespace WinApp_Homes
                         {
                             if (admin[0]["pass"].ToString() == TxtPsw.Text)
                             {
+                                LoginForm principal = new LoginForm();
+                                this.Hide();
                                 MenuFormAdmin obj = new MenuFormAdmin();
                                 obj.ShowDialog();
+                                principal.Show();
                             }
                             else
                             {
@@ -88,6 +91,7 @@ namespace WinApp_Homes
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
+                e.Handled = true;
                 TxtPsw.Focus();
             }
         }
@@ -96,8 +100,14 @@ namespace WinApp_Homes
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
+                e.Handled = true;
                 BtnLogin_Click(sender, e);
             }
+        }
+
+        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

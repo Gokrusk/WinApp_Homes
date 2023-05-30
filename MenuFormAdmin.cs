@@ -68,5 +68,10 @@ namespace WinApp_Homes
             ReportesForm ReportesObj = new ReportesForm();
             ReportesObj.ShowDialog();
         }
+
+        private void MenuFormAdmin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
     }
 }

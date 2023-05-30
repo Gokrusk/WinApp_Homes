@@ -68,6 +68,18 @@ namespace WinApp_Homes
             GuardarImagenesXML();
 
             MessageBox.Show("Inmueble guardado correctamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            ReiniciarDatos();
+        }
+
+        private void ReiniciarDatos()
+        {
+            TxtNombre.Clear();
+            TxtDesc.Clear();
+            TxtPrecio.Clear();
+            CbxTipo.SelectedIndex = 0;
+            CbxUbi.SelectedIndex = 0;
+
         }
 
         private void GuardarImagenes()

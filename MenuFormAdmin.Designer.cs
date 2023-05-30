@@ -228,6 +228,7 @@
             this.Name = "MenuFormAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MenuFormAdmin_FormClosed);
             this.Load += new System.EventHandler(this.MenuFormAdmin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

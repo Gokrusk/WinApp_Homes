@@ -18,4 +18,97 @@
     <EstadoVenta>DISPONIBLE</EstadoVenta>
     <NombreInmueble>ALEJANDRo</NombreInmueble>
   </TblInmueble>
+  <TblInmueble>
+    <Codigo>CASA_0</Codigo>
+    <Tipo>CASA</Tipo>
+    <Precio>0</Precio>
+    <Descripcion>Casa esquinera en sector consolidado, al norte de la ciudad, sector la Campana, a
+      una cuadra del centro de salud Lizarzaburu y UPC.
+
+      Ésta casa esta construída con todas las normas arquitectónicas y estructurales.
+
+      Esta distribuida de la siguiente manera:
+      Planta baja: encontramos jardín delantero y lateral, patio/ parqueadero para 5 vehículos,
+      cisterna, bomba y tanque de lavado.
+
+      Ingreso principal a la casa, estudio, hall de acceso, baño social, sala comedor, cocina
+      independiente con muebles altos y bajos, alacena, área de lavandería, cuarto de servicio con
+      baño completo y acceso directo a parqueaderos.
+
+      En el segundo piso dos dormitorios máster, dos dormitorios con baño compartido (4
+      habitaciones), todos los dormitorios tienen closet e iluminación natural y
+      sala de televisión.
+
+      Las areas son bien ventiladas, amplias, remodeladas.</Descripcion>
+    <Ubicacion>Riobamba</Ubicacion>
+    <EstadoVenta>DISPONIBLE</EstadoVenta>
+  </TblInmueble>
+  <TblInmueble>
+    <Codigo>CASA_1</Codigo>
+    <Tipo>CASA</Tipo>
+    <Precio>0</Precio>
+    <Descripcion>CASAS POR ESTRENAR EN SAN LORENZO
+
+      Área de 160 m2 de construcción
+      1| PISO
+      • 1 garaje
+      • Áreas verdes
+      • Cerco eléctrico
+      • Amplia área social con pisos de porcelano, diseño en gypsun, pare decorativa, luces led,
+      • Cocina concepto abierto con isla central, mesones de melamina y porcelanato, lámparas
+      decorativas, lacena.
+      • Baño social,
+      • Bodega
+      • Instalación de lavadora y secadora
+      • Patio trasero con área BBQQ
+      • Cisterna, tanque hidroneumático y bomba de presión instalada.
+      • Gradas flotantes con porcelanato, jardín seco
+      • Pisos de porcelanato
+      2| PISO
+      • Sala de estar
+      • 2 dormitorios con baño compartido, piso flotante y closet, luces led
+      3| PISO
+      • Dormitorio Master, con baño completo, con walk in closet con tragaluz, balcón, pared
+      decorativa con luces led, área multifuncional con instalaciones para un jacuzzi.</Descripcion>
+    <Ubicacion>San Lorenzo</Ubicacion>
+    <EstadoVenta>DISPONIBLE</EstadoVenta>
+  </TblInmueble>
+  <TblInmueble>
+    <Codigo>DEPARTAMENTO_0</Codigo>
+    <Precio>0</Precio>
+    <Descripcion>Venta de Departamentos a Estrenar en un Edificio Inteligente
+      Los departamentos se encuentran en un Conjunto Residencial
+      Privado con sistema de domótica
+      - Área de construcción 128 m2
+      - Área social amplia con acabados modernos
+      - Cocina estilo americano con muebles altos y bajos
+      - Dormitorio master con amplio baño y clóset
+      - 2 Dormitorios con closet y baño compartido
+      - 1 Baño Social
+      - Estudio
+      - Área de Lavandería
+      - Un parqueadero
+      - Espectacular Vista
+
+      El Edificio cuenta con Gimnasio, Sauna, Piscina y áreas verdes
+      Todos los servicios básicos, 2 vías principales de acceso Panamericana y República
+      Nos encontramos a 10 minutos del centro de Quito</Descripcion>
+    <Ubicacion>Quito</Ubicacion>
+    <EstadoVenta>DISPONIBLE</EstadoVenta>
+  </TblInmueble>
+  <TblInmueble>
+    <Codigo>DEPARTAMENTO_1</Codigo>
+    <Tipo>DEPARTAMENTO</Tipo>
+    <Precio>67000</Precio>
+    <Descripcion>Hermoso Departamento con acabados de Primera en Riobamba - Sector Arupos del Norte
+      - Excelente Ubicacion.
+
+      Area: 135.00 m2
+      Distribucion Espacial: 1 Dormitorio Master y 2 Dormitorios con baño compartido, sala, comedor,
+      estudio, baño social, Parqueadero Independiente, Parqueadero de Visita y Lavanderia
+      independiente en la Terraza</Descripcion>
+    <Ubicacion>Riobamba</Ubicacion>
+    <EstadoVenta>DISPONIBLE</EstadoVenta>
+    <NombreInmueble>Departamento Belleza</NombreInmueble>
+  </TblInmueble>
 </DataSetVenta>
