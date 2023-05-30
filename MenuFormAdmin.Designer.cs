@@ -56,7 +56,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(169, 49);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Ingreso Dep";
+            this.button1.Text = "Ingreso Inmueble";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -69,7 +69,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(169, 49);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Registro cliente";
+            this.button2.Text = "Registro Cliente";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -114,13 +114,14 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(557, 546);
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(169)))), ((int)(((byte)(143)))));
+            this.button6.Location = new System.Drawing.Point(392, 40);
             this.button6.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(252, 79);
+            this.button6.Size = new System.Drawing.Size(169, 49);
             this.button6.TabIndex = 5;
             this.button6.Text = "Venta";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // panel1
@@ -150,10 +151,11 @@
             // 
             this.GbxRegistro.Controls.Add(this.button1);
             this.GbxRegistro.Controls.Add(this.button2);
+            this.GbxRegistro.Controls.Add(this.button6);
             this.GbxRegistro.ForeColor = System.Drawing.Color.White;
             this.GbxRegistro.Location = new System.Drawing.Point(37, 104);
             this.GbxRegistro.Name = "GbxRegistro";
-            this.GbxRegistro.Size = new System.Drawing.Size(421, 117);
+            this.GbxRegistro.Size = new System.Drawing.Size(586, 117);
             this.GbxRegistro.TabIndex = 7;
             this.GbxRegistro.TabStop = false;
             this.GbxRegistro.Text = "Registro de datos";
@@ -219,7 +221,6 @@
             this.Controls.Add(this.GbxModi);
             this.Controls.Add(this.GbxRegistro);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button6);
             this.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MaximumSize = new System.Drawing.Size(900, 550);
