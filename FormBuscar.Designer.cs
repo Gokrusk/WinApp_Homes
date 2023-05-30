@@ -45,10 +45,16 @@
             this.dataSetVenta = new WinApp_Homes.DataSetVenta();
             this.TxtItem = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.tblFotoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nombreFotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigoInmuebleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblInmuebleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetVenta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblFotoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -112,6 +118,8 @@
             // 
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(58)))), ((int)(((byte)(63)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigoDataGridViewTextBoxColumn,
@@ -123,6 +131,7 @@
             this.dataGridView1.DataSource = this.tblInmuebleBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(19, 193);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(853, 255);
             this.dataGridView1.TabIndex = 6;
             // 
@@ -191,12 +200,43 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Palabra de filtro";
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombreFotoDataGridViewTextBoxColumn,
+            this.codigoInmuebleDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.tblFotoBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(19, 331);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(382, 150);
+            this.dataGridView2.TabIndex = 9;
+            // 
+            // tblFotoBindingSource
+            // 
+            this.tblFotoBindingSource.DataMember = "TblFoto";
+            this.tblFotoBindingSource.DataSource = this.dataSetVenta;
+            // 
+            // nombreFotoDataGridViewTextBoxColumn
+            // 
+            this.nombreFotoDataGridViewTextBoxColumn.DataPropertyName = "NombreFoto";
+            this.nombreFotoDataGridViewTextBoxColumn.HeaderText = "NombreFoto";
+            this.nombreFotoDataGridViewTextBoxColumn.Name = "nombreFotoDataGridViewTextBoxColumn";
+            // 
+            // codigoInmuebleDataGridViewTextBoxColumn
+            // 
+            this.codigoInmuebleDataGridViewTextBoxColumn.DataPropertyName = "CodigoInmueble";
+            this.codigoInmuebleDataGridViewTextBoxColumn.HeaderText = "CodigoInmueble";
+            this.codigoInmuebleDataGridViewTextBoxColumn.Name = "codigoInmuebleDataGridViewTextBoxColumn";
+            // 
             // FormBuscar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(58)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(884, 511);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.TxtItem);
             this.Controls.Add(this.dataGridView1);
@@ -215,6 +255,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblInmuebleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetVenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblFotoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,5 +280,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoVentaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreInmuebleDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreFotoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoInmuebleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource tblFotoBindingSource;
     }
 }

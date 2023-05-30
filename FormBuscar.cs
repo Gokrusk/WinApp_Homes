@@ -22,6 +22,7 @@ namespace WinApp_Homes
         private void FormBuscar_Load(object sender, EventArgs e)
         {
             dataSetVenta.ReadXml(PathFile + "\\inmuebles.xml");
+            //dataSetVenta.ReadXml(PathFile + "\\imagenes.xml");
         }
 
         static string RemoverTildes(string texto)
