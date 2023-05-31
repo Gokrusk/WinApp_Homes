@@ -88,8 +88,7 @@
             this.CbxCliente.Name = "CbxCliente";
             this.CbxCliente.Size = new System.Drawing.Size(279, 26);
             this.CbxCliente.TabIndex = 5;
-            this.CbxCliente.SelectionChangeCommitted += new System.EventHandler(this.CbxCliente_SelectionChangeCommitted);
-            // 
+           // 
             // label2
             // 
             this.label2.AutoSize = true;

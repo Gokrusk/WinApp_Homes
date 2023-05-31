@@ -152,7 +152,7 @@
             this.TxtDesc.Location = new System.Drawing.Point(592, 187);
             this.TxtDesc.Multiline = true;
             this.TxtDesc.Name = "TxtDesc";
-            this.TxtDesc.Size = new System.Drawing.Size(198, 123);
+            this.TxtDesc.Size = new System.Drawing.Size(238, 171);
             this.TxtDesc.TabIndex = 32;
             // 
             // LblDesc
@@ -210,6 +210,7 @@
             this.CbxTipo.Name = "CbxTipo";
             this.CbxTipo.Size = new System.Drawing.Size(198, 21);
             this.CbxTipo.TabIndex = 26;
+            this.CbxTipo.SelectionChangeCommitted += new System.EventHandler(this.CbxTipo_SelectionChangeCommitted);
             // 
             // LblTipo
             // 
@@ -319,7 +320,7 @@
             "Yaguachi",
             "Zamora"});
             this.CbxUbi.Location = new System.Drawing.Point(185, 340);
-            this.CbxUbi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CbxUbi.Margin = new System.Windows.Forms.Padding(2);
             this.CbxUbi.Name = "CbxUbi";
             this.CbxUbi.Size = new System.Drawing.Size(199, 21);
             this.CbxUbi.TabIndex = 38;

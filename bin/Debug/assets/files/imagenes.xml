@@ -212,4 +212,20 @@
     <NombreFoto>354350526.jpg</NombreFoto>
     <CodigoInmueble>DEPARTAMENTO_1</CodigoInmueble>
   </TblFoto>
+  <TblFoto>
+    <NombreFoto>297012234.jpg</NombreFoto>
+    <CodigoInmueble>OFICINA_0</CodigoInmueble>
+  </TblFoto>
+  <TblFoto>
+    <NombreFoto>297012237.jpg</NombreFoto>
+    <CodigoInmueble>OFICINA_0</CodigoInmueble>
+  </TblFoto>
+  <TblFoto>
+    <NombreFoto>297012239.jpg</NombreFoto>
+    <CodigoInmueble>OFICINA_0</CodigoInmueble>
+  </TblFoto>
+  <TblFoto>
+    <NombreFoto>297012242.jpg</NombreFoto>
+    <CodigoInmueble>OFICINA_0</CodigoInmueble>
+  </TblFoto>
 </DataSetVenta>

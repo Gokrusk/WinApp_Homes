@@ -90,5 +90,18 @@ namespace WinApp_Homes
                 TxtPrecio.Visible = true;
             }
         }
+
+        private void CbxTipo_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            DataRow[] dataInmuebles;
+
+            dataSetVenta1.Clear();
+            dataSetVenta1.ReadXml(PathFile + "inmuebles.xml");
+
+            dataInmuebles = dataSetVenta1.TblInmueble.Select("Tipo='" + CbxTipo.SelectedItem.ToString() + "'");
+
+            int num = dataInmuebles.Length;
+            LblCodigo.Text = vector[0]["Tipo"].ToString() + "_" + num.ToString();
+        }
     }
 }

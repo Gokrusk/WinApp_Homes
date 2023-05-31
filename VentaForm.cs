@@ -102,20 +102,12 @@ namespace WinApp_Homes
             dataSetVenta1.ReadXml(PathFile + "inmuebles.xml");
 
             dataInmuebleVenta = dataSetVenta1.TblInmueble.Select("NombreInmueble='" + CbxInmueble.SelectedItem.ToString() + "'")[0];
-
         }
 
         private void CbxInmueble_SelectionChangeCommitted(object sender, EventArgs e)
         {
             LeerInmueble();
             LblPrecio.Text = "Precio: $" + dataInmuebleVenta["Precio"].ToString();
-        }
-
-        private void CbxCliente_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            int sele = CbxCliente.SelectedIndex;
-
-            
         }
     }
 }
