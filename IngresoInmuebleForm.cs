@@ -62,7 +62,6 @@ namespace WinApp_Homes
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-
             GuardarImagenes();
             GuardarDatosXML();
             GuardarImagenesXML();
@@ -79,7 +78,9 @@ namespace WinApp_Homes
             TxtPrecio.Clear();
             CbxTipo.SelectedIndex = 0;
             CbxUbi.SelectedIndex = 0;
-
+            PbxImagen.Image = null;
+            ListImagenes.Items.Clear();
+            rutasImagenes.Clear();
         }
 
         private void GuardarImagenes()
@@ -123,6 +124,9 @@ namespace WinApp_Homes
         private void GuardarDatosXML()
         {
             dataSetVenta1.Clear();
+            InmuebleObj.nombre = TxtNombre.Text;
+            InmuebleObj.precio = float.Parse(TxtPrecio.Text);
+            InmuebleObj.tipo = CbxTipo.SelectedItem.ToString();
             InmuebleObj.descripcion = TxtDesc.Text;
             InmuebleObj.ubicacion = CbxUbi.SelectedItem.ToString();
 
@@ -168,18 +172,17 @@ namespace WinApp_Homes
 
         private void TxtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == (char)Keys.Enter)
+            if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
 
-                InmuebleObj.nombre = TxtNombre.Text;
-                CbxTipo.Focus();
+                if (TxtNombre.Text.Length > 0)
+                    CbxTipo.Focus();
+                else
+                {
+                    MessageBox.Show("El nombre del inmueble no puede quedar vacío", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-        }
-
-        private void CbxTipo_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            InmuebleObj.tipo = CbxTipo.SelectedItem.ToString();
         }
 
         private void TxtPrecio_KeyPress(object sender, KeyPressEventArgs e)

@@ -38,6 +38,7 @@ namespace WinApp_Homes
             TxtPrecio.Visible = false;
             CbxUbi.Visible = false;
             TxtPrecio.Visible = false;
+            label3.Visible = false;
 
             dataSetVenta1.ReadXml(PathFile + "inmuebles.xml");
         }
@@ -73,7 +74,6 @@ namespace WinApp_Homes
                     e.Handled = true;
                     etiqueta = comboBox1.SelectedItem.ToString() + "='";
 
-                    
                     vector = dataSetVenta1.TblInmueble.Select(etiqueta + textBox1.Text + "'"); //+...+ para concatenar y no hay que poner espacios
 
                     LblCodigo.Text = vector[0]["Codigo"].ToString();
@@ -96,6 +96,7 @@ namespace WinApp_Homes
                     TxtPrecio.Visible = true;
                     CbxUbi.Visible = true;
                     TxtPrecio.Visible = true;
+                    label3.Visible = false;
                 }
                 catch
                 {

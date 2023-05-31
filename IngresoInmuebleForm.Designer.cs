@@ -335,7 +335,6 @@
             this.CbxTipo.Name = "CbxTipo";
             this.CbxTipo.Size = new System.Drawing.Size(249, 26);
             this.CbxTipo.TabIndex = 1;
-            this.CbxTipo.SelectionChangeCommitted += new System.EventHandler(this.CbxTipo_SelectionChangeCommitted);
             // 
             // label2
             // 
