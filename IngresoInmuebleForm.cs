@@ -20,6 +20,7 @@ namespace WinApp_Homes
         readonly string PathImage = Application.StartupPath + "\\assets\\images\\";
         readonly string PathFile = Application.StartupPath + "\\assets\\files\\";
 
+
         private List<string> rutasImagenes = new List<string>();
 
         public IngresoInmuebleForm()
@@ -62,10 +63,6 @@ namespace WinApp_Homes
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            GuardarImagenes();
-            GuardarDatosXML();
-            GuardarImagenesXML();
-
             if(rutasImagenes.Count > 0)
             {
                 GuardarImagenes();
@@ -109,39 +106,25 @@ namespace WinApp_Homes
 
         private int ContarTipos()
         {
-            XmlDocument doc = new XmlDocument();
-            doc.Load(PathFile + "inmuebles.xml");
-            int con = 0;
+            dataSetVenta1.Clear();
 
-            foreach (XmlNode n1 in doc.DocumentElement.ChildNodes)
-            {
-                // Si tiene nodos, recorro sus hijos
-                if (n1.HasChildNodes)
-                {
-                    foreach (XmlNode n2 in n1.ChildNodes)
-                    {
-                        // Nodos hijos del coche
-                        foreach (XmlNode n3 in n2.ChildNodes)
-                        {
-                            if(n3.InnerText == InmuebleObj.tipo)
-                                con++;
-                        }
-                    }
-                }
-            }
+            DataRow[] dataInmuebles;
 
-            return con;
+            dataSetVenta1.Tables["TblInmueble"].ReadXml(PathFile + "inmuebles.xml");
+            dataInmuebles = dataSetVenta1.TblInmueble.Select("Tipo='" + InmuebleObj.tipo + "'");
+
+            MessageBox.Show(dataInmuebles.Length.ToString() + InmuebleObj.tipo);
+            return dataInmuebles.Length;
         }
         private void GuardarDatosXML()
         {
-            dataSetVenta1.Clear();
             InmuebleObj.nombre = TxtNombre.Text;
             InmuebleObj.precio = float.Parse(TxtPrecio.Text);
             InmuebleObj.tipo = CbxTipo.SelectedItem.ToString();
             InmuebleObj.descripcion = TxtDesc.Text;
             InmuebleObj.ubicacion = CbxUbi.SelectedItem.ToString();
 
-            dataSetVenta1.Tables["TblInmueble"].ReadXml(PathFile + "inmuebles.xml");
+            
             object[] dataInmu = new object[7];
 
             InmuebleObj.GenerarCodigo(ContarTipos());
@@ -154,6 +137,8 @@ namespace WinApp_Homes
             dataInmu[5] = InmuebleObj.estadoVenta;
             dataInmu[6] = InmuebleObj.nombre;
 
+            dataSetVenta1.Clear();
+            dataSetVenta1.Tables["TblInmueble"].ReadXml(PathFile + "inmuebles.xml");
             dataSetVenta1.TblInmueble.Rows.Add(dataInmu);
             dataSetVenta1.Tables["TblInmueble"].WriteXml(PathFile + "inmuebles.xml");
         }
