@@ -121,7 +121,7 @@
       Matriz: Naciones Unidas y Nuñez de Vela, Edificio Metropolitan, Piso 10, Oficina 1011
       Sucursal: Calle Polonia y Vancouver Edificio Clifford 3 Local 2</Descripcion>
     <Ubicacion>Montecristi</Ubicacion>
-    <EstadoVenta>DISPONIBLE</EstadoVenta>
+    <EstadoVenta>VENDIDO</EstadoVenta>
     <NombreInmueble>El Batán</NombreInmueble>
   </TblInmueble>
 </DataSetVenta>

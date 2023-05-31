@@ -79,7 +79,6 @@ namespace WinApp_Homes
             TxtPrecio.Clear();
             CbxTipo.SelectedIndex = 0;
             CbxUbi.SelectedIndex = 0;
-
         }
 
         private void GuardarImagenes()

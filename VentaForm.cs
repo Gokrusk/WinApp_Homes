@@ -35,8 +35,10 @@ namespace WinApp_Homes
             dataSetVenta1.ReadXml(PathFile + "inmuebles.xml");
             dataInmuebles = dataSetVenta1.TblInmueble.Select();
             foreach (DataRow inmu in dataInmuebles)
-                CbxInmueble.Items.Add(inmu["NombreInmueble"]);
-            
+            {
+                if (inmu["EstadoVenta"].ToString() == "DISPONIBLE")
+                    CbxInmueble.Items.Add(inmu["NombreInmueble"]);
+            }
             dataSetVenta1.Clear();
             dataSetVenta1.ReadXml(PathFile + "clientes.xml");
             dataClientes = dataSetVenta1.TblCliente.Select();
