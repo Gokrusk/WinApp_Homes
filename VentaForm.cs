@@ -8,14 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace WinApp_Homes
 {
     public partial class VentaForm : Form
     {
         readonly string PathFile = Application.StartupPath + "\\assets\\files\\";
+        float precio;
+        DataRow dataInmuebleVenta;
 
-        
+        DataRow[] dataInmuebles;
+        DataRow[] dataClientes;
+        List<string> clientes = new List<string>();
+
+
         public VentaForm()
         {
             InitializeComponent();
@@ -23,34 +30,19 @@ namespace WinApp_Homes
 
         private void VentaForm_Load(object sender, EventArgs e)
         {
-            XmlDocument docIn = new XmlDocument();
-            docIn.Load(PathFile + "inmuebles.xml");
-
-            XmlDocument docCli = new XmlDocument();
-            docCli.Load(PathFile + "clientes.xml");
-
-            foreach (XmlNode n1 in docIn.DocumentElement.ChildNodes)
+            dataSetVenta1.Clear();
+            dataSetVenta1.ReadXml(PathFile + "inmuebles.xml");
+            dataInmuebles = dataSetVenta1.TblInmueble.Select();
+            foreach (DataRow inmu in dataInmuebles)
+                CbxInmueble.Items.Add(inmu["NombreInmueble"]);
+            
+            dataSetVenta1.Clear();
+            dataSetVenta1.ReadXml(PathFile + "clientes.xml");
+            dataClientes = dataSetVenta1.TblCliente.Select();
+            foreach (DataRow cliente in dataClientes)
             {
-                if (n1.HasChildNodes)
-                {
-                    foreach (XmlNode n2 in n1.ChildNodes)
-                    {
-                        if(n2.Name == "NombreInmueble")
-                            comboBox1.Items.Add(n2.InnerText);
-                    }
-                }
-            }
-
-            foreach (XmlNode n1 in docCli.DocumentElement.ChildNodes)
-            {
-                if (n1.HasChildNodes)
-                {
-                    foreach (XmlNode n2 in n1.ChildNodes)
-                    {
-                        if (n2.Name == "Nombre")
-                            comboBox2.Items.Add(n2.InnerText);
-                    }
-                }
+                CbxCliente.Items.Add(cliente["Nombre"] + " " + cliente["Apellido"]);
+                clientes.Add(cliente["Cedula"].ToString());
             }
         }
 
@@ -64,47 +56,49 @@ namespace WinApp_Homes
             XmlDocument docCli = new XmlDocument();
             docCli.Load(PathFile + "clientes.xml");
 
-            string inmu = "";
-            string ced = "";
-            foreach (XmlNode n1 in docIn.DocumentElement.ChildNodes)
-            {
-                if (n1.HasChildNodes)
-                {
-                    foreach (XmlNode n2 in n1.ChildNodes)
-                    {
-                        if (n2.Name == "Codigo")
-                            inmu = n2.InnerText;
-
-                        if (n2.InnerText == comboBox1.SelectedItem.ToString())
-                            break;
-                    }
-                }
-            }
-
-            foreach (XmlNode n1 in docCli.DocumentElement.ChildNodes)
-            {
-                if (n1.HasChildNodes)
-                {
-                    foreach (XmlNode n2 in n1.ChildNodes)
-                    {
-                        if (n2.Name == "Cedula")
-                            ced = n2.InnerText;
-
-                        if (n2.InnerText == comboBox2.SelectedItem.ToString())
-                            break;
-                    }
-                }
-            }
+            string inmu = dataInmuebleVenta["Codigo"].ToString();
+            string ced = clientes[CbxCliente.SelectedIndex];
 
             dataSetVenta1.Tables["TblInmueble"].ReadXml(PathFile + "ventas.xml");
             object[] dataVenta = new object[3];
 
             dataVenta[0] = inmu;
-            dataVenta[1] = textBox1.Text;
+            dataVenta[1] = TxtMensualidad.Text;
             dataVenta[2] = ced;
+            dataVenta[3] = TxtMeses.Text;
 
             dataSetVenta1.TblVenta.Rows.Add(dataVenta);
             dataSetVenta1.Tables["TblVenta"].WriteXml(PathFile + "ventas.xml");
+        }
+
+        private void TxtMensualidad_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int meses = int.Parse(Math.Round(double.Parse(dataInmuebleVenta["Precio"].ToString()) / double.Parse(TxtMensualidad.Text)).ToString());
+                TxtMeses.Text = meses.ToString();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void CbxInmueble_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            dataSetVenta1.Clear();
+            dataSetVenta1.ReadXml(PathFile + "inmuebles.xml");
+
+            dataInmuebleVenta = dataSetVenta1.TblInmueble.Select("NombreInmueble='" + CbxInmueble.SelectedItem.ToString() + "'")[0];
+
+            LblPrecio.Text = "Precio: $" + dataInmuebleVenta["Precio"].ToString();
+        }
+
+        private void CbxCliente_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            int sele = CbxCliente.SelectedIndex;
+
+            
         }
     }
 }

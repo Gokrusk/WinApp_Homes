@@ -9,4 +9,58 @@
     <FechaNacimiento>30/12/2001 10:35:34</FechaNacimiento>
     <Email>KevinTapia3@gmail.com</Email>
   </TblCliente>
+  <TblCliente>
+    <Cedula>0604401919</Cedula>
+    <Nombre>Maria</Nombre>
+    <Apellido>García</Apellido>
+    <Sexo>Femenino</Sexo>
+    <Ciudad>Quito</Ciudad>
+    <FechaNacimiento>15/06/1995 09:15:00</FechaNacimiento>
+    <Email>maria.garcia@example.com</Email>
+  </TblCliente>
+  <TblCliente>
+    <Cedula>0602926925</Cedula>
+    <Nombre>Juan</Nombre>
+    <Apellido>Pérez</Apellido>
+    <Sexo>Masculino</Sexo>
+    <Ciudad>Guayaquil</Ciudad>
+    <FechaNacimiento>02/03/1988 14:30:00</FechaNacimiento>
+    <Email>juan.perez@example.com</Email>
+  </TblCliente>
+  <TblCliente>
+    <Cedula>1707216527</Cedula>
+    <Nombre>Ana</Nombre>
+    <Apellido>Ruiz</Apellido>
+    <Sexo>Femenino</Sexo>
+    <Ciudad>Cuenca</Ciudad>
+    <FechaNacimiento>10/11/1990 18:45:00</FechaNacimiento>
+    <Email>ana.ruiz@example.com</Email>
+  </TblCliente>
+  <TblCliente>
+    <Cedula>0600334924</Cedula>
+    <Nombre>Carlos</Nombre>
+    <Apellido>López</Apellido>
+    <Sexo>Masculino</Sexo>
+    <Ciudad>Guayaquil</Ciudad>
+    <FechaNacimiento>12/05/1990 08:30:00</FechaNacimiento>
+    <Email>carlos.lopez@example.com</Email>
+  </TblCliente>
+  <TblCliente>
+    <Cedula>0912345678</Cedula>
+    <Nombre>Sofía</Nombre>
+    <Apellido>Rodríguez</Apellido>
+    <Sexo>Femenino</Sexo>
+    <Ciudad>Quito</Ciudad>
+    <FechaNacimiento>28/09/1985 14:20:00</FechaNacimiento>
+    <Email>sofia.rodriguez@example.com</Email>
+  </TblCliente>
+  <TblCliente>
+    <Cedula>0801234567</Cedula>
+    <Nombre>Pablo</Nombre>
+    <Apellido>Moreno</Apellido>
+    <Sexo>Masculino</Sexo>
+    <Ciudad>Cuenca</Ciudad>
+    <FechaNacimiento>03/07/1992 16:45:00</FechaNacimiento>
+    <Email>pablo.moreno@example.com</Email>
+  </TblCliente>
 </DataSetVenta>

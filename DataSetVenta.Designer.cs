@@ -1394,6 +1394,8 @@ namespace WinApp_Homes {
             
             private global::System.Data.DataColumn columnCedula;
             
+            private global::System.Data.DataColumn columnNumeroMeses;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public TblVentaDataTable() {
@@ -1453,6 +1455,14 @@ namespace WinApp_Homes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NumeroMesesColumn {
+                get {
+                    return this.columnNumeroMeses;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1488,12 +1498,13 @@ namespace WinApp_Homes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TblVentaRow AddTblVentaRow(TblInmuebleRow parentTblInmuebleRowByFK_TblInmueble_TblVenta, string Mensualidad, TblClienteRow parentTblClienteRowByFK_TblCliente_TblVenta) {
+            public TblVentaRow AddTblVentaRow(TblInmuebleRow parentTblInmuebleRowByFK_TblInmueble_TblVenta, string Mensualidad, TblClienteRow parentTblClienteRowByFK_TblCliente_TblVenta, string NumeroMeses) {
                 TblVentaRow rowTblVentaRow = ((TblVentaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Mensualidad,
-                        null};
+                        null,
+                        NumeroMeses};
                 if ((parentTblInmuebleRowByFK_TblInmueble_TblVenta != null)) {
                     columnValuesArray[0] = parentTblInmuebleRowByFK_TblInmueble_TblVenta[0];
                 }
@@ -1525,6 +1536,7 @@ namespace WinApp_Homes {
                 this.columnCodigoInmueble = base.Columns["CodigoInmueble"];
                 this.columnMensualidad = base.Columns["Mensualidad"];
                 this.columnCedula = base.Columns["Cedula"];
+                this.columnNumeroMeses = base.Columns["NumeroMeses"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1536,6 +1548,8 @@ namespace WinApp_Homes {
                 base.Columns.Add(this.columnMensualidad);
                 this.columnCedula = new global::System.Data.DataColumn("Cedula", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCedula);
+                this.columnNumeroMeses = new global::System.Data.DataColumn("NumeroMeses", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumeroMeses);
                 this.columnCodigoInmueble.AllowDBNull = false;
                 this.columnCedula.AllowDBNull = false;
             }
@@ -2482,6 +2496,22 @@ namespace WinApp_Homes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string NumeroMeses {
+                get {
+                    try {
+                        return ((string)(this[this.tableTblVenta.NumeroMesesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NumeroMeses\' in table \'TblVenta\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTblVenta.NumeroMesesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public TblInmuebleRow TblInmuebleRow {
                 get {
                     return ((TblInmuebleRow)(this.GetParentRow(this.Table.ParentRelations["FK_TblInmueble_TblVenta"])));
@@ -2512,6 +2542,18 @@ namespace WinApp_Homes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetMensualidadNull() {
                 this[this.tableTblVenta.MensualidadColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsNumeroMesesNull() {
+                return this.IsNull(this.tableTblVenta.NumeroMesesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetNumeroMesesNull() {
+                this[this.tableTblVenta.NumeroMesesColumn] = global::System.Convert.DBNull;
             }
         }
         

@@ -112,6 +112,7 @@
             this.Controls.Add(this.PbxFoto);
             this.Controls.Add(this.panel1);
             this.Name = "CargaFotosForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CargaFotosForm";
             this.Load += new System.EventHandler(this.CargaFotosForm_Load);
             this.panel1.ResumeLayout(false);

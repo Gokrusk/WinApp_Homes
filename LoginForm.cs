@@ -80,8 +80,9 @@ namespace WinApp_Homes
                     MessageBox.Show("No se encuentra el usuario", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
                 MessageBox.Show("No se puede leer el archivo de registros", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

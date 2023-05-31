@@ -115,6 +115,7 @@
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(169)))), ((int)(((byte)(143)))));
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.Location = new System.Drawing.Point(392, 40);
             this.button6.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.button6.Name = "button6";
@@ -228,7 +229,6 @@
             this.Name = "MenuFormAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuForm";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MenuFormAdmin_FormClosed);
             this.Load += new System.EventHandler(this.MenuFormAdmin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
