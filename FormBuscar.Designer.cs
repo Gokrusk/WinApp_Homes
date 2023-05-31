@@ -41,19 +41,16 @@
             this.ubicacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreInmuebleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fotos = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tblInmuebleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetVenta = new WinApp_Homes.DataSetVenta();
             this.TxtItem = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tblFotoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nombreFotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigoInmuebleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblInmuebleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetVenta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFotoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,49 +124,67 @@
             this.precioDataGridViewTextBoxColumn,
             this.ubicacionDataGridViewTextBoxColumn,
             this.estadoVentaDataGridViewTextBoxColumn,
-            this.nombreInmuebleDataGridViewTextBoxColumn});
+            this.nombreInmuebleDataGridViewTextBoxColumn,
+            this.Fotos});
             this.dataGridView1.DataSource = this.tblInmuebleBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(19, 193);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(853, 255);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // codigoDataGridViewTextBoxColumn
             // 
             this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
             this.codigoDataGridViewTextBoxColumn.HeaderText = "Código";
             this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            this.codigoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // tipoDataGridViewTextBoxColumn
             // 
             this.tipoDataGridViewTextBoxColumn.DataPropertyName = "Tipo";
             this.tipoDataGridViewTextBoxColumn.HeaderText = "Tipo";
             this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
+            this.tipoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // precioDataGridViewTextBoxColumn
             // 
             this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
             this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
             this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ubicacionDataGridViewTextBoxColumn
             // 
             this.ubicacionDataGridViewTextBoxColumn.DataPropertyName = "Ubicacion";
             this.ubicacionDataGridViewTextBoxColumn.HeaderText = "Ubicación";
             this.ubicacionDataGridViewTextBoxColumn.Name = "ubicacionDataGridViewTextBoxColumn";
+            this.ubicacionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // estadoVentaDataGridViewTextBoxColumn
             // 
             this.estadoVentaDataGridViewTextBoxColumn.DataPropertyName = "EstadoVenta";
             this.estadoVentaDataGridViewTextBoxColumn.HeaderText = "Estado de Venta";
             this.estadoVentaDataGridViewTextBoxColumn.Name = "estadoVentaDataGridViewTextBoxColumn";
+            this.estadoVentaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nombreInmuebleDataGridViewTextBoxColumn
             // 
             this.nombreInmuebleDataGridViewTextBoxColumn.DataPropertyName = "NombreInmueble";
             this.nombreInmuebleDataGridViewTextBoxColumn.HeaderText = "Nombre de Inmueble";
             this.nombreInmuebleDataGridViewTextBoxColumn.Name = "nombreInmuebleDataGridViewTextBoxColumn";
+            this.nombreInmuebleDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Fotos
+            // 
+            this.Fotos.DataPropertyName = "Codigo";
+            this.Fotos.HeaderText = "Fotografías";
+            this.Fotos.Name = "Fotos";
+            this.Fotos.ReadOnly = true;
+            this.Fotos.Text = "VER";
+            this.Fotos.ToolTipText = "VER";
+            this.Fotos.UseColumnTextForButtonValue = true;
             // 
             // tblInmuebleBindingSource
             // 
@@ -200,35 +215,10 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Palabra de filtro";
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nombreFotoDataGridViewTextBoxColumn,
-            this.codigoInmuebleDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.tblFotoBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(19, 331);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(382, 150);
-            this.dataGridView2.TabIndex = 9;
-            // 
             // tblFotoBindingSource
             // 
             this.tblFotoBindingSource.DataMember = "TblFoto";
             this.tblFotoBindingSource.DataSource = this.dataSetVenta;
-            // 
-            // nombreFotoDataGridViewTextBoxColumn
-            // 
-            this.nombreFotoDataGridViewTextBoxColumn.DataPropertyName = "NombreFoto";
-            this.nombreFotoDataGridViewTextBoxColumn.HeaderText = "NombreFoto";
-            this.nombreFotoDataGridViewTextBoxColumn.Name = "nombreFotoDataGridViewTextBoxColumn";
-            // 
-            // codigoInmuebleDataGridViewTextBoxColumn
-            // 
-            this.codigoInmuebleDataGridViewTextBoxColumn.DataPropertyName = "CodigoInmueble";
-            this.codigoInmuebleDataGridViewTextBoxColumn.HeaderText = "CodigoInmueble";
-            this.codigoInmuebleDataGridViewTextBoxColumn.Name = "codigoInmuebleDataGridViewTextBoxColumn";
             // 
             // FormBuscar
             // 
@@ -236,7 +226,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(58)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(884, 511);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.TxtItem);
             this.Controls.Add(this.dataGridView1);
@@ -255,7 +244,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblInmuebleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetVenta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFotoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -273,16 +261,14 @@
         private System.Windows.Forms.BindingSource tblInmuebleBindingSource;
         private DataSetVenta dataSetVenta;
         private System.Windows.Forms.TextBox TxtItem;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.BindingSource tblFotoBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ubicacionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoVentaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreInmuebleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreFotoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoInmuebleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource tblFotoBindingSource;
+        private System.Windows.Forms.DataGridViewButtonColumn Fotos;
     }
 }

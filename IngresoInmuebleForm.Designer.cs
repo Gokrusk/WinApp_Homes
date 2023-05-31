@@ -98,9 +98,9 @@
             this.GbxInmueble.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GbxInmueble.ForeColor = System.Drawing.Color.White;
             this.GbxInmueble.Location = new System.Drawing.Point(9, 84);
-            this.GbxInmueble.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GbxInmueble.Margin = new System.Windows.Forms.Padding(2);
             this.GbxInmueble.Name = "GbxInmueble";
-            this.GbxInmueble.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GbxInmueble.Padding = new System.Windows.Forms.Padding(2);
             this.GbxInmueble.Size = new System.Drawing.Size(864, 416);
             this.GbxInmueble.TabIndex = 3;
             this.GbxInmueble.TabStop = false;
@@ -162,7 +162,7 @@
             "Yaguachi",
             "Zamora"});
             this.CbxUbi.Location = new System.Drawing.Point(130, 168);
-            this.CbxUbi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CbxUbi.Margin = new System.Windows.Forms.Padding(2);
             this.CbxUbi.Name = "CbxUbi";
             this.CbxUbi.Size = new System.Drawing.Size(250, 26);
             this.CbxUbi.TabIndex = 25;
@@ -361,10 +361,10 @@
             this.ClientSize = new System.Drawing.Size(884, 511);
             this.Controls.Add(this.GbxInmueble);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "IngresoInmuebleForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "IngresoDepartamentoForm";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.IngresoDepartamentoForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

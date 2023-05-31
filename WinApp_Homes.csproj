@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CargaFotosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CargaFotosForm.Designer.cs">
+      <DependentUpon>CargaFotosForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClCliente.cs" />
     <Compile Include="ClInmueble.cs" />
     <Compile Include="DataSetVenta.cs">
@@ -137,6 +143,9 @@
     <Compile Include="VentaForm.Designer.cs">
       <DependentUpon>VentaForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CargaFotosForm.resx">
+      <DependentUpon>CargaFotosForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

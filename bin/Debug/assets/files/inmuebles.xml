@@ -2,26 +2,8 @@
 <DataSetVenta xmlns="http://tempuri.org/DataSetVenta.xsd">
   <TblInmueble>
     <Codigo>CASA_0</Codigo>
-    <Tipo>DEPARTAMENTO</Tipo>
-    <Precio>5465</Precio>
-    <Descripcion>eso eso es o eso</Descripcion>
-    <Ubicacion>Cayambe</Ubicacion>
-    <EstadoVenta>DISPONIBLE</EstadoVenta>
-    <NombreInmueble>JORDI</NombreInmueble>
-  </TblInmueble>
-  <TblInmueble>
-    <Codigo>CASA_1</Codigo>
-    <Tipo>OFICINA</Tipo>
-    <Precio>4578845</Precio>
-    <Descripcion>prueba pruebaprueba pruebaprueba pruebaprueba prueba</Descripcion>
-    <Ubicacion>Nueva Loja (Lago Agrio)</Ubicacion>
-    <EstadoVenta>DISPONIBLE</EstadoVenta>
-    <NombreInmueble>ALEJANDRo</NombreInmueble>
-  </TblInmueble>
-  <TblInmueble>
-    <Codigo>CASA_0</Codigo>
     <Tipo>CASA</Tipo>
-    <Precio>0</Precio>
+    <Precio>111000</Precio>
     <Descripcion>Casa esquinera en sector consolidado, al norte de la ciudad, sector la Campana, a
       una cuadra del centro de salud Lizarzaburu y UPC.
 
@@ -42,11 +24,12 @@
       Las areas son bien ventiladas, amplias, remodeladas.</Descripcion>
     <Ubicacion>Riobamba</Ubicacion>
     <EstadoVenta>DISPONIBLE</EstadoVenta>
+    <NombreInmueble>Casa Aurora</NombreInmueble>
   </TblInmueble>
   <TblInmueble>
     <Codigo>CASA_1</Codigo>
     <Tipo>CASA</Tipo>
-    <Precio>0</Precio>
+    <Precio>90500</Precio>
     <Descripcion>CASAS POR ESTRENAR EN SAN LORENZO
 
       Área de 160 m2 de construcción
@@ -72,10 +55,12 @@
       decorativa con luces led, área multifuncional con instalaciones para un jacuzzi.</Descripcion>
     <Ubicacion>San Lorenzo</Ubicacion>
     <EstadoVenta>DISPONIBLE</EstadoVenta>
+    <NombreInmueble>Residencia Épsilon</NombreInmueble>
   </TblInmueble>
   <TblInmueble>
     <Codigo>DEPARTAMENTO_0</Codigo>
-    <Precio>0</Precio>
+    <Tipo>DEPARTAMENTO</Tipo>
+    <Precio>77000</Precio>
     <Descripcion>Venta de Departamentos a Estrenar en un Edificio Inteligente
       Los departamentos se encuentran en un Conjunto Residencial
       Privado con sistema de domótica
@@ -95,6 +80,7 @@
       Nos encontramos a 10 minutos del centro de Quito</Descripcion>
     <Ubicacion>Quito</Ubicacion>
     <EstadoVenta>DISPONIBLE</EstadoVenta>
+    <NombreInmueble>Jardín del Sol</NombreInmueble>
   </TblInmueble>
   <TblInmueble>
     <Codigo>DEPARTAMENTO_1</Codigo>

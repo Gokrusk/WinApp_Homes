@@ -22,6 +22,7 @@ namespace WinApp_Homes
         private void FormBuscar_Load(object sender, EventArgs e)
         {
             dataSetVenta.ReadXml(PathFile + "\\inmuebles.xml");
+            
             //dataSetVenta.ReadXml(PathFile + "\\imagenes.xml");
         }
 
@@ -69,14 +70,24 @@ namespace WinApp_Homes
             }
             catch
             {
-                MessageBox.Show("No se puede leer el archivo de registros", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               MessageBox.Show("No se puede leer el archivo de registros", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
         }
 
         private void TxtItem_KeyPress(object sender, KeyPressEventArgs e)
         {
             BtnBuscar_Click(sender, e);
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verificar si se hizo clic en la columna deseada (por ejemplo, la columna 0)
+            if (e.ColumnIndex == 6) // Reemplaza 0 por el índice de la columna en tu caso
+            {
+                int ind = e.RowIndex;
+                CargaFotosForm objFotos = new CargaFotosForm(dataGridView1[0, ind].Value.ToString());
+                objFotos.ShowDialog();
+            }
         }
     }
 }
