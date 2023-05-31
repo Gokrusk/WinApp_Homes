@@ -1,3 +1,9 @@
 <?xml version="1.0" standalone="yes"?>
 <DataSetVenta xmlns="http://tempuri.org/DataSetVenta.xsd">
+  <TblVenta>
+    <CodigoInmueble>CASA_1</CodigoInmueble>
+    <Mensualidad>900</Mensualidad>
+    <Cedula>0801234567</Cedula>
+    <NumeroMeses>101</NumeroMeses>
+  </TblVenta>
 </DataSetVenta>

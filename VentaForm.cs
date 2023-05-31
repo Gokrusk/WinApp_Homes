@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace WinApp_Homes
@@ -48,19 +49,14 @@ namespace WinApp_Homes
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            dataSetVenta1.Clear();
-
-            XmlDocument docIn = new XmlDocument();
-            docIn.Load(PathFile + "inmuebles.xml");
-
-            XmlDocument docCli = new XmlDocument();
-            docCli.Load(PathFile + "clientes.xml");
+            LeerInmueble();
 
             string inmu = dataInmuebleVenta["Codigo"].ToString();
             string ced = clientes[CbxCliente.SelectedIndex];
 
-            dataSetVenta1.Tables["TblInmueble"].ReadXml(PathFile + "ventas.xml");
-            object[] dataVenta = new object[3];
+            dataSetVenta1.Clear();
+            dataSetVenta1.Tables["TblVenta"].ReadXml(PathFile + "ventas.xml");
+            object[] dataVenta = new object[4];
 
             dataVenta[0] = inmu;
             dataVenta[1] = TxtMensualidad.Text;
@@ -69,6 +65,22 @@ namespace WinApp_Homes
 
             dataSetVenta1.TblVenta.Rows.Add(dataVenta);
             dataSetVenta1.Tables["TblVenta"].WriteXml(PathFile + "ventas.xml");
+
+            LeerInmueble();
+            DataRow vector = dataInmuebleVenta;
+
+            vector["Codigo"] = dataInmuebleVenta["Codigo"];
+            vector["Tipo"] = dataInmuebleVenta["Tipo"];
+            vector["Precio"] = dataInmuebleVenta["Precio"];
+            vector["Descripcion"] = dataInmuebleVenta["Descripcion"];
+            vector["Ubicacion"] = dataInmuebleVenta["Ubicacion"];
+            vector["NombreInmueble"] = dataInmuebleVenta["NombreInmueble"];
+            vector["EstadoVenta"] = "VENDIDO";
+
+            vector.AcceptChanges();
+            dataSetVenta1.WriteXml(PathFile + "inmuebles.xml");
+
+            MessageBox.Show("Venta generada correctamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void TxtMensualidad_TextChanged(object sender, EventArgs e)
@@ -84,13 +96,18 @@ namespace WinApp_Homes
             }
         }
 
-        private void CbxInmueble_SelectionChangeCommitted(object sender, EventArgs e)
+        private void LeerInmueble()
         {
             dataSetVenta1.Clear();
             dataSetVenta1.ReadXml(PathFile + "inmuebles.xml");
 
             dataInmuebleVenta = dataSetVenta1.TblInmueble.Select("NombreInmueble='" + CbxInmueble.SelectedItem.ToString() + "'")[0];
 
+        }
+
+        private void CbxInmueble_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            LeerInmueble();
             LblPrecio.Text = "Precio: $" + dataInmuebleVenta["Precio"].ToString();
         }
 
