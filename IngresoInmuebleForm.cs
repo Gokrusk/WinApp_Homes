@@ -66,9 +66,20 @@ namespace WinApp_Homes
             GuardarDatosXML();
             GuardarImagenesXML();
 
-            MessageBox.Show("Inmueble guardado correctamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if(rutasImagenes.Count > 0)
+            {
+                GuardarImagenes();
+                GuardarDatosXML();
+                GuardarImagenesXML();
+                MessageBox.Show("Inmueble guardado correctamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            ReiniciarDatos();
+                ReiniciarDatos();
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar al menos una imagen para el inmueble", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
         }
 
         private void ReiniciarDatos()

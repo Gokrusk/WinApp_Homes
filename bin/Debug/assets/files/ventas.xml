@@ -6,4 +6,10 @@
     <Cedula>0801234567</Cedula>
     <NumeroMeses>101</NumeroMeses>
   </TblVenta>
+  <TblVenta>
+    <CodigoInmueble>OFICINA_0</CodigoInmueble>
+    <Mensualidad>150</Mensualidad>
+    <Cedula>0801234567</Cedula>
+    <NumeroMeses>10</NumeroMeses>
+  </TblVenta>
 </DataSetVenta>

@@ -121,11 +121,12 @@
       Matriz: Naciones Unidas y Nuñez de Vela, Edificio Metropolitan, Piso 10, Oficina 1011
       Sucursal: Calle Polonia y Vancouver Edificio Clifford 3 Local 2</Descripcion>
     <Ubicacion>Montecristi</Ubicacion>
-    <EstadoVenta>DISPONIBLE</EstadoVenta>
+    <EstadoVenta>VENDIDO</EstadoVenta>
     <NombreInmueble>El Batán</NombreInmueble>
   </TblInmueble>
   <TblInmueble>
     <Codigo>CASA_2</Codigo>
+<<<<<<< HEAD
     <Tipo>CASA</Tipo>
     <Precio>111000</Precio>
     <Descripcion>Vendo hermosa casa de 3 plantas en la Cdla 24 de mayo
@@ -178,5 +179,28 @@ Sucursal: República de El Salvador y Naciones Unidas Edificio Metroplaza Oficin
     <Ubicacion>Quito</Ubicacion>
     <EstadoVenta>DISPONIBLE</EstadoVenta>
     <NombreInmueble>La Mariszal</NombreInmueble>
+=======
+    <Precio>83924</Precio>
+    <Descripcion>CASA ESQUINERA POR ESTRENAR, ACABADOS DE PRIMERA
+o Área de terreno 135 m2
+o Área de construcción 215 m2
+o Cocina equipada muebles altos, bajos
+o Amplia área social
+o Todos los servicios
+o Vía de acceso en buen estado
+o 2 dormitorios master con closet
+o 2 dormitorios con closet
+o 1 cuarto de lavandería con armario
+o 2 salas star en 2° y 3 °piso
+o 3 baños completos
+o 1 baños social
+o 3 parqueaderos
+o Portones metálicos retractiles garaje
+o Iluminación LED
+o Cisterna 8000 lt.
+o Precio de oportunidad</Descripcion>
+    <Ubicacion>Nueva Loja (Lago Agrio)</Ubicacion>
+    <EstadoVenta>DISPONIBLE</EstadoVenta>
+>>>>>>> d84ded6d435ef2447f8d6aea927ac95b6e76a058
   </TblInmueble>
 </DataSetVenta>

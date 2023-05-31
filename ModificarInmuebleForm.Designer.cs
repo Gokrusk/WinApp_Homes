@@ -48,6 +48,10 @@
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.dataSetVenta1 = new WinApp_Homes.DataSetVenta();
             this.CbxUbi = new System.Windows.Forms.ComboBox();
+            this.ListImagenes = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.BtnCargar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetVenta1)).BeginInit();
             this.SuspendLayout();
@@ -78,7 +82,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(608, 107);
+            this.textBox1.Location = new System.Drawing.Point(607, 93);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(156, 26);
             this.textBox1.TabIndex = 6;
@@ -89,7 +93,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(33, 110);
+            this.label2.Location = new System.Drawing.Point(32, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(171, 18);
             this.label2.TabIndex = 5;
@@ -102,7 +106,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Codigo",
             "NombreInmueble"});
-            this.comboBox1.Location = new System.Drawing.Point(234, 107);
+            this.comboBox1.Location = new System.Drawing.Point(233, 93);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(218, 26);
             this.comboBox1.TabIndex = 4;
@@ -112,7 +116,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label3.Location = new System.Drawing.Point(62, 154);
+            this.label3.Location = new System.Drawing.Point(32, 152);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 18);
             this.label3.TabIndex = 7;
@@ -123,14 +127,14 @@
             this.LblCodigo.AutoSize = true;
             this.LblCodigo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCodigo.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.LblCodigo.Location = new System.Drawing.Point(218, 154);
+            this.LblCodigo.Location = new System.Drawing.Point(188, 152);
             this.LblCodigo.Name = "LblCodigo";
             this.LblCodigo.Size = new System.Drawing.Size(0, 18);
             this.LblCodigo.TabIndex = 9;
             // 
             // TxtNombre
             // 
-            this.TxtNombre.Location = new System.Drawing.Point(184, 202);
+            this.TxtNombre.Location = new System.Drawing.Point(154, 200);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(199, 20);
             this.TxtNombre.TabIndex = 34;
@@ -140,7 +144,7 @@
             this.LblNombre.AutoSize = true;
             this.LblNombre.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNombre.ForeColor = System.Drawing.Color.White;
-            this.LblNombre.Location = new System.Drawing.Point(62, 205);
+            this.LblNombre.Location = new System.Drawing.Point(32, 203);
             this.LblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblNombre.Name = "LblNombre";
             this.LblNombre.Size = new System.Drawing.Size(76, 18);
@@ -149,7 +153,7 @@
             // 
             // TxtDesc
             // 
-            this.TxtDesc.Location = new System.Drawing.Point(592, 187);
+            this.TxtDesc.Location = new System.Drawing.Point(401, 188);
             this.TxtDesc.Multiline = true;
             this.TxtDesc.Name = "TxtDesc";
             this.TxtDesc.Size = new System.Drawing.Size(238, 171);
@@ -160,7 +164,7 @@
             this.LblDesc.AutoSize = true;
             this.LblDesc.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblDesc.ForeColor = System.Drawing.Color.White;
-            this.LblDesc.Location = new System.Drawing.Point(468, 189);
+            this.LblDesc.Location = new System.Drawing.Point(461, 152);
             this.LblDesc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblDesc.Name = "LblDesc";
             this.LblDesc.Size = new System.Drawing.Size(109, 18);
@@ -172,7 +176,7 @@
             this.LblUbi.AutoSize = true;
             this.LblUbi.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUbi.ForeColor = System.Drawing.Color.White;
-            this.LblUbi.Location = new System.Drawing.Point(62, 340);
+            this.LblUbi.Location = new System.Drawing.Point(32, 338);
             this.LblUbi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblUbi.Name = "LblUbi";
             this.LblUbi.Size = new System.Drawing.Size(93, 18);
@@ -181,7 +185,7 @@
             // 
             // TxtPrecio
             // 
-            this.TxtPrecio.Location = new System.Drawing.Point(185, 292);
+            this.TxtPrecio.Location = new System.Drawing.Point(155, 290);
             this.TxtPrecio.Name = "TxtPrecio";
             this.TxtPrecio.Size = new System.Drawing.Size(199, 20);
             this.TxtPrecio.TabIndex = 28;
@@ -191,7 +195,7 @@
             this.LblPrecio.AutoSize = true;
             this.LblPrecio.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPrecio.ForeColor = System.Drawing.Color.White;
-            this.LblPrecio.Location = new System.Drawing.Point(62, 295);
+            this.LblPrecio.Location = new System.Drawing.Point(32, 293);
             this.LblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPrecio.Name = "LblPrecio";
             this.LblPrecio.Size = new System.Drawing.Size(60, 18);
@@ -206,7 +210,7 @@
             "CASA",
             "DEPARTAMENTO",
             "OFICINA"});
-            this.CbxTipo.Location = new System.Drawing.Point(185, 246);
+            this.CbxTipo.Location = new System.Drawing.Point(155, 244);
             this.CbxTipo.Name = "CbxTipo";
             this.CbxTipo.Size = new System.Drawing.Size(198, 21);
             this.CbxTipo.TabIndex = 26;
@@ -217,7 +221,7 @@
             this.LblTipo.AutoSize = true;
             this.LblTipo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTipo.ForeColor = System.Drawing.Color.White;
-            this.LblTipo.Location = new System.Drawing.Point(62, 249);
+            this.LblTipo.Location = new System.Drawing.Point(32, 247);
             this.LblTipo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblTipo.Name = "LblTipo";
             this.LblTipo.Size = new System.Drawing.Size(42, 18);
@@ -231,13 +235,13 @@
             this.BtnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(169)))), ((int)(((byte)(143)))));
             this.BtnGuardar.FlatAppearance.BorderSize = 0;
             this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnGuardar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuardar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.BtnGuardar.Location = new System.Drawing.Point(272, 432);
+            this.BtnGuardar.Location = new System.Drawing.Point(282, 450);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(155, 43);
             this.BtnGuardar.TabIndex = 36;
-            this.BtnGuardar.Text = "ACEPTAR";
+            this.BtnGuardar.Text = "ACEPTAR CAMBIOS";
             this.BtnGuardar.UseVisualStyleBackColor = false;
             this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
@@ -248,14 +252,14 @@
             this.BtnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.BtnEliminar.FlatAppearance.BorderSize = 0;
             this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEliminar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEliminar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.ForeColor = System.Drawing.Color.White;
-            this.BtnEliminar.Location = new System.Drawing.Point(489, 432);
+            this.BtnEliminar.Location = new System.Drawing.Point(485, 450);
             this.BtnEliminar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(155, 43);
             this.BtnEliminar.TabIndex = 37;
-            this.BtnEliminar.Text = "CANCELAR";
+            this.BtnEliminar.Text = "DESCARTAR CAMBIOS";
             this.BtnEliminar.UseVisualStyleBackColor = false;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
@@ -319,11 +323,64 @@
             "Vinces",
             "Yaguachi",
             "Zamora"});
-            this.CbxUbi.Location = new System.Drawing.Point(185, 340);
+            this.CbxUbi.Location = new System.Drawing.Point(155, 338);
             this.CbxUbi.Margin = new System.Windows.Forms.Padding(2);
             this.CbxUbi.Name = "CbxUbi";
             this.CbxUbi.Size = new System.Drawing.Size(199, 21);
             this.CbxUbi.TabIndex = 38;
+            // 
+            // ListImagenes
+            // 
+            this.ListImagenes.FormattingEnabled = true;
+            this.ListImagenes.Location = new System.Drawing.Point(658, 188);
+            this.ListImagenes.Name = "ListImagenes";
+            this.ListImagenes.Size = new System.Drawing.Size(214, 56);
+            this.ListImagenes.TabIndex = 42;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(3)))), ((int)(((byte)(31)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(694, 316);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(155, 43);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "BORRAR IMÁGENES";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // BtnCargar
+            // 
+            this.BtnCargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(198)))), ((int)(((byte)(73)))));
+            this.BtnCargar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCargar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(169)))), ((int)(((byte)(143)))));
+            this.BtnCargar.FlatAppearance.BorderSize = 0;
+            this.BtnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCargar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F);
+            this.BtnCargar.ForeColor = System.Drawing.Color.Black;
+            this.BtnCargar.Location = new System.Drawing.Point(694, 267);
+            this.BtnCargar.Name = "BtnCargar";
+            this.BtnCargar.Size = new System.Drawing.Size(155, 43);
+            this.BtnCargar.TabIndex = 40;
+            this.BtnCargar.Text = "CARGAR IMÁGENES";
+            this.BtnCargar.UseVisualStyleBackColor = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(735, 152);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 18);
+            this.label5.TabIndex = 39;
+            this.label5.Text = "Imágenes";
             // 
             // ModificarInmuebleForm
             // 
@@ -331,6 +388,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(58)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(884, 511);
+            this.Controls.Add(this.ListImagenes);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnCargar);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.CbxUbi);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnGuardar);
@@ -383,5 +444,9 @@
         private System.Windows.Forms.Button BtnEliminar;
         private DataSetVenta dataSetVenta1;
         private System.Windows.Forms.ComboBox CbxUbi;
+        private System.Windows.Forms.ListBox ListImagenes;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnCargar;
+        private System.Windows.Forms.Label label5;
     }
 }

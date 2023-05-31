@@ -106,59 +106,59 @@
   </TblFoto>
   <TblFoto>
     <NombreFoto>354350510.jpg</NombreFoto>
-    <CodigoInmueble>_0</CodigoInmueble>
+    <CodigoInmueble>DEPARTAMENTO_0</CodigoInmueble>
   </TblFoto>
   <TblFoto>
     <NombreFoto>354350514.jpg</NombreFoto>
-    <CodigoInmueble>_0</CodigoInmueble>
+    <CodigoInmueble>DEPARTAMENTO_0</CodigoInmueble>
   </TblFoto>
   <TblFoto>
     <NombreFoto>354350517.jpg</NombreFoto>
-    <CodigoInmueble>_0</CodigoInmueble>
+    <CodigoInmueble>DEPARTAMENTO_0</CodigoInmueble>
   </TblFoto>
   <TblFoto>
     <NombreFoto>354350518.jpg</NombreFoto>
-    <CodigoInmueble>_0</CodigoInmueble>
+    <CodigoInmueble>DEPARTAMENTO_0</CodigoInmueble>
   </TblFoto>
   <TblFoto>
     <NombreFoto>354350523.jpg</NombreFoto>
-    <CodigoInmueble>_0</CodigoInmueble>
+    <CodigoInmueble>DEPARTAMENTO_0</CodigoInmueble>
   </TblFoto>
   <TblFoto>
     <NombreFoto>354350527.jpg</NombreFoto>
-    <CodigoInmueble>_0</CodigoInmueble>
+    <CodigoInmueble>DEPARTAMENTO_0</CodigoInmueble>
   </TblFoto>
   <TblFoto>
     <NombreFoto>354350509.jpg</NombreFoto>
-    <CodigoInmueble>_0</CodigoInmueble>
+    <CodigoInmueble>DEPARTAMENTO_0</CodigoInmueble>
   </TblFoto>
   <TblFoto>
     <NombreFoto>354350511.jpg</NombreFoto>
-    <CodigoInmueble>_0</CodigoInmueble>
+    <CodigoInmueble>DEPARTAMENTO_0</CodigoInmueble>
   </TblFoto>
   <TblFoto>
     <NombreFoto>354350512.jpg</NombreFoto>
-    <CodigoInmueble>_0</CodigoInmueble>
+    <CodigoInmueble>DEPARTAMENTO_0</CodigoInmueble>
   </TblFoto>
   <TblFoto>
     <NombreFoto>354350515.jpg</NombreFoto>
-    <CodigoInmueble>_0</CodigoInmueble>
+    <CodigoInmueble>DEPARTAMENTO_0</CodigoInmueble>
   </TblFoto>
   <TblFoto>
     <NombreFoto>354350516.jpg</NombreFoto>
-    <CodigoInmueble>_0</CodigoInmueble>
+    <CodigoInmueble>DEPARTAMENTO_0</CodigoInmueble>
   </TblFoto>
   <TblFoto>
     <NombreFoto>354350526.jpg</NombreFoto>
-    <CodigoInmueble>_0</CodigoInmueble>
+    <CodigoInmueble>DEPARTAMENTO_0</CodigoInmueble>
   </TblFoto>
   <TblFoto>
     <NombreFoto>354350528.jpg</NombreFoto>
-    <CodigoInmueble>_0</CodigoInmueble>
+    <CodigoInmueble>DEPARTAMENTO_0</CodigoInmueble>
   </TblFoto>
   <TblFoto>
     <NombreFoto>354350521.jpg</NombreFoto>
-    <CodigoInmueble>_0</CodigoInmueble>
+    <CodigoInmueble>DEPARTAMENTO_0</CodigoInmueble>
   </TblFoto>
   <TblFoto>
     <NombreFoto>296914811.jpg</NombreFoto>
@@ -229,6 +229,7 @@
     <CodigoInmueble>OFICINA_0</CodigoInmueble>
   </TblFoto>
   <TblFoto>
+<<<<<<< HEAD
     <NombreFoto>361882154.jpg</NombreFoto>
     <CodigoInmueble>CASA_2</CodigoInmueble>
   </TblFoto>
@@ -319,5 +320,53 @@
   <TblFoto>
     <NombreFoto>349745148.jpg</NombreFoto>
     <CodigoInmueble>OFICINA_1</CodigoInmueble>
+=======
+    <NombreFoto>363632485.jpg</NombreFoto>
+    <CodigoInmueble>CASA_2</CodigoInmueble>
+  </TblFoto>
+  <TblFoto>
+    <NombreFoto>363632488.jpg</NombreFoto>
+    <CodigoInmueble>CASA_2</CodigoInmueble>
+  </TblFoto>
+  <TblFoto>
+    <NombreFoto>363871716.jpg</NombreFoto>
+    <CodigoInmueble>CASA_2</CodigoInmueble>
+  </TblFoto>
+  <TblFoto>
+    <NombreFoto>363871719.jpg</NombreFoto>
+    <CodigoInmueble>CASA_2</CodigoInmueble>
+  </TblFoto>
+  <TblFoto>
+    <NombreFoto>363632482.jpg</NombreFoto>
+    <CodigoInmueble>CASA_2</CodigoInmueble>
+  </TblFoto>
+  <TblFoto>
+    <NombreFoto>363632483.jpg</NombreFoto>
+    <CodigoInmueble>CASA_2</CodigoInmueble>
+  </TblFoto>
+  <TblFoto>
+    <NombreFoto>363632484.jpg</NombreFoto>
+    <CodigoInmueble>CASA_2</CodigoInmueble>
+  </TblFoto>
+  <TblFoto>
+    <NombreFoto>363632489.jpg</NombreFoto>
+    <CodigoInmueble>CASA_2</CodigoInmueble>
+  </TblFoto>
+  <TblFoto>
+    <NombreFoto>363871718.jpg</NombreFoto>
+    <CodigoInmueble>CASA_2</CodigoInmueble>
+  </TblFoto>
+  <TblFoto>
+    <NombreFoto>363632480.jpg</NombreFoto>
+    <CodigoInmueble>CASA_2</CodigoInmueble>
+  </TblFoto>
+  <TblFoto>
+    <NombreFoto>363632479.jpg</NombreFoto>
+    <CodigoInmueble>CASA_2</CodigoInmueble>
+  </TblFoto>
+  <TblFoto>
+    <NombreFoto>363632491.jpg</NombreFoto>
+    <CodigoInmuebleCASA_2</CodigoInmueble>
+>>>>>>> d84ded6d435ef2447f8d6aea927ac95b6e76a058
   </TblFoto>
 </DataSetVenta>

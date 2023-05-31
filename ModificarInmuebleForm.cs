@@ -62,7 +62,15 @@ namespace WinApp_Homes
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            string texto = "¿Está seguro de no guardar sus modificaciones?";
+
+            bool opcion = MessageBox.Show(texto, "ADVERTENCIA", MessageBoxButtons.YesNo) == DialogResult.Yes;
+
+            if (opcion)
+            {
+                MessageBox.Show("No se realizó ninguna modificación en la información", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
