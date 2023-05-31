@@ -63,13 +63,22 @@ namespace WinApp_Homes
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
 
-            GuardarImagenes();
-            GuardarDatosXML();
-            GuardarImagenesXML();
+            
 
-            MessageBox.Show("Inmueble guardado correctamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if(rutasImagenes.Count > 0)
+            {
+                GuardarImagenes();
+                GuardarDatosXML();
+                GuardarImagenesXML();
+                MessageBox.Show("Inmueble guardado correctamente", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            ReiniciarDatos();
+                ReiniciarDatos();
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar al menos una imagen para el inmueble", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
         }
 
         private void ReiniciarDatos()
@@ -79,6 +88,7 @@ namespace WinApp_Homes
             TxtPrecio.Clear();
             CbxTipo.SelectedIndex = 0;
             CbxUbi.SelectedIndex = 0;
+            ListImagenes.Items.Clear();
         }
 
         private void GuardarImagenes()

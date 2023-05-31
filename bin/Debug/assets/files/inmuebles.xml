@@ -124,4 +124,28 @@
     <EstadoVenta>VENDIDO</EstadoVenta>
     <NombreInmueble>El Batán</NombreInmueble>
   </TblInmueble>
+  <TblInmueble>
+    <Codigo>CASA_2</Codigo>
+    <Precio>83924</Precio>
+    <Descripcion>CASA ESQUINERA POR ESTRENAR, ACABADOS DE PRIMERA
+o Área de terreno 135 m2
+o Área de construcción 215 m2
+o Cocina equipada muebles altos, bajos
+o Amplia área social
+o Todos los servicios
+o Vía de acceso en buen estado
+o 2 dormitorios master con closet
+o 2 dormitorios con closet
+o 1 cuarto de lavandería con armario
+o 2 salas star en 2° y 3 °piso
+o 3 baños completos
+o 1 baños social
+o 3 parqueaderos
+o Portones metálicos retractiles garaje
+o Iluminación LED
+o Cisterna 8000 lt.
+o Precio de oportunidad</Descripcion>
+    <Ubicacion>Nueva Loja (Lago Agrio)</Ubicacion>
+    <EstadoVenta>DISPONIBLE</EstadoVenta>
+  </TblInmueble>
 </DataSetVenta>
