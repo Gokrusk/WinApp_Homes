@@ -12,11 +12,12 @@ namespace WinApp_Homes
 {
     public partial class ModificarInmuebleForm : Form
     {
-        string etiqueta;
+        string etiqueta, original;
 
-        System.Data.DataRow[] vector; //otra forma de declarar un vector
+        DataRow[] vector; //otra forma de declarar un vector
 
         readonly string PathFile = Application.StartupPath + "\\assets\\files\\";
+
 
         public ModificarInmuebleForm()
         {
@@ -37,10 +38,15 @@ namespace WinApp_Homes
             TxtPrecio.Visible = false;
             CbxUbi.Visible = false;
             TxtPrecio.Visible = false;
+
+            dataSetVenta1.ReadXml(PathFile + "inmuebles.xml");
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
+            //dataSetVenta1.ReadXml(PathFile + "inmuebles.xml");
+            
+            vector[0]["Codigo"] = LblCodigo.Text;
             vector[0]["Tipo"] = CbxTipo.SelectedItem.ToString();
             vector[0]["Precio"] = TxtPrecio.Text;
             vector[0]["Descripcion"] = TxtDesc.Text;
@@ -55,7 +61,6 @@ namespace WinApp_Homes
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
@@ -63,31 +68,39 @@ namespace WinApp_Homes
         {
             if(e.KeyChar == (char)Keys.Enter)
             {
-                e.Handled = true;
-                etiqueta = comboBox1.SelectedItem.ToString() + "='";
+                try
+                {
+                    e.Handled = true;
+                    etiqueta = comboBox1.SelectedItem.ToString() + "='";
 
-                dataSetVenta1.ReadXml(PathFile + "inmuebles.xml");
-                vector = dataSetVenta1.TblInmueble.Select(etiqueta + textBox1.Text + "'"); //+...+ para concatenar y no hay que poner espacios
+                    
+                    vector = dataSetVenta1.TblInmueble.Select(etiqueta + textBox1.Text + "'"); //+...+ para concatenar y no hay que poner espacios
 
-                LblCodigo.Text = vector[0]["Codigo"].ToString();
-                CbxTipo.Text = vector[0]["Tipo"].ToString();
-                TxtPrecio.Text = vector[0]["Precio"].ToString();
-                TxtDesc.Text = vector[0]["Descripcion"].ToString();
-                CbxUbi.Text = vector[0]["Ubicacion"].ToString();
-                TxtNombre.Text = vector[0]["NombreInmueble"].ToString();
+                    LblCodigo.Text = vector[0]["Codigo"].ToString();
+                    CbxTipo.Text = vector[0]["Tipo"].ToString();
+                    TxtPrecio.Text = vector[0]["Precio"].ToString();
+                    TxtDesc.Text = vector[0]["Descripcion"].ToString();
+                    CbxUbi.Text = vector[0]["Ubicacion"].ToString();
+                    TxtNombre.Text = vector[0]["NombreInmueble"].ToString();
+                    original = LblCodigo.Text;
 
-                LblCodigo.Visible = true;
-                LblDesc.Visible = true;
-                LblNombre.Visible = true;
-                LblPrecio.Visible = true;
-                LblTipo.Visible = true;
-                LblUbi.Visible = true;
-                CbxTipo.Visible = true;
-                TxtDesc.Visible = true;
-                TxtNombre.Visible = true;
-                TxtPrecio.Visible = true;
-                CbxUbi.Visible = true;
-                TxtPrecio.Visible = true;
+                    LblCodigo.Visible = true;
+                    LblDesc.Visible = true;
+                    LblNombre.Visible = true;
+                    LblPrecio.Visible = true;
+                    LblTipo.Visible = true;
+                    LblUbi.Visible = true;
+                    CbxTipo.Visible = true;
+                    TxtDesc.Visible = true;
+                    TxtNombre.Visible = true;
+                    TxtPrecio.Visible = true;
+                    CbxUbi.Visible = true;
+                    TxtPrecio.Visible = true;
+                }
+                catch
+                {
+                    MessageBox.Show("No exite un inmueble que coincida con su campo de búsqueda");
+                }
             }
         }
 
@@ -95,13 +108,14 @@ namespace WinApp_Homes
         {
             DataRow[] dataInmuebles;
 
-            dataSetVenta1.Clear();
-            dataSetVenta1.ReadXml(PathFile + "inmuebles.xml");
-
             dataInmuebles = dataSetVenta1.TblInmueble.Select("Tipo='" + CbxTipo.SelectedItem.ToString() + "'");
 
             int num = dataInmuebles.Length;
-            LblCodigo.Text = vector[0]["Tipo"].ToString() + "_" + num.ToString();
+
+            if (CbxTipo.SelectedItem.ToString() == original)
+                LblCodigo.Text = original;
+            else
+                LblCodigo.Text = CbxTipo.SelectedItem.ToString() + "_" + num.ToString();
         }
     }
 }
