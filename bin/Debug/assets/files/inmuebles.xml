@@ -187,4 +187,45 @@
     <EstadoVenta>DISPONIBLE</EstadoVenta>
     <NombreInmueble>La Mariscal</NombreInmueble>
   </TblInmueble>
+  <TblInmueble>
+    <Codigo>CASA_4</Codigo>
+    <Tipo>CASA</Tipo>
+    <Precio>1250000</Precio>
+    <Descripcion>Casa de Lujo
+🔥2500m2 de terreno 
+ 🔥1000m2  de construcción 
+
+PLANTA BAJA
+* Recibidor 
+* Estudio
+* Sala de juegos 
+* Sala principal con chimenea 
+* Sala Bar 
+* 2 baños
+* Cocina con cuarto de lavandería y un baño social
+
+🔥PRIMERA PLANTA ALTA
+* Habitación Máster con balcón
+* Sala 
+* Cuarto de estudio 
+* Habitación Master para  huéspedes
+* 2 Habitaciones Máster  Duplex 
+* 2 Habitaciones con baño privado 
+
+🔥SEGUNDA  PLANTA ALTA
+* 2 balcones uno  de ellos cubierto
+* Salón de Recepciónes y  zona de entretenimiento 
+* Baño completo
+
+🔥AREA EXTERNA 
+* Zona  de bbq
+* Zona para gimnasio 
+* 4 Baños Sociales 
+
+🔥Área verde compuesta por amplios jardines 
+🔥Zona de Parqueo para 7 vehículos</Descripcion>
+    <Ubicacion>Riobamba</Ubicacion>
+    <EstadoVenta>DISPONIBLE</EstadoVenta>
+    <NombreInmueble>Casa del Joab</NombreInmueble>
+  </TblInmueble>
 </DataSetVenta>
