@@ -21,7 +21,7 @@ namespace WinApp_Homes
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("BIENVENIDO A NUESTRA APLICATIVO", "HOLA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("BIENVENIDO A NUESTRA APLICATIVO", "BIENVENIDA", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void BtnLogin_Click(object sender, EventArgs e)
