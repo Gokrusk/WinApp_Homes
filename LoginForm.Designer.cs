@@ -111,7 +111,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 22);
             this.label2.TabIndex = 5;
-            this.label2.Text = "EMAIL";
+            this.label2.Text = "USUARIO";
             // 
             // label3
             // 
