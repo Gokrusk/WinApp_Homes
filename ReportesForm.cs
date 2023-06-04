@@ -18,6 +18,7 @@ namespace WinApp_Homes
         {
             InitializeComponent();
             dataSetVenta.ReadXml(PathFile + "clientes.xml");
+            dataSetVenta.ReadXml(PathFile + "inmuebles.xml");
         }
 
         private void ReportesForm_Load(object sender, EventArgs e)
