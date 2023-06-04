@@ -52,24 +52,6 @@ namespace WinApp_Homes
                                 MessageBox.Show("Contraseña incorrecta", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
-                        else if (TxtUser.Text != "administrar")
-                        {
-                            dataSetVenta1.ReadXml(PathFile + "data.xml");
-                            DataRow[] data;
-                            data = dataSetVenta1.TblCliente.Select("Email='" + TxtUser.Text + "'");
-                            if (data[0]["Cedula"].ToString() == TxtPsw.Text)
-                            {
-                                MessageBox.Show("Abriendo menu de cliente", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                            else
-                            {
-                                MessageBox.Show("Contraseña incorrecta", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("No se encuentra el usuario", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
                     }
                     else
                     {
