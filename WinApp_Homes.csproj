@@ -172,6 +172,7 @@
     <EmbeddedResource Include="RegistroClientForm.resx">
       <DependentUpon>RegistroClientForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportHomes.rdlc" />
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="ReportesForm.resx">
       <DependentUpon>ReportesForm.cs</DependentUpon>
