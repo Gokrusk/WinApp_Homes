@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace WinApp_Homes
 {
@@ -17,7 +19,6 @@ namespace WinApp_Homes
         DataRow[] vector; //otra forma de declarar un vector
 
         readonly string PathFile = Application.StartupPath + "\\assets\\files\\";
-
 
         public ModificarInmuebleForm()
         {
@@ -104,14 +105,16 @@ namespace WinApp_Homes
                     TxtPrecio.Visible = true;
                     CbxUbi.Visible = true;
                     TxtPrecio.Visible = true;
-                    label3.Visible = false;
+                    label3.Visible = true;
                 }
-                catch
+                catch (Exception ex)
                 {
+                    MessageBox.Show(ex.Message);
                     MessageBox.Show("No exite un inmueble que coincida con su campo de búsqueda");
                 }
             }
         }
+
 
         private void CbxTipo_SelectionChangeCommitted(object sender, EventArgs e)
         {

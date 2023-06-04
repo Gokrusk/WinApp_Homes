@@ -11,11 +11,11 @@
   </TblCliente>
   <TblCliente>
     <Cedula>0604401919</Cedula>
-    <Nombre>Maria</Nombre>
+    <Nombre>Fernando</Nombre>
     <Apellido>García</Apellido>
-    <Sexo>Femenino</Sexo>
+    <Sexo>Masculino</Sexo>
     <Ciudad>Quito</Ciudad>
-    <FechaNacimiento>15/06/1995 09:15:00</FechaNacimiento>
+    <FechaNacimiento>15/6/2003 09:15:00</FechaNacimiento>
     <Email>maria.garcia@example.com</Email>
   </TblCliente>
   <TblCliente>

@@ -24,7 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.tblClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetVenta = new WinApp_Homes.DataSetVenta();
             this.LblIntruccion = new System.Windows.Forms.Label();
@@ -59,7 +59,8 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Listado de clientes"});
+            "Listado de clientes",
+            "Promedio de precio"});
             this.comboBox1.Location = new System.Drawing.Point(211, 24);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(183, 26);
@@ -67,9 +68,9 @@
             // 
             // reportViewer1
             // 
-            reportDataSource3.Name = "DataSet1";
-            reportDataSource3.Value = this.tblClienteBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.tblClienteBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "WinApp_Homes.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(-1, 69);
             this.reportViewer1.Name = "reportViewer1";

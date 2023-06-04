@@ -20,7 +20,6 @@ namespace WinApp_Homes
         readonly string PathImage = Application.StartupPath + "\\assets\\images\\";
         readonly string PathFile = Application.StartupPath + "\\assets\\files\\";
 
-
         private List<string> rutasImagenes = new List<string>();
 
         public IngresoInmuebleForm()
