@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ayuda</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta lang="en" />
+
+    <style>
+      /* STYLING all elements */
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+
+      /* STYLING NAVIGATION */
+      #navbar {
+        position: fixed;
+        min-width: 290px;
+        top: 0px;
+        left: 0px;
+        width: 300px;
+        height: 100%;
+        font-family: sans-serif;
+        border-right: 1px solid rgba(0, 22, 22, 0.4);
+      }
+
+      .nav-header {
+        width: 100%;
+        height: 10%;
+        padding: 15px;
+        text-align: center;
+        font-size: 2rem;
+        box-shadow: 0 3px 2px #ddd;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+      }
+
+      #nav {
+        width: 100%;
+        height: 90%;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+
+      .nav-link {
+        width: 100%;
+        height: auto;
+        text-align: left;
+        text-decoration: none;
+        color: #000;
+      }
+
+      /* .nav-link:hover{
+	font-style: italic;
+} */
+
+      .nav-link li {
+        list-style: none;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        padding: 15px 0 15px 15px;
+        font-size: 1.2rem;
+        border-bottom: 1px dotted #333;
+      }
+
+      .nav-link li:first-child {
+        border-top: 1px dotted #333;
+      }
+
+      .nav-link li:hover {
+        background-color: #eee;
+      }
+
+      /* STYLING MAIN CONTENT */
+      #main-doc {
+        position: absolute;
+        margin-left: 300px;
+        width: 500px;
+        min-width: calc(100% - 300px);
+        max-width: calc(100% - 290px);
+        height: 100%;
+        padding: 20px 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+
+      .main-section {
+        width: 100%;
+        height: auto;
+        margin: 5px;
+        padding: 20px 10px 20px 10px;
+      }
+
+      .main-section > header {
+        font-size: 2rem;
+        font-family: sans-serif;
+      }
+
+      .main-section > header:hover {
+        text-decoration: underline;
+      }
+
+      p {
+        width: 100%;
+        height: auto;
+        font-size: 1rem;
+        padding: 5px;
+        line-height: 20px;
+        word-spacing: 2.1px;
+        letter-spacing: 0.8px;
+        text-align: justify;
+        margin: 0.3rem 0 0.3rem 0.1rem;
+        font-family: sans-serif;
+      }
+
+      code {
+        width: 99%;
+        background: #f7f7f7;
+        font-size: 1.1rem;
+        display: inline-block;
+        margin: 0.9rem 0.3rem 0.9rem 0.3rem;
+        padding: 15px;
+        white-space: pre;
+      }
+
+      .main-section > ul {
+        margin: 1rem 0 1rem 3%;
+      }
+
+      .main-section > ul > li {
+        width: 100%;
+        height: auto;
+        font-size: 1rem;
+        padding: 10px;
+        line-height: 20px;
+        word-spacing: 2.1px;
+        letter-spacing: 0.8px;
+        text-align: justify;
+        font-family: sans-serif;
+      }
+
+      .main-section > ul > li > ul > li {
+        margin-left: 1rem;
+        width: 100%;
+        height: auto;
+        font-size: 1rem;
+        padding: 10px;
+        line-height: 20px;
+        word-spacing: 2.1px;
+        letter-spacing: 0.8px;
+        text-align: justify;
+        font-family: sans-serif;
+      }
+
+      /*MEDIA QUERY*/
+      @media screen and (max-width: 700px) {
+        #navbar {
+          min-width: 100%;
+          width: 100%;
+          height: 200px;
+          position: static;
+          box-shadow: 0px 3px 2px #ccc;
+          box-sizing: border-box;
+        }
+
+        .nav-header {
+          padding: 0;
+          height: 40px;
+          font-size: 1.8rem;
+        }
+
+        #navbar > #nav {
+          height: 160px;
+        }
+
+        .nav-link li {
+          font-size: 1rem;
+        }
+
+        #main-doc {
+          position: static;
+          min-width: 100%;
+          max-width: 100%;
+          height: 80%;
+          margin-left: 0px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <header class="nav-header">Venta de Casas</header>
+
+      <div id="nav">
+        <ul>
+          <a href="#introduction" class="nav-link">
+            <li>Introducción</li>
+          </a>
+
+          <a href="#login" class="nav-link">
+            <li>Inicio de Sesión</li>
+          </a>
+
+          <a href="#register_client" class="nav-link">
+            <li>Registro de Clientes</li>
+          </a>
+
+          <a href="#update_client" class="nav-link">
+            <li>Modificar Clientes</li>
+          </a>
+
+          <a href="#delete_client" class="nav-link">
+            <li>Eliminar Cliente</li>
+          </a>
+
+          <a href="#register_home" class="nav-link">
+            <li>Registro de Inmuebles</li>
+          </a>
+
+          <a href="#update_home" class="nav-link">
+            <li>Modificar Inmuebles</li>
+          </a>
+
+          <a href="#search_home" class="nav-link">
+            <li>Busqueda de Inmueble</li>
+          </a>
+
+          <a href="#delete_home" class="nav-link">
+            <li>Eliminar Inmueble</li>
+          </a>
+
+          <a href="#reference" class="nav-link">
+            <li>Contacto</li>
+          </a>
+
+        </ul>
+      </div>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="introduction">
+        <header>Introducción</header>
+
+        <p>
+          Nuestra aplicación revoluciona la forma en que las personas compran y
+          venden casas al ofrecer una plataforma digital intuitiva y eficiente
+          para el mercado inmobiliario. Diseñada para satisfacer las necesidades
+          tanto de compradores como de vendedores, simplifica el proceso de
+          búsqueda, visualización y transacción de propiedades, brindando una
+          experiencia sin igual en el mundo de las ventas de casas.
+        </p>
+
+        <p>
+          Los usuarios pueden acceder a una amplia selección de casas en venta
+          en diferentes ubicaciones geográficas, desde la comodidad de su hogar
+          o desde cualquier lugar con conexión a internet.
+        </p>
+        <p>
+          La aplicación ofrece una interfaz elegante y fácil de usar, que
+          permite a los usuarios explorar las propiedades de manera eficiente y
+          realizar búsquedas personalizadas según sus preferencias específicas,
+          como ubicación, tamaño, precio y características.
+        </p>
+
+        <p>
+          En resumen, la aplicación "HomeSales" redefine la forma en que las
+          personas compran y venden casas al proporcionar una experiencia
+          digital sin complicaciones, con funciones de búsqueda avanzadas,
+          visualización inmersiva y comunicación directa. Ya sea que estés
+          buscando tu hogar ideal o deseando vender una propiedad, "HomeSales"
+          es la solución definitiva que te permite encontrar y cerrar tratos de
+          manera rápida, eficiente y segura.
+        </p>
+      </section>
+
+      <section class="main-section" id="login">
+        <header>Inicio de Sesión</header>
+
+        <p>Para iniciar sesión siga los siguientes pasos:</p>
+
+        <img src="../images/login.png" alt="Login" width="500" />
+
+        <ul>
+          <li>Administrador</li>
+          <p>1. Ingrese su usuario</p>
+          <p>2. Ingrese su contraseña</p>
+        </ul>
+      </section>
+
+      <section class="main-section" id="register_client">
+        <header>Registro de Clientes</header>
+
+        <p>
+          Si es un administrador, usted puede registrar clientes. Para ello siga
+          los siguientes pasos:
+        </p>
+
+        <img
+          src="../images//register_client.png"
+          alt="Registro de Clientes"
+          width="500"
+        />
+
+        <ul>
+          <p>1. Ingrese la cédula</p>
+          <p>2. Ingrese el nombre</p>
+          <p>3. Ingrese el apellido</p>
+          <p>4. Ingrese el sexo</p>
+          <p>5. Ingrese la fecha de nacimiento</p>
+          <p>6. Ingrese la ciudad</p>
+          <p>7. Ingrese el correo electrónico</p>
+          <p>8. Pulse el botón guardar</p>
+        </ul>
+      </section>
+
+      <section class="main-section" id="update_client">
+        <header>Modificar Clientes</header>
+
+        <p>
+          Si es un administrador, usted puede modificar clientes. Para ello siga
+          los siguientes pasos:
+        </p>
+
+        <ul>
+          <p>1. Ingrese la cédula de cliente a modificar y presione enter</p>
+          <img
+            src="../images//update_client.png"
+            alt="Registro de Clientes"
+            width="500"
+          />
+          <p>2. Modificar los datos y guardar los cambios o cancelar</p>
+          <img
+            src="../images//update_client2.png"
+            alt="Registro de Clientes"
+            width="500"
+          />
+        </ul>
+      </section>
+
+      <section class="main-section" id="register_home">
+        <header>Registro de Inmuebles</header>
+
+        <p>
+          Si es un administrador, usted puede registrar inmuebles. Para ello
+          siga los siguientes pasos:
+        </p>
+
+        <img
+          src="../images//register_home.png"
+          alt="Registro de Inmuebles"
+          width="500"
+        />
+
+        <ul>
+          <p>1. Ingrese el nombre</p>
+          <p>2. Seleccione el tipo</p>
+          <p>3. Ingrese el precio</p>
+          <p>4. Ingrese la ubicación</p>
+          <p>5. Ingrese la descripción</p>
+          <p>6. Cargue las imágenes</p>
+          <p>7. Pulse el botón guardar</p>
+        </ul>
+      </section>
+
+      <section class="main-section" id="update_home">
+        <header>Registro de Inmuebles</header>
+
+        <p>
+          Si es un administrador, usted puede modificar inmuebles. Para ello
+          siga los siguientes pasos:
+        </p>
+
+        <ul>
+          <p>1. Seleccione un campo de búsqueda</p>
+          <img
+            src="../images//update_home.png"
+            alt="Registro de Inmuebles"
+            width="500"
+          />
+          <p>
+            2. Ingrese el dato para buscar según el campo de búsqueda y precio
+            enter
+          </p>
+          <img
+            src="../images//update_home2.png"
+            alt="Registro de Inmuebles"
+            width="500"
+          />
+          <p>3. Modificar datos y aceptar cambios o descartar cambios</p>
+        </ul>
+      </section>
+
+      <section class="main-section" id="search_home">
+        <header>Busqueda de Inmueble</header>
+
+        <p>Para buscar un inmueble siga los siguientes pasos:</p>
+
+        <ul>
+          <p>1. Seleccione un filtro de busqueda</p>
+          <img src="../images/search_form.png" alt="Login" width="500" />
+          <p>2. Ingrese palabra para filtrar y presione el botón buscar</p>
+          <img src="../images/search_form2.png" alt="Login" width="500" />
+          <p>3. Si desea ver las fotografías, presione en el botón <b> VER </b></p>
+            <img src="../images/search_form3.png" alt="Login" width="500" />
+        </ul>
+      </section>
+
+      <section class="main-section" id="reference">
+        <header>Contacto</header>
+
+        <ul>
+          <li>Fernando Alejandro Novillo Aguirre - 7196</li>
+          <li>Nigell Marcel Jama Oyarvide - 7046</li>
+          <li>Cristhian Paul Chimbo Ortiz - 7168</li>
+          <li>Kevin Hernan Tapia Sanmartin - 7097</li>
+          <li>Cielo de Los Ángeles Morillo Obando - 7097</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

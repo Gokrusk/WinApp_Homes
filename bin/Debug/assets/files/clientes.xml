@@ -1,0 +1,48 @@
+<?xml version="1.0" standalone="yes"?>
+<DataSetVenta xmlns="http://tempuri.org/DataSetVenta.xsd">
+  <TblCliente>
+    <Cedula>0503959447</Cedula>
+    <Nombre>Kevin</Nombre>
+    <Apellido>Tapia</Apellido>
+    <Sexo>M</Sexo>
+    <Ciudad>Latacunga</Ciudad>
+    <FechaNacimiento>30/12/2001 0:00:00</FechaNacimiento>
+    <Email>kevintapia@gmail.com</Email>
+  </TblCliente>
+  <TblCliente>
+    <Cedula>0604401919</Cedula>
+    <Nombre>Fernando</Nombre>
+    <Apellido>García</Apellido>
+    <Sexo>M</Sexo>
+    <Ciudad>Quito</Ciudad>
+    <FechaNacimiento>15/6/2003 0:00:00</FechaNacimiento>
+    <Email>maria.garcia@gmail.com</Email>
+  </TblCliente>
+  <TblCliente>
+    <Cedula>0602926925</Cedula>
+    <Nombre>Juan</Nombre>
+    <Apellido>Pérez</Apellido>
+    <Sexo>M</Sexo>
+    <Ciudad>Guayaquil</Ciudad>
+    <FechaNacimiento>2/3/1988 0:00:00</FechaNacimiento>
+    <Email>juan.perez@gmail.com</Email>
+  </TblCliente>
+  <TblCliente>
+    <Cedula>1707216527</Cedula>
+    <Nombre>Ana</Nombre>
+    <Apellido>Ruiz</Apellido>
+    <Sexo>F</Sexo>
+    <Ciudad>Cuenca</Ciudad>
+    <FechaNacimiento>10/11/1990 0:00:00</FechaNacimiento>
+    <Email>ana.ruiz@gmail.com</Email>
+  </TblCliente>
+  <TblCliente>
+    <Cedula>0600334924</Cedula>
+    <Nombre>Carlos</Nombre>
+    <Apellido>López</Apellido>
+    <Sexo>M</Sexo>
+    <Ciudad>Guayaquil</Ciudad>
+    <FechaNacimiento>12/5/1990 0:00:00</FechaNacimiento>
+    <Email>carlos.lopez@gmail.com</Email>
+  </TblCliente>
+</DataSetVenta>
