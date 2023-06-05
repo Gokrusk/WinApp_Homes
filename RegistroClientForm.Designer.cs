@@ -37,7 +37,6 @@
             this.LblInfoCed = new System.Windows.Forms.Label();
             this.TxtCorreo = new System.Windows.Forms.TextBox();
             this.CbxCiudad = new System.Windows.Forms.ComboBox();
-            this.DtpFecha = new System.Windows.Forms.DateTimePicker();
             this.CbxSexo = new System.Windows.Forms.ComboBox();
             this.LblSexo = new System.Windows.Forms.Label();
             this.TxtApellido = new System.Windows.Forms.TextBox();
@@ -52,6 +51,7 @@
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.dataSetVenta1 = new WinApp_Homes.DataSetVenta();
+            this.DtpFecha = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.GbxRegistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetVenta1)).BeginInit();
@@ -82,13 +82,13 @@
             // 
             // GbxRegistro
             // 
+            this.GbxRegistro.Controls.Add(this.DtpFecha);
             this.GbxRegistro.Controls.Add(this.LblInfoCorr);
             this.GbxRegistro.Controls.Add(this.LblInfoApe);
             this.GbxRegistro.Controls.Add(this.LblInfoNom);
             this.GbxRegistro.Controls.Add(this.LblInfoCed);
             this.GbxRegistro.Controls.Add(this.TxtCorreo);
             this.GbxRegistro.Controls.Add(this.CbxCiudad);
-            this.GbxRegistro.Controls.Add(this.DtpFecha);
             this.GbxRegistro.Controls.Add(this.CbxSexo);
             this.GbxRegistro.Controls.Add(this.LblSexo);
             this.GbxRegistro.Controls.Add(this.TxtApellido);
@@ -215,17 +215,6 @@
             this.CbxCiudad.Size = new System.Drawing.Size(150, 25);
             this.CbxCiudad.TabIndex = 19;
             this.CbxCiudad.SelectedIndexChanged += new System.EventHandler(this.CbxCiudad_SelectedIndexChanged);
-            // 
-            // DtpFecha
-            // 
-            this.DtpFecha.Enabled = false;
-            this.DtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpFecha.Location = new System.Drawing.Point(466, 170);
-            this.DtpFecha.Name = "DtpFecha";
-            this.DtpFecha.Size = new System.Drawing.Size(135, 26);
-            this.DtpFecha.TabIndex = 18;
-            this.DtpFecha.Value = new System.DateTime(2023, 5, 28, 10, 35, 34, 0);
-            this.DtpFecha.ValueChanged += new System.EventHandler(this.DtpFecha_ValueChanged);
             // 
             // CbxSexo
             // 
@@ -388,7 +377,18 @@
             // dataSetVenta1
             // 
             this.dataSetVenta1.DataSetName = "DataSetVenta";
+            this.dataSetVenta1.EnforceConstraints = false;
             this.dataSetVenta1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // DtpFecha
+            // 
+            this.DtpFecha.CustomFormat = "dd/MM/yyyy";
+            this.DtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DtpFecha.Location = new System.Drawing.Point(466, 170);
+            this.DtpFecha.Name = "DtpFecha";
+            this.DtpFecha.Size = new System.Drawing.Size(136, 26);
+            this.DtpFecha.TabIndex = 25;
+            this.DtpFecha.ValueChanged += new System.EventHandler(this.DtpFecha_ValueChanged);
             // 
             // RegistroClientForm
             // 
@@ -432,7 +432,6 @@
         private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.Label LblSexo;
         private System.Windows.Forms.ComboBox CbxSexo;
-        private System.Windows.Forms.DateTimePicker DtpFecha;
         private System.Windows.Forms.ComboBox CbxCiudad;
         private System.Windows.Forms.TextBox TxtCorreo;
         private System.Windows.Forms.Button BtnGuardar;
@@ -442,5 +441,6 @@
         private System.Windows.Forms.Label LblInfoApe;
         private System.Windows.Forms.Label LblInfoNom;
         private DataSetVenta dataSetVenta1;
+        private System.Windows.Forms.DateTimePicker DtpFecha;
     }
 }

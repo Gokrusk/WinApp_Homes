@@ -62,6 +62,15 @@ namespace WinApp_Homes
             }
         }
 
+        private bool CedulaYaRegistrada(string cedula) {
+            dataSetVenta1.ReadXml(PathFile + "clientes.xml");
+
+            DataRow[] rows = dataSetVenta1.Tables["TblCliente"].Select("Cedula = '" + cedula + "'");
+            bool cedulaDuplicada = rows.Length > 0;
+
+            return cedulaDuplicada;
+        }
+
         public static bool ValidarCorreo(string Correo)
         {
             string formato = @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$";
@@ -90,22 +99,24 @@ namespace WinApp_Homes
                     LblInfoCed.Text = "";
                     ClienteObj.Cedula = TxtCedula.Text;
 
-                    if (ClienteObj.Cedula != "")
-                    {
-                        if (ValidarCedula(ClienteObj.Cedula))
-                        {
-                            TxtCedula.ForeColor = Color.Black;
-                            TxtNombre.Enabled = true;
-                            ModCed = true;
-                            TxtNombre.Focus();
+                    if (CedulaYaRegistrada(ClienteObj.Cedula)) {
+                        MessageBox.Show("El número de cédula ya está registrado.", "Cédula duplicada", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        TxtCedula.Clear();
+                        return;
+
+                    } else {
+                        if (ClienteObj.Cedula != "") {
+                            if (ValidarCedula(ClienteObj.Cedula)) {
+                                TxtCedula.ForeColor = Color.Black;
+                                TxtNombre.Enabled = true;
+                                ModCed = true;
+                                TxtNombre.Focus();
+                            }
+
+                        } else {
+                            LblInfoCed.Text = "Dato requerido";
                         }
-
                     }
-                    else
-                    {
-                        LblInfoCed.Text = "Dato requerido";
-                    }
-
                 }
                 catch (Exception)
                 {
@@ -230,8 +241,10 @@ namespace WinApp_Homes
             DtpFecha.MaxDate = DateTime.Today.AddYears(-18);
             DtpFecha.MinDate = DateTime.Today.AddYears(-100);
 
-            ClienteObj.FechaNacimiento = DtpFecha.Value;
+            ClienteObj.FechaNacimiento = DtpFecha.Value.Date;
             CbxCiudad.Enabled = true;
+
+            DtpFecha.Format = DateTimePickerFormat.Short;
         }
 
         private void CbxCiudad_SelectedIndexChanged(object sender, EventArgs e)
@@ -282,6 +295,7 @@ namespace WinApp_Homes
         {
             try
             {
+
                 if (ModCed && ModNom && ModApe && ModCor)
                 {
                     dataSetVenta1.Clear();
@@ -300,6 +314,19 @@ namespace WinApp_Homes
                     dataSetVenta1.Tables["TblCliente"].WriteXml(PathFile + "clientes.xml");
 
                     MessageBox.Show("Cliente registrado correctamente.", "Registro guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    TxtCedula.Clear();
+                    TxtNombre.Clear();
+                    TxtNombre.Enabled = false;
+                    TxtApellido.Clear();
+                    TxtApellido.Enabled = false;
+                    CbxSexo.Text = "";
+                    CbxSexo.Enabled = false;
+                    DtpFecha.Enabled = false;
+                    CbxCiudad.Text = "";
+                    CbxCiudad.Enabled = false;
+                    TxtCorreo.Clear();
+                    TxtCorreo.Enabled = false;
+                    BtnGuardar.Enabled = false;
 
                 }
                 else

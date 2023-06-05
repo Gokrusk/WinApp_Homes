@@ -489,7 +489,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!FechaNacimiento.Value</Value>
+                              <Value>=DateDiff(DateInterval.Year, Fields!FechaNacimiento.Value, Today()) + IIf(DatePart(DateInterval.DayOfYear, Today()) &lt; DatePart(DateInterval.DayOfYear, Fields!FechaNacimiento.Value), -1, 0)</Value>
                               <Style>
                                 <FontFamily>Arial Rounded MT Bold</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -582,8 +582,8 @@
         <DataSetName>DataSet1</DataSetName>
         <Top>1.05516cm</Top>
         <Left>1.21453cm</Left>
-        <Height>2.33771cm</Height>
-        <Width>20.64854cm</Width>
+        <Height>2.3377cm</Height>
+        <Width>20.64853cm</Width>
         <Style>
           <Border>
             <Style>None</Style>

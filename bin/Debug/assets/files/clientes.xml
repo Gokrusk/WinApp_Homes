@@ -2,65 +2,47 @@
 <DataSetVenta xmlns="http://tempuri.org/DataSetVenta.xsd">
   <TblCliente>
     <Cedula>0503959447</Cedula>
-    <Nombre>KevinH</Nombre>
+    <Nombre>Kevin</Nombre>
     <Apellido>Tapia</Apellido>
-    <Sexo>Femenino</Sexo>
+    <Sexo>M</Sexo>
     <Ciudad>Latacunga</Ciudad>
-    <FechaNacimiento>12/30/2001 10:35:34</FechaNacimiento>
-    <Email>KevinTapia3@gmail.com</Email>
+    <FechaNacimiento>30/12/2001 0:00:00</FechaNacimiento>
+    <Email>kevintapia@gmail.com</Email>
   </TblCliente>
   <TblCliente>
     <Cedula>0604401919</Cedula>
     <Nombre>Fernando</Nombre>
     <Apellido>García</Apellido>
-    <Sexo>Masculino</Sexo>
+    <Sexo>M</Sexo>
     <Ciudad>Quito</Ciudad>
-    <FechaNacimiento>06/15/2003 09:15:00</FechaNacimiento>
-    <Email>maria.garcia@example.com</Email>
+    <FechaNacimiento>15/6/2003 0:00:00</FechaNacimiento>
+    <Email>maria.garcia@gmail.com</Email>
   </TblCliente>
   <TblCliente>
     <Cedula>0602926925</Cedula>
     <Nombre>Juan</Nombre>
     <Apellido>Pérez</Apellido>
-    <Sexo>Masculino</Sexo>
+    <Sexo>M</Sexo>
     <Ciudad>Guayaquil</Ciudad>
-    <FechaNacimiento>03/02/1988 14:30:00</FechaNacimiento>
-    <Email>juan.perez@example.com</Email>
+    <FechaNacimiento>2/3/1988 0:00:00</FechaNacimiento>
+    <Email>juan.perez@gmail.com</Email>
   </TblCliente>
   <TblCliente>
     <Cedula>1707216527</Cedula>
     <Nombre>Ana</Nombre>
     <Apellido>Ruiz</Apellido>
-    <Sexo>Femenino</Sexo>
+    <Sexo>F</Sexo>
     <Ciudad>Cuenca</Ciudad>
-    <FechaNacimiento>11/10/1990 18:45:00</FechaNacimiento>
-    <Email>ana.ruiz@example.com</Email>
+    <FechaNacimiento>10/11/1990 0:00:00</FechaNacimiento>
+    <Email>ana.ruiz@gmail.com</Email>
   </TblCliente>
   <TblCliente>
     <Cedula>0600334924</Cedula>
     <Nombre>Carlos</Nombre>
     <Apellido>López</Apellido>
-    <Sexo>Masculino</Sexo>
+    <Sexo>M</Sexo>
     <Ciudad>Guayaquil</Ciudad>
-    <FechaNacimiento>05/12/1990 08:30:00</FechaNacimiento>
-    <Email>carlos.lopez@example.com</Email>
-  </TblCliente>
-  <TblCliente>
-    <Cedula>0912345678</Cedula>
-    <Nombre>Sofía</Nombre>
-    <Apellido>Rodríguez</Apellido>
-    <Sexo>Femenino</Sexo>
-    <Ciudad>Quito</Ciudad>
-    <FechaNacimiento>09/28/1985 14:20:00</FechaNacimiento>
-    <Email>sofia.rodriguez@example.com</Email>
-  </TblCliente>
-  <TblCliente>
-    <Cedula>0801234567</Cedula>
-    <Nombre>Pablo</Nombre>
-    <Apellido>Moreno</Apellido>
-    <Sexo>Masculino</Sexo>
-    <Ciudad>Cuenca</Ciudad>
-    <FechaNacimiento>07/03/1992 16:45:00</FechaNacimiento>
-    <Email>pablo.moreno@example.com</Email>
+    <FechaNacimiento>12/5/1990 0:00:00</FechaNacimiento>
+    <Email>carlos.lopez@gmail.com</Email>
   </TblCliente>
 </DataSetVenta>
