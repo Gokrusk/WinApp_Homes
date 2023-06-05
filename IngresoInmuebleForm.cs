@@ -105,7 +105,6 @@ namespace WinApp_Homes
             dataSetVenta1.Tables["TblInmueble"].ReadXml(PathFile + "inmuebles.xml");
             dataInmuebles = dataSetVenta1.TblInmueble.Select("Tipo='" + InmuebleObj.tipo + "'");
 
-            MessageBox.Show(dataInmuebles.Length.ToString() + InmuebleObj.tipo);
             return dataInmuebles.Length;
         }
         private void GuardarDatosXML()

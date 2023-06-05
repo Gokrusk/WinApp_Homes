@@ -32,11 +32,9 @@ namespace WinApp_Homes
                     dataSetVenta1.ReadXml(PathFile + "inmuebles.xml");
                     //dataSetVenta1.ReadXml(PathImages + "imagenes.xml");
                     System.Data.DataRow[] vecDatosInmueble;
-                    System.Data.DataRow[] vecFotosInmueble;
 
                     vecDatosInmueble = dataSetVenta1.TblInmueble.Select("Codigo ='" + txtCodigoImbBuscar.Text + "'");
-                    vecFotosInmueble = dataSetVenta1.TblFoto.Select("CodigoInmueble ='" + txtCodigoImbBuscar.Text + "'");
-
+                    
                     if (vecDatosInmueble.Length > 0)
                     {
                             
@@ -46,30 +44,8 @@ namespace WinApp_Homes
                         {
                             vecDatosInmueble[0].Delete();
                             dataSetVenta1.WriteXml(PathFile + "inmuebles.xml");
-                            dataSetVenta1.WriteXml(PathFile + "imagenes.xml");
-                            vecFotosInmueble[0].Delete();
-                            //dataSetVenta1.WriteXml(PathImages + "imagenes.xml");
-
+                           
                             BorrarFotos();
-                            //foreach (DataRow row in vecFotosInmueble)
-                            //{
-                            //    MessageBox.Show(row["NombreFoto"].ToString(),"HOLA", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            //    string nombreFoto = row["NombreFoto"].ToString();
-                            //    string pathImagen = PathImages + nombreFoto;
-
-                            //    if (File.Exists(pathImagen))
-                            //    {
-                            //        File.Delete(pathImagen);
-                            //        MessageBox.Show("Foto eliminada'");
-
-                            //    }
-                            //    else
-                            //    {
-                            //        MessageBox.Show("Foto NO eliminada'");
-                            //    }
-                            //}
-
                         }
                         else
                         {
@@ -102,9 +78,9 @@ namespace WinApp_Homes
         
             foreach (DataRow row in vectorFotos) {
                 File.Delete(PathImages + row["NombreFoto"]);
+                row.Delete();
             }
-
-            
+            dataSetVenta1.WriteXml(PathFile + "imagenes.xml");
         }
     }
 }
