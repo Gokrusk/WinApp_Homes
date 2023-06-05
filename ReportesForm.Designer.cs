@@ -26,6 +26,7 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.tblClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetVenta = new WinApp_Homes.DataSetVenta();
             this.TblInmuebleBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -33,9 +34,12 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.reportViewer3 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.fKTblClienteTblVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TblInmuebleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKTblClienteTblVentaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tblClienteBindingSource
@@ -70,7 +74,8 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Listado de clientes",
             "Listado de inmuebles",
-            "Promedio de precio"});
+            "Listado de Ventas",
+            "Listado Clientes-Inmuebles"});
             this.comboBox1.Location = new System.Drawing.Point(211, 24);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(183, 26);
@@ -103,12 +108,31 @@
             this.reportViewer2.TabIndex = 3;
             this.reportViewer2.Visible = false;
             // 
+            // reportViewer3
+            // 
+            reportDataSource3.Name = "DataSet1";
+            reportDataSource3.Value = this.fKTblClienteTblVentaBindingSource;
+            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer3.LocalReport.ReportEmbeddedResource = "WinApp_Homes.ReportVentas.rdlc";
+            this.reportViewer3.Location = new System.Drawing.Point(-1, 69);
+            this.reportViewer3.Name = "reportViewer3";
+            this.reportViewer3.ServerReport.BearerToken = null;
+            this.reportViewer3.Size = new System.Drawing.Size(887, 443);
+            this.reportViewer3.TabIndex = 4;
+            this.reportViewer3.Visible = false;
+            // 
+            // fKTblClienteTblVentaBindingSource
+            // 
+            this.fKTblClienteTblVentaBindingSource.DataMember = "FK_TblCliente_TblVenta";
+            this.fKTblClienteTblVentaBindingSource.DataSource = this.tblClienteBindingSource;
+            // 
             // ReportesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(58)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(884, 511);
+            this.Controls.Add(this.reportViewer3);
             this.Controls.Add(this.reportViewer2);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.comboBox1);
@@ -124,6 +148,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetVenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TblInmuebleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKTblClienteTblVentaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,5 +163,7 @@
         private DataSetVenta dataSetVenta;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
         private System.Windows.Forms.BindingSource TblInmuebleBindingSource;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer3;
+        private System.Windows.Forms.BindingSource fKTblClienteTblVentaBindingSource;
     }
 }

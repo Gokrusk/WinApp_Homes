@@ -74,7 +74,9 @@
       <DependentUpon>CargaFotosForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ClCliente.cs" />
+    <Compile Include="ClCliInm.cs" />
     <Compile Include="ClInmueble.cs" />
+    <Compile Include="ClVentas.cs" />
     <Compile Include="DataSetVenta.cs">
       <DependentUpon>DataSetVenta.xsd</DependentUpon>
     </Compile>
@@ -172,11 +174,13 @@
     <EmbeddedResource Include="RegistroClientForm.resx">
       <DependentUpon>RegistroClientForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportCliInm.rdlc" />
     <EmbeddedResource Include="ReportHomes.rdlc" />
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="ReportesForm.resx">
       <DependentUpon>ReportesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportVentas.rdlc" />
     <EmbeddedResource Include="VentaForm.resx">
       <DependentUpon>VentaForm.cs</DependentUpon>
     </EmbeddedResource>
