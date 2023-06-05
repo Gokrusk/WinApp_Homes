@@ -6,18 +6,18 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>5.07528cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>5.07528cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>5.07528cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>1.06302cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -29,10 +29,16 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Codigo Inmueble</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Arial Rounded MT Bold</FontFamily>
+                                <FontSize>14pt</FontSize>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox1</rd:DefaultName>
@@ -59,10 +65,16 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Cedula</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Arial Rounded MT Bold</FontFamily>
+                                <FontSize>14pt</FontSize>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox3</rd:DefaultName>
@@ -89,10 +101,16 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Numero Meses</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Arial Rounded MT Bold</FontFamily>
+                                <FontSize>14pt</FontSize>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox5</rd:DefaultName>
@@ -112,7 +130,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>1.06302cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -124,10 +142,16 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!CodigoInmueble.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Arial Rounded MT Bold</FontFamily>
+                                <FontSize>14pt</FontSize>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>CodigoInmueble</rd:DefaultName>
@@ -136,6 +160,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -154,10 +179,16 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Cedula.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Arial Rounded MT Bold</FontFamily>
+                                <FontSize>14pt</FontSize>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Cedula</rd:DefaultName>
@@ -166,6 +197,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -184,10 +216,16 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!NumeroMeses.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Arial Rounded MT Bold</FontFamily>
+                                <FontSize>14pt</FontSize>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>NumeroMeses</rd:DefaultName>
@@ -196,6 +234,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -226,10 +265,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>2.82787cm</Top>
-        <Left>8.11953cm</Left>
-        <Height>1.2cm</Height>
-        <Width>7.5cm</Width>
+        <Top>2.16641cm</Top>
+        <Left>4.33599cm</Left>
+        <Height>2.12604cm</Height>
+        <Width>15.22583cm</Width>
         <Style>
           <Border>
             <Style>None</Style>

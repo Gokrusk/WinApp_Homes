@@ -20,6 +20,7 @@ namespace WinApp_Homes
             dataSetVenta.ReadXml(PathFile + "clientes.xml");
             dataSetVenta.ReadXml(PathFile + "inmuebles.xml");
             dataSetVenta.ReadXml(PathFile + "ventas.xml");
+            dataSetVenta.ReadXml(PathFile + "imagenes.xml");
         }
 
         private void ReportesForm_Load(object sender, EventArgs e)
@@ -27,6 +28,7 @@ namespace WinApp_Homes
             this.reportViewer1.RefreshReport();
             this.reportViewer2.RefreshReport();
             this.reportViewer3.RefreshReport();
+            this.reportViewer4.RefreshReport();
 
         }
 
@@ -47,6 +49,13 @@ namespace WinApp_Homes
                     reportViewer2.Visible = false;
                     reportViewer3.Visible = true;
 
+            }
+            else if (comboBox1.SelectedItem.ToString() == "Listado Imagenes")
+            {
+                reportViewer1.Visible = false;
+                reportViewer2.Visible = false;
+                reportViewer3.Visible = false;
+                reportViewer4.Visible = true;
             }
 
         }

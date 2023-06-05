@@ -10,11 +10,10 @@ namespace WinApp_Homes
     {
         public ClCliInm() { }
 
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public string Codigo { get; set; }
-        public float Precio { get; set; }
-        public string Descripcion { get; set; }
+        public string NombreFoto { get; set; }
+        
+        public string CodigoInmueble { get; set; }
+        
 
     }
 }
