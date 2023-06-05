@@ -56,6 +56,7 @@
             // 
             // panel1
             // 
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(108)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -70,7 +71,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(352, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 32);
+            this.label1.Size = new System.Drawing.Size(209, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "BÚSQUEDA";
             // 
@@ -84,7 +85,7 @@
             " "});
             this.comboBox1.Location = new System.Drawing.Point(146, 121);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(175, 26);
+            this.comboBox1.Size = new System.Drawing.Size(175, 31);
             this.comboBox1.TabIndex = 1;
             // 
             // label2
@@ -93,7 +94,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label2.Location = new System.Drawing.Point(48, 129);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 18);
+            this.label2.Size = new System.Drawing.Size(114, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "Filtrar por:";
             // 
@@ -130,6 +131,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(19, 193);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(853, 306);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -138,6 +140,7 @@
             // 
             this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
             this.codigoDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.codigoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
             this.codigoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -145,6 +148,7 @@
             // 
             this.tipoDataGridViewTextBoxColumn.DataPropertyName = "Tipo";
             this.tipoDataGridViewTextBoxColumn.HeaderText = "Tipo";
+            this.tipoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
             this.tipoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -152,6 +156,7 @@
             // 
             this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
             this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
             this.precioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -159,6 +164,7 @@
             // 
             this.ubicacionDataGridViewTextBoxColumn.DataPropertyName = "Ubicacion";
             this.ubicacionDataGridViewTextBoxColumn.HeaderText = "Ubicación";
+            this.ubicacionDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ubicacionDataGridViewTextBoxColumn.Name = "ubicacionDataGridViewTextBoxColumn";
             this.ubicacionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -166,6 +172,7 @@
             // 
             this.estadoVentaDataGridViewTextBoxColumn.DataPropertyName = "EstadoVenta";
             this.estadoVentaDataGridViewTextBoxColumn.HeaderText = "Estado de Venta";
+            this.estadoVentaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.estadoVentaDataGridViewTextBoxColumn.Name = "estadoVentaDataGridViewTextBoxColumn";
             this.estadoVentaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -173,6 +180,7 @@
             // 
             this.nombreInmuebleDataGridViewTextBoxColumn.DataPropertyName = "NombreInmueble";
             this.nombreInmuebleDataGridViewTextBoxColumn.HeaderText = "Nombre de Inmueble";
+            this.nombreInmuebleDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nombreInmuebleDataGridViewTextBoxColumn.Name = "nombreInmuebleDataGridViewTextBoxColumn";
             this.nombreInmuebleDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -180,6 +188,7 @@
             // 
             this.Fotos.DataPropertyName = "Codigo";
             this.Fotos.HeaderText = "Fotografías";
+            this.Fotos.MinimumWidth = 6;
             this.Fotos.Name = "Fotos";
             this.Fotos.ReadOnly = true;
             this.Fotos.Text = "VER";
@@ -201,7 +210,7 @@
             // 
             this.TxtItem.Location = new System.Drawing.Point(490, 121);
             this.TxtItem.Name = "TxtItem";
-            this.TxtItem.Size = new System.Drawing.Size(118, 26);
+            this.TxtItem.Size = new System.Drawing.Size(118, 31);
             this.TxtItem.TabIndex = 7;
             this.TxtItem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtItem_KeyPress);
             // 
@@ -211,7 +220,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label3.Location = new System.Drawing.Point(350, 129);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 18);
+            this.label3.Size = new System.Drawing.Size(166, 23);
             this.label3.TabIndex = 8;
             this.label3.Text = "Palabra de filtro";
             // 
@@ -222,8 +231,9 @@
             // 
             // FormBuscar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(58)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(884, 511);
             this.Controls.Add(this.label3);
@@ -235,9 +245,11 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormBuscar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormBuscar";
+            this.Text = "Buscar Inmueble";
             this.Load += new System.EventHandler(this.FormBuscar_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

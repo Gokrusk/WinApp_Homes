@@ -66,17 +66,6 @@ namespace WinApp_Homes
             {
                 e.Handled = true;
             }
-
-            try
-            {
-                btnBuscar.Focus();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-                throw;
-            }
         }
     }
 }

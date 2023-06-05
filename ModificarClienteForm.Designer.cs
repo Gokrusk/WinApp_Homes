@@ -75,7 +75,7 @@
             this.lblTitulo.Location = new System.Drawing.Point(209, 23);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(437, 32);
+            this.lblTitulo.Size = new System.Drawing.Size(555, 39);
             this.lblTitulo.TabIndex = 2;
             this.lblTitulo.Text = "MODIFICACIÓN DE UN CLIENTE";
             // 
@@ -95,7 +95,7 @@
             // 
             this.TxtCedulaBus.Location = new System.Drawing.Point(252, 34);
             this.TxtCedulaBus.Name = "TxtCedulaBus";
-            this.TxtCedulaBus.Size = new System.Drawing.Size(184, 26);
+            this.TxtCedulaBus.Size = new System.Drawing.Size(184, 31);
             this.TxtCedulaBus.TabIndex = 23;
             this.TxtCedulaBus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCedulaBus_KeyPress);
             // 
@@ -107,7 +107,7 @@
             this.LblCedulaBus.Location = new System.Drawing.Point(22, 37);
             this.LblCedulaBus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblCedulaBus.Name = "LblCedulaBus";
-            this.LblCedulaBus.Size = new System.Drawing.Size(221, 18);
+            this.LblCedulaBus.Size = new System.Drawing.Size(272, 23);
             this.LblCedulaBus.TabIndex = 22;
             this.LblCedulaBus.Text = "Ingrese número de cédula:";
             // 
@@ -174,7 +174,7 @@
             this.LblInfoCorr.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblInfoCorr.Location = new System.Drawing.Point(211, 283);
             this.LblInfoCorr.Name = "LblInfoCorr";
-            this.LblInfoCorr.Size = new System.Drawing.Size(0, 12);
+            this.LblInfoCorr.Size = new System.Drawing.Size(0, 16);
             this.LblInfoCorr.TabIndex = 24;
             // 
             // LblInfoApe
@@ -183,7 +183,7 @@
             this.LblInfoApe.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblInfoApe.Location = new System.Drawing.Point(410, 115);
             this.LblInfoApe.Name = "LblInfoApe";
-            this.LblInfoApe.Size = new System.Drawing.Size(0, 12);
+            this.LblInfoApe.Size = new System.Drawing.Size(0, 16);
             this.LblInfoApe.TabIndex = 23;
             // 
             // LblInfoNom
@@ -192,14 +192,14 @@
             this.LblInfoNom.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblInfoNom.Location = new System.Drawing.Point(123, 114);
             this.LblInfoNom.Name = "LblInfoNom";
-            this.LblInfoNom.Size = new System.Drawing.Size(0, 12);
+            this.LblInfoNom.Size = new System.Drawing.Size(0, 16);
             this.LblInfoNom.TabIndex = 22;
             // 
             // TxtCorreo
             // 
             this.TxtCorreo.Location = new System.Drawing.Point(213, 245);
             this.TxtCorreo.Name = "TxtCorreo";
-            this.TxtCorreo.Size = new System.Drawing.Size(326, 26);
+            this.TxtCorreo.Size = new System.Drawing.Size(326, 31);
             this.TxtCorreo.TabIndex = 20;
             // 
             // CbxCiudad
@@ -259,7 +259,7 @@
             "Zamora"});
             this.CbxCiudad.Location = new System.Drawing.Point(118, 194);
             this.CbxCiudad.Name = "CbxCiudad";
-            this.CbxCiudad.Size = new System.Drawing.Size(150, 25);
+            this.CbxCiudad.Size = new System.Drawing.Size(150, 30);
             this.CbxCiudad.TabIndex = 19;
             // 
             // DtpFecha
@@ -267,7 +267,7 @@
             this.DtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpFecha.Location = new System.Drawing.Point(462, 141);
             this.DtpFecha.Name = "DtpFecha";
-            this.DtpFecha.Size = new System.Drawing.Size(135, 26);
+            this.DtpFecha.Size = new System.Drawing.Size(135, 31);
             this.DtpFecha.TabIndex = 18;
             this.DtpFecha.Value = new System.DateTime(2023, 5, 28, 10, 35, 34, 0);
             // 
@@ -280,7 +280,7 @@
             "Femenino"});
             this.CbxSexo.Location = new System.Drawing.Point(101, 141);
             this.CbxSexo.Name = "CbxSexo";
-            this.CbxSexo.Size = new System.Drawing.Size(121, 25);
+            this.CbxSexo.Size = new System.Drawing.Size(121, 30);
             this.CbxSexo.TabIndex = 17;
             // 
             // LblSexo
@@ -291,7 +291,7 @@
             this.LblSexo.Location = new System.Drawing.Point(42, 143);
             this.LblSexo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblSexo.Name = "LblSexo";
-            this.LblSexo.Size = new System.Drawing.Size(52, 18);
+            this.LblSexo.Size = new System.Drawing.Size(63, 23);
             this.LblSexo.TabIndex = 13;
             this.LblSexo.Text = "Sexo:";
             // 
@@ -300,7 +300,7 @@
             this.TxtApellido.Location = new System.Drawing.Point(412, 86);
             this.TxtApellido.MaxLength = 20;
             this.TxtApellido.Name = "TxtApellido";
-            this.TxtApellido.Size = new System.Drawing.Size(143, 26);
+            this.TxtApellido.Size = new System.Drawing.Size(143, 31);
             this.TxtApellido.TabIndex = 12;
             // 
             // TxtNombre
@@ -308,7 +308,7 @@
             this.TxtNombre.Location = new System.Drawing.Point(125, 86);
             this.TxtNombre.MaxLength = 20;
             this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(143, 26);
+            this.TxtNombre.Size = new System.Drawing.Size(143, 31);
             this.TxtNombre.TabIndex = 11;
             // 
             // LblCorreo
@@ -319,7 +319,7 @@
             this.LblCorreo.Location = new System.Drawing.Point(42, 248);
             this.LblCorreo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblCorreo.Name = "LblCorreo";
-            this.LblCorreo.Size = new System.Drawing.Size(164, 18);
+            this.LblCorreo.Size = new System.Drawing.Size(200, 23);
             this.LblCorreo.TabIndex = 9;
             this.LblCorreo.Text = "Correo electrónico:";
             // 
@@ -331,7 +331,7 @@
             this.LblFechaNa.Location = new System.Drawing.Point(276, 144);
             this.LblFechaNa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblFechaNa.Name = "LblFechaNa";
-            this.LblFechaNa.Size = new System.Drawing.Size(179, 18);
+            this.LblFechaNa.Size = new System.Drawing.Size(218, 23);
             this.LblFechaNa.TabIndex = 8;
             this.LblFechaNa.Text = "Fecha de nacimiento:";
             // 
@@ -343,7 +343,7 @@
             this.LblCiudad.Location = new System.Drawing.Point(42, 196);
             this.LblCiudad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblCiudad.Name = "LblCiudad";
-            this.LblCiudad.Size = new System.Drawing.Size(69, 18);
+            this.LblCiudad.Size = new System.Drawing.Size(86, 23);
             this.LblCiudad.TabIndex = 7;
             this.LblCiudad.Text = "Ciudad:";
             // 
@@ -355,7 +355,7 @@
             this.LblApellido.Location = new System.Drawing.Point(330, 89);
             this.LblApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblApellido.Name = "LblApellido";
-            this.LblApellido.Size = new System.Drawing.Size(77, 18);
+            this.LblApellido.Size = new System.Drawing.Size(95, 23);
             this.LblApellido.TabIndex = 6;
             this.LblApellido.Text = "Apellido:";
             // 
@@ -367,7 +367,7 @@
             this.LblNombre.Location = new System.Drawing.Point(42, 89);
             this.LblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblNombre.Name = "LblNombre";
-            this.LblNombre.Size = new System.Drawing.Size(76, 18);
+            this.LblNombre.Size = new System.Drawing.Size(95, 23);
             this.LblNombre.TabIndex = 5;
             this.LblNombre.Text = "Nombre:";
             // 
@@ -379,7 +379,7 @@
             this.LblCedula.Location = new System.Drawing.Point(42, 41);
             this.LblCedula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblCedula.Name = "LblCedula";
-            this.LblCedula.Size = new System.Drawing.Size(0, 18);
+            this.LblCedula.Size = new System.Drawing.Size(0, 23);
             this.LblCedula.TabIndex = 4;
             // 
             // dataSetVenta1
@@ -396,16 +396,19 @@
             // 
             // ModificarClienteForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(58)))), ((int)(((byte)(63)))));
-            this.ClientSize = new System.Drawing.Size(884, 511);
+            this.ClientSize = new System.Drawing.Size(882, 503);
             this.Controls.Add(this.GbxDatos);
             this.Controls.Add(this.GbxBuscar);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(900, 550);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(900, 550);
             this.Name = "ModificarClienteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

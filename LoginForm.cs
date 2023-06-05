@@ -92,5 +92,14 @@ namespace WinApp_Homes
         {
             Application.Exit();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            LoginForm principal = new LoginForm();
+            this.Hide();
+            MenuFormAdmin obj = new MenuFormAdmin();
+            obj.ShowDialog();
+            principal.Show();
+        }
     }
 }

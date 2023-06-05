@@ -45,4 +45,13 @@
     <FechaNacimiento>12/5/1990 0:00:00</FechaNacimiento>
     <Email>carlos.lopez@gmail.com</Email>
   </TblCliente>
+  <TblCliente>
+    <Cedula>0605144146</Cedula>
+    <Nombre>Cristhian</Nombre>
+    <Apellido>Chimbo</Apellido>
+    <Sexo>M</Sexo>
+    <Ciudad>Cuenca</Ciudad>
+    <FechaNacimiento>12/1/2003 0:00:00</FechaNacimiento>
+    <Email>chimbocristhian994@gmail.com</Email>
+  </TblCliente>
 </DataSetVenta>

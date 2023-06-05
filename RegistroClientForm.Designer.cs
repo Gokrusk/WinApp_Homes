@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.GbxRegistro = new System.Windows.Forms.GroupBox();
+            this.DtpFecha = new System.Windows.Forms.DateTimePicker();
             this.LblInfoCorr = new System.Windows.Forms.Label();
             this.LblInfoApe = new System.Windows.Forms.Label();
             this.LblInfoNom = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.dataSetVenta1 = new WinApp_Homes.DataSetVenta();
-            this.DtpFecha = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.GbxRegistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetVenta1)).BeginInit();
@@ -59,6 +59,7 @@
             // 
             // panel1
             // 
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(108)))));
             this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -76,7 +77,7 @@
             this.lblTitulo.Location = new System.Drawing.Point(26, 23);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(150, 32);
+            this.lblTitulo.Size = new System.Drawing.Size(190, 39);
             this.lblTitulo.TabIndex = 2;
             this.lblTitulo.Text = "CLIENTES";
             // 
@@ -108,13 +109,23 @@
             this.GbxRegistro.TabStop = false;
             this.GbxRegistro.Text = "Registro";
             // 
+            // DtpFecha
+            // 
+            this.DtpFecha.CustomFormat = "dd/MM/yyyy";
+            this.DtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DtpFecha.Location = new System.Drawing.Point(466, 170);
+            this.DtpFecha.Name = "DtpFecha";
+            this.DtpFecha.Size = new System.Drawing.Size(136, 31);
+            this.DtpFecha.TabIndex = 25;
+            this.DtpFecha.ValueChanged += new System.EventHandler(this.DtpFecha_ValueChanged);
+            // 
             // LblInfoCorr
             // 
             this.LblInfoCorr.AutoSize = true;
             this.LblInfoCorr.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblInfoCorr.Location = new System.Drawing.Point(211, 315);
             this.LblInfoCorr.Name = "LblInfoCorr";
-            this.LblInfoCorr.Size = new System.Drawing.Size(0, 12);
+            this.LblInfoCorr.Size = new System.Drawing.Size(0, 16);
             this.LblInfoCorr.TabIndex = 24;
             // 
             // LblInfoApe
@@ -123,7 +134,7 @@
             this.LblInfoApe.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblInfoApe.Location = new System.Drawing.Point(410, 140);
             this.LblInfoApe.Name = "LblInfoApe";
-            this.LblInfoApe.Size = new System.Drawing.Size(0, 12);
+            this.LblInfoApe.Size = new System.Drawing.Size(0, 16);
             this.LblInfoApe.TabIndex = 23;
             // 
             // LblInfoNom
@@ -132,7 +143,7 @@
             this.LblInfoNom.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblInfoNom.Location = new System.Drawing.Point(123, 138);
             this.LblInfoNom.Name = "LblInfoNom";
-            this.LblInfoNom.Size = new System.Drawing.Size(0, 12);
+            this.LblInfoNom.Size = new System.Drawing.Size(0, 16);
             this.LblInfoNom.TabIndex = 22;
             // 
             // LblInfoCed
@@ -141,7 +152,7 @@
             this.LblInfoCed.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblInfoCed.Location = new System.Drawing.Point(116, 80);
             this.LblInfoCed.Name = "LblInfoCed";
-            this.LblInfoCed.Size = new System.Drawing.Size(0, 12);
+            this.LblInfoCed.Size = new System.Drawing.Size(0, 16);
             this.LblInfoCed.TabIndex = 21;
             // 
             // TxtCorreo
@@ -149,7 +160,7 @@
             this.TxtCorreo.Enabled = false;
             this.TxtCorreo.Location = new System.Drawing.Point(213, 286);
             this.TxtCorreo.Name = "TxtCorreo";
-            this.TxtCorreo.Size = new System.Drawing.Size(326, 26);
+            this.TxtCorreo.Size = new System.Drawing.Size(326, 31);
             this.TxtCorreo.TabIndex = 20;
             this.TxtCorreo.TextChanged += new System.EventHandler(this.TxtCorreo_TextChanged);
             this.TxtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCorreo_KeyPress);
@@ -212,7 +223,7 @@
             "Zamora"});
             this.CbxCiudad.Location = new System.Drawing.Point(118, 229);
             this.CbxCiudad.Name = "CbxCiudad";
-            this.CbxCiudad.Size = new System.Drawing.Size(150, 25);
+            this.CbxCiudad.Size = new System.Drawing.Size(150, 30);
             this.CbxCiudad.TabIndex = 19;
             this.CbxCiudad.SelectedIndexChanged += new System.EventHandler(this.CbxCiudad_SelectedIndexChanged);
             // 
@@ -226,7 +237,7 @@
             "Femenino"});
             this.CbxSexo.Location = new System.Drawing.Point(101, 170);
             this.CbxSexo.Name = "CbxSexo";
-            this.CbxSexo.Size = new System.Drawing.Size(121, 25);
+            this.CbxSexo.Size = new System.Drawing.Size(121, 30);
             this.CbxSexo.TabIndex = 17;
             this.CbxSexo.SelectedIndexChanged += new System.EventHandler(this.CbxSexo_SelectedIndexChanged);
             // 
@@ -238,7 +249,7 @@
             this.LblSexo.Location = new System.Drawing.Point(42, 172);
             this.LblSexo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblSexo.Name = "LblSexo";
-            this.LblSexo.Size = new System.Drawing.Size(52, 18);
+            this.LblSexo.Size = new System.Drawing.Size(63, 23);
             this.LblSexo.TabIndex = 13;
             this.LblSexo.Text = "Sexo:";
             // 
@@ -248,7 +259,7 @@
             this.TxtApellido.Location = new System.Drawing.Point(412, 111);
             this.TxtApellido.MaxLength = 20;
             this.TxtApellido.Name = "TxtApellido";
-            this.TxtApellido.Size = new System.Drawing.Size(143, 26);
+            this.TxtApellido.Size = new System.Drawing.Size(143, 31);
             this.TxtApellido.TabIndex = 12;
             this.TxtApellido.TextChanged += new System.EventHandler(this.TxtApellido_TextChanged);
             this.TxtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtApellido_KeyPress);
@@ -259,7 +270,7 @@
             this.TxtNombre.Location = new System.Drawing.Point(125, 110);
             this.TxtNombre.MaxLength = 20;
             this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(143, 26);
+            this.TxtNombre.Size = new System.Drawing.Size(143, 31);
             this.TxtNombre.TabIndex = 11;
             this.TxtNombre.TextChanged += new System.EventHandler(this.TxtNombre_TextChanged);
             this.TxtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre_KeyPress);
@@ -268,7 +279,7 @@
             // 
             this.TxtCedula.Location = new System.Drawing.Point(118, 52);
             this.TxtCedula.Name = "TxtCedula";
-            this.TxtCedula.Size = new System.Drawing.Size(143, 26);
+            this.TxtCedula.Size = new System.Drawing.Size(143, 31);
             this.TxtCedula.TabIndex = 10;
             this.TxtCedula.TextChanged += new System.EventHandler(this.TxtCedula_TextChanged);
             this.TxtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCedula_KeyPress);
@@ -281,7 +292,7 @@
             this.LblCorreo.Location = new System.Drawing.Point(42, 289);
             this.LblCorreo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblCorreo.Name = "LblCorreo";
-            this.LblCorreo.Size = new System.Drawing.Size(164, 18);
+            this.LblCorreo.Size = new System.Drawing.Size(200, 23);
             this.LblCorreo.TabIndex = 9;
             this.LblCorreo.Text = "Correo electrónico:";
             // 
@@ -293,7 +304,7 @@
             this.LblFechaNa.Location = new System.Drawing.Point(280, 173);
             this.LblFechaNa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblFechaNa.Name = "LblFechaNa";
-            this.LblFechaNa.Size = new System.Drawing.Size(179, 18);
+            this.LblFechaNa.Size = new System.Drawing.Size(218, 23);
             this.LblFechaNa.TabIndex = 8;
             this.LblFechaNa.Text = "Fecha de nacimiento:";
             // 
@@ -305,7 +316,7 @@
             this.LblCiudad.Location = new System.Drawing.Point(42, 231);
             this.LblCiudad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblCiudad.Name = "LblCiudad";
-            this.LblCiudad.Size = new System.Drawing.Size(69, 18);
+            this.LblCiudad.Size = new System.Drawing.Size(86, 23);
             this.LblCiudad.TabIndex = 7;
             this.LblCiudad.Text = "Ciudad:";
             // 
@@ -317,7 +328,7 @@
             this.LblApellido.Location = new System.Drawing.Point(330, 114);
             this.LblApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblApellido.Name = "LblApellido";
-            this.LblApellido.Size = new System.Drawing.Size(77, 18);
+            this.LblApellido.Size = new System.Drawing.Size(95, 23);
             this.LblApellido.TabIndex = 6;
             this.LblApellido.Text = "Apellido:";
             // 
@@ -329,7 +340,7 @@
             this.LblNombre.Location = new System.Drawing.Point(42, 113);
             this.LblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblNombre.Name = "LblNombre";
-            this.LblNombre.Size = new System.Drawing.Size(76, 18);
+            this.LblNombre.Size = new System.Drawing.Size(95, 23);
             this.LblNombre.TabIndex = 5;
             this.LblNombre.Text = "Nombre:";
             // 
@@ -341,7 +352,7 @@
             this.LblCedula.Location = new System.Drawing.Point(42, 55);
             this.LblCedula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblCedula.Name = "LblCedula";
-            this.LblCedula.Size = new System.Drawing.Size(69, 18);
+            this.LblCedula.Size = new System.Drawing.Size(85, 23);
             this.LblCedula.TabIndex = 4;
             this.LblCedula.Text = "Cédula:";
             // 
@@ -380,29 +391,22 @@
             this.dataSetVenta1.EnforceConstraints = false;
             this.dataSetVenta1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // DtpFecha
-            // 
-            this.DtpFecha.CustomFormat = "dd/MM/yyyy";
-            this.DtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DtpFecha.Location = new System.Drawing.Point(466, 170);
-            this.DtpFecha.Name = "DtpFecha";
-            this.DtpFecha.Size = new System.Drawing.Size(136, 26);
-            this.DtpFecha.TabIndex = 25;
-            this.DtpFecha.ValueChanged += new System.EventHandler(this.DtpFecha_ValueChanged);
-            // 
             // RegistroClientForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(58)))), ((int)(((byte)(63)))));
-            this.ClientSize = new System.Drawing.Size(884, 511);
+            this.ClientSize = new System.Drawing.Size(882, 503);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.GbxRegistro);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(900, 550);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(900, 550);
             this.Name = "RegistroClientForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

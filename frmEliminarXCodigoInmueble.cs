@@ -32,22 +32,22 @@ namespace WinApp_Homes
                     dataSetVenta1.ReadXml(PathFile + "inmuebles.xml");
                     //dataSetVenta1.ReadXml(PathImages + "imagenes.xml");
                     System.Data.DataRow[] vecDatosInmueble;
-                    //System.Data.DataRow[] vecFotosInmueble;
+                    System.Data.DataRow[] vecFotosInmueble;
 
                     vecDatosInmueble = dataSetVenta1.TblInmueble.Select("Codigo ='" + txtCodigoImbBuscar.Text + "'");
-                    //vecFotosInmueble = dataSetVenta1.TblFoto.Select("CodigoInmueble ='" + txtCodigoImbBuscar.Text + "'");
+                    vecFotosInmueble = dataSetVenta1.TblFoto.Select("CodigoInmueble ='" + txtCodigoImbBuscar.Text + "'");
 
                     if (vecDatosInmueble.Length > 0)
                     {
-
+                            
                         frmEliminarInmueble objMostarEliminar = new frmEliminarInmueble(vecDatosInmueble, buscarCod);
                         
                         if (objMostarEliminar.ShowDialog() == DialogResult.OK)
                         {
                             vecDatosInmueble[0].Delete();
                             dataSetVenta1.WriteXml(PathFile + "inmuebles.xml");
-                            //dataSetVenta1.WriteXml(PathFile + "imagenes.xml");
-                            //vecFotosInmueble[0].Delete();
+                            dataSetVenta1.WriteXml(PathFile + "imagenes.xml");
+                            vecFotosInmueble[0].Delete();
                             //dataSetVenta1.WriteXml(PathImages + "imagenes.xml");
 
                             BorrarFotos();
@@ -104,8 +104,7 @@ namespace WinApp_Homes
                 File.Delete(PathImages + row["NombreFoto"]);
             }
 
-            vectorFotos[0].Delete();
-            dataSetVenta1.WriteXml(PathFile + "imagenes.xml");
+            
         }
     }
 }

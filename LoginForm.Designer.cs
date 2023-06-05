@@ -49,9 +49,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(885, 78);
+            this.panel1.Size = new System.Drawing.Size(1180, 96);
             this.panel1.TabIndex = 1;
             // 
             // label1
@@ -59,12 +59,13 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(206, 23);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(275, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(476, 32);
+            this.label1.Size = new System.Drawing.Size(602, 39);
             this.label1.TabIndex = 2;
             this.label1.Text = "APLICACIÓN DE VENTA DE CASAS";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // BtnLogin
             // 
@@ -74,10 +75,10 @@
             this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLogin.ForeColor = System.Drawing.Color.White;
-            this.BtnLogin.Location = new System.Drawing.Point(430, 294);
-            this.BtnLogin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.BtnLogin.Location = new System.Drawing.Point(573, 362);
+            this.BtnLogin.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.BtnLogin.Name = "BtnLogin";
-            this.BtnLogin.Size = new System.Drawing.Size(155, 43);
+            this.BtnLogin.Size = new System.Drawing.Size(207, 53);
             this.BtnLogin.TabIndex = 2;
             this.BtnLogin.Text = "INICIAR SESIÓN";
             this.BtnLogin.UseVisualStyleBackColor = false;
@@ -86,19 +87,21 @@
             // TxtUser
             // 
             this.TxtUser.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.TxtUser.Location = new System.Drawing.Point(408, 194);
+            this.TxtUser.Location = new System.Drawing.Point(544, 239);
+            this.TxtUser.Margin = new System.Windows.Forms.Padding(4);
             this.TxtUser.Name = "TxtUser";
-            this.TxtUser.Size = new System.Drawing.Size(212, 26);
+            this.TxtUser.Size = new System.Drawing.Size(281, 31);
             this.TxtUser.TabIndex = 3;
             this.TxtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtUser_KeyPress);
             // 
             // TxtPsw
             // 
             this.TxtPsw.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.TxtPsw.Location = new System.Drawing.Point(408, 246);
+            this.TxtPsw.Location = new System.Drawing.Point(544, 303);
+            this.TxtPsw.Margin = new System.Windows.Forms.Padding(4);
             this.TxtPsw.Name = "TxtPsw";
             this.TxtPsw.PasswordChar = '*';
-            this.TxtPsw.Size = new System.Drawing.Size(212, 26);
+            this.TxtPsw.Size = new System.Drawing.Size(281, 31);
             this.TxtPsw.TabIndex = 4;
             this.TxtPsw.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPsw_KeyPress);
             // 
@@ -107,9 +110,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(251, 198);
+            this.label2.Location = new System.Drawing.Point(335, 244);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 22);
+            this.label2.Size = new System.Drawing.Size(125, 28);
             this.label2.TabIndex = 5;
             this.label2.Text = "USUARIO";
             // 
@@ -118,9 +122,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(251, 250);
+            this.label3.Location = new System.Drawing.Point(335, 308);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 22);
+            this.label3.Size = new System.Drawing.Size(183, 28);
             this.label3.TabIndex = 6;
             this.label3.Text = "CONTRASEÑA";
             // 
@@ -137,16 +142,19 @@
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(58)))), ((int)(((byte)(63)))));
-            this.ClientSize = new System.Drawing.Size(884, 511);
+            this.ClientSize = new System.Drawing.Size(1179, 629);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TxtPsw);
             this.Controls.Add(this.TxtUser);
             this.Controls.Add(this.BtnLogin);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Sesión";

@@ -68,7 +68,7 @@ namespace WinApp_Homes {
                     dataSetVenta1.Tables["TblCliente"].WriteXml(PathFile + "clientes.xml");
 
                     MessageBox.Show("Datos modificados correctamente", "Registro guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    this.Close();
                 } else if (resultado == DialogResult.No) {
                     this.Close();
                 } else {

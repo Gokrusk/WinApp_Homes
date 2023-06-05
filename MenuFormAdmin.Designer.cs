@@ -153,7 +153,7 @@
             this.lblTitulo.Location = new System.Drawing.Point(396, 23);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(96, 32);
+            this.lblTitulo.Size = new System.Drawing.Size(120, 39);
             this.lblTitulo.TabIndex = 2;
             this.lblTitulo.Text = "MENÚ";
             // 
@@ -258,10 +258,11 @@
             // 
             // MenuFormAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(58)))), ((int)(((byte)(63)))));
-            this.ClientSize = new System.Drawing.Size(884, 511);
+            this.ClientSize = new System.Drawing.Size(882, 503);
             this.Controls.Add(this.GbxEliminar);
             this.Controls.Add(this.GbxExtras);
             this.Controls.Add(this.GbxModi);
@@ -271,11 +272,13 @@
             this.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(900, 550);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(900, 550);
             this.Name = "MenuFormAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MenuForm";
+            this.Text = "Menú";
             this.Load += new System.EventHandler(this.MenuFormAdmin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
