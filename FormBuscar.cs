@@ -86,7 +86,7 @@ namespace WinApp_Homes
             {
                 int ind = e.RowIndex;
                 CargaFotosForm objFotos = new CargaFotosForm(dataGridView1[0, ind].Value.ToString());
-                objFotos.ShowDialog();
+                objFotos.Show();
             }
         }
     }

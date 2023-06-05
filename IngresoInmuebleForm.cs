@@ -31,6 +31,7 @@ namespace WinApp_Homes
         {
             TxtNombre.Focus();
             CbxTipo.SelectedIndex = 0;
+            CbxUbi.SelectedIndex = 0;
         }
 
         private void BtnCargar_Click(object sender, EventArgs e)

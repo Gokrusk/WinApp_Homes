@@ -16,7 +16,7 @@ namespace WinApp_Homes
     public partial class VentaForm : Form
     {
         readonly string PathFile = Application.StartupPath + "\\assets\\files\\";
-        float precio;
+
         DataRow dataInmuebleVenta;
 
         DataRow[] dataInmuebles;

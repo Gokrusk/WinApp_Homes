@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Xml;
 using System.Collections;
+using System.IO;
 
 namespace WinApp_Homes
 {
@@ -22,6 +23,8 @@ namespace WinApp_Homes
         int contador = 0;
 
         string cod;
+
+
 
         public CargaFotosForm(string codigoInmueble)
         {
@@ -36,24 +39,29 @@ namespace WinApp_Homes
             XmlDocument docImg = new XmlDocument();
             docImg.Load(PathFile + "imagenes.xml");
 
-            foreach (XmlNode n1 in docImg.DocumentElement.ChildNodes)
+            dataSetVenta1.Clear();
+            dataSetVenta1.ReadXml(PathFile + "imagenes.xml");
+
+            DataRow[] vectorFotos = dataSetVenta1.TblFoto.Select("CodigoInmueble ='" + cod + "'");
+
+            foreach (DataRow row in vectorFotos)
             {
-
-                if (n1.HasChildNodes)
-                {
-                    foreach (XmlNode n2 in n1.ChildNodes)
-                    {
-                        if (n2.Name == "NombreFoto")
-                            Fotos.Add(n2.InnerText);
-
-                        if (n2.Name == "CodigoInmueble" && n2.InnerText != cod)
-                            Fotos.RemoveAt(Fotos.Count - 1);
-                    }
-                }
+                Fotos.Add(PathImages + row["NombreFoto"]);
             }
 
-            PbxFoto.Image = Image.FromFile(PathImages + Fotos[0]);
-            PbxAntes.Visible = false;
+
+            FileStream fs = new FileStream(Fotos[0], FileMode.Open, FileAccess.Read);
+            PbxFoto.Image = System.Drawing.Image.FromStream(fs);
+            fs.Close();
+
+
+            if (Fotos.Count == 1)
+            {
+                PbxAntes.Visible = false;
+                PbxSig.Visible = false;
+            }
+            else
+                PbxAntes.Visible = false;
         }
 
         private void PbxSig_Click(object sender, EventArgs e)
@@ -65,8 +73,10 @@ namespace WinApp_Homes
 
             if (contador > 0)
                 PbxAntes.Visible = true;
-            
-            PbxFoto.Image = Image.FromFile(PathImages + Fotos[contador]);
+
+            FileStream fs = new FileStream(Fotos[contador], FileMode.Open, FileAccess.Read);
+            PbxFoto.Image = System.Drawing.Image.FromStream(fs);
+            fs.Close();
         }
 
         private void PbxAntes_Click(object sender, EventArgs e)
@@ -79,12 +89,19 @@ namespace WinApp_Homes
             if (contador < Fotos.Count - 1)
                 PbxSig.Visible = true;
 
-            PbxFoto.Image = Image.FromFile(PathImages + Fotos[contador]);
+            FileStream fs = new FileStream(Fotos[contador], FileMode.Open, FileAccess.Read);
+            PbxFoto.Image = System.Drawing.Image.FromStream(fs);
+            fs.Close();
         }
 
         private void CargaFotosForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            PbxAntes.Image = null;
+            PbxSig.Image = null;
             PbxFoto.Image = null;
+            Fotos.Clear();
+
+            this.Dispose(true);
         }
     }
 }
