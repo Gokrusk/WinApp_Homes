@@ -46,19 +46,29 @@ namespace WinApp_Homes
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            //dataSetVenta1.ReadXml(PathFile + "inmuebles.xml");
+            try
+            {
+                   //dataSetVenta1.ReadXml(PathFile + "inmuebles.xml");
             
-            vector[0]["Codigo"] = LblCodigo.Text;
-            vector[0]["Tipo"] = CbxTipo.SelectedItem.ToString();
-            vector[0]["Precio"] = TxtPrecio.Text;
-            vector[0]["Descripcion"] = TxtDesc.Text;
-            vector[0]["Ubicacion"] = CbxUbi.SelectedItem.ToString();
-            vector[0]["NombreInmueble"] = TxtNombre.Text;
+                vector[0]["Codigo"] = LblCodigo.Text;
+                vector[0]["Tipo"] = CbxTipo.SelectedItem.ToString();
+                vector[0]["Precio"] = TxtPrecio.Text;
+                vector[0]["Descripcion"] = TxtDesc.Text;
+                vector[0]["Ubicacion"] = CbxUbi.SelectedItem.ToString();
+                vector[0]["NombreInmueble"] = TxtNombre.Text;
 
-            vector[0].AcceptChanges();
-            dataSetVenta1.WriteXml(PathFile + "inmuebles.xml");
+                vector[0].AcceptChanges();
+                dataSetVenta1.WriteXml(PathFile + "inmuebles.xml");
 
-            this.Close();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+
+                throw;
+            }
+            
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
@@ -76,7 +86,8 @@ namespace WinApp_Homes
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == (char)Keys.Enter)
+            
+            if (e.KeyChar == (char)Keys.Enter)
             {
                 try
                 {
