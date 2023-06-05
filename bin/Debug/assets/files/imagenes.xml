@@ -413,15 +413,7 @@
     <CodigoInmueble>CASA_5</CodigoInmueble>
   </TblFoto>
   <TblFoto>
-    <NombreFoto>descarga.jpeg</NombreFoto>
-    <CodigoInmueble>CASA_5</CodigoInmueble>
-  </TblFoto>
-  <TblFoto>
-    <NombreFoto>descarga.jpeg</NombreFoto>
-    <CodigoInmueble>CASA_5</CodigoInmueble>
-  </TblFoto>
-  <TblFoto>
-    <NombreFoto>descarga.jpeg</NombreFoto>
+    <NombreFoto>carbon.png</NombreFoto>
     <CodigoInmueble>CASA_5</CodigoInmueble>
   </TblFoto>
 </DataSetVenta>

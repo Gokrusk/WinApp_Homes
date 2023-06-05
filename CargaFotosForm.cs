@@ -81,5 +81,10 @@ namespace WinApp_Homes
 
             PbxFoto.Image = Image.FromFile(PathImages + Fotos[contador]);
         }
+
+        private void CargaFotosForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            PbxFoto.Image = null;
+        }
     }
 }

@@ -314,7 +314,6 @@ namespace WinApp_Homes
                     dataSetVenta1.Tables["TblCliente"].WriteXml(PathFile + "clientes.xml");
 
                     MessageBox.Show("Cliente registrado correctamente.", "Registro guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-<<<<<<< HEAD
                     TxtCedula.Clear();
                     TxtNombre.Clear();
                     TxtNombre.Enabled = false;
@@ -329,9 +328,6 @@ namespace WinApp_Homes
                     TxtCorreo.Enabled = false;
                     BtnGuardar.Enabled = false;
 
-=======
-                    this.Close();
->>>>>>> e agrego eliminacion
                 }
                 else
                 {

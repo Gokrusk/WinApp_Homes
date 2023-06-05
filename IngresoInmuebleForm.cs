@@ -48,7 +48,7 @@ namespace WinApp_Homes
                     ListImagenes.Items.Add(Path.GetFileName(rutaArchivo));
                 }
             }
-
+            
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
@@ -92,6 +92,7 @@ namespace WinApp_Homes
 
                 File.Copy(rutaArchivo, nuevaRutaCompleta, true);
             }
+            
         }
 
         private int ContarTipos()
@@ -177,6 +178,7 @@ namespace WinApp_Homes
             {
                 e.Handled = true;
             }
+
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;

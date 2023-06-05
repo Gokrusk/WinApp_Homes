@@ -30,11 +30,12 @@ namespace WinApp_Homes
                 {
                     buscarCod = txtCodigoImbBuscar.Text;
                     dataSetVenta1.ReadXml(PathFile + "inmuebles.xml");
+                    //dataSetVenta1.ReadXml(PathImages + "imagenes.xml");
                     System.Data.DataRow[] vecDatosInmueble;
-                    System.Data.DataRow[] vecFotosInmueble;
+                    //System.Data.DataRow[] vecFotosInmueble;
 
                     vecDatosInmueble = dataSetVenta1.TblInmueble.Select("Codigo ='" + txtCodigoImbBuscar.Text + "'");
-                    vecFotosInmueble = dataSetVenta1.TblFoto.Select("CodigoInmueble ='" + txtCodigoImbBuscar.Text + "'");
+                    //vecFotosInmueble = dataSetVenta1.TblFoto.Select("CodigoInmueble ='" + txtCodigoImbBuscar.Text + "'");
 
                     if (vecDatosInmueble.Length > 0)
                     {
@@ -45,27 +46,29 @@ namespace WinApp_Homes
                         {
                             vecDatosInmueble[0].Delete();
                             dataSetVenta1.WriteXml(PathFile + "inmuebles.xml");
+                            //dataSetVenta1.WriteXml(PathFile + "imagenes.xml");
+                            //vecFotosInmueble[0].Delete();
+                            //dataSetVenta1.WriteXml(PathImages + "imagenes.xml");
 
-                            XmlDocument docImg = new XmlDocument();
-                            docImg.Load(PathFile + "imagenes.xml");
+                            BorrarFotos();
+                            //foreach (DataRow row in vecFotosInmueble)
+                            //{
+                            //    MessageBox.Show(row["NombreFoto"].ToString(),"HOLA", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            foreach (DataRow row in vecFotosInmueble)
-                            {
-                                string nombreFoto = row["NombreFoto"].ToString();
-                                string pathImagen = PathImages + nombreFoto;
+                            //    string nombreFoto = row["NombreFoto"].ToString();
+                            //    string pathImagen = PathImages + nombreFoto;
 
-                                // Aquí puedes agregar la lógica para verificar si la imagen existe antes de eliminarla
-                                if (File.Exists(pathImagen))
-                                {
-                                    File.Delete(pathImagen);
-                                    MessageBox.Show("Foto eliminada'");
+                            //    if (File.Exists(pathImagen))
+                            //    {
+                            //        File.Delete(pathImagen);
+                            //        MessageBox.Show("Foto eliminada'");
 
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Foto NO eliminada'");
-                                }
-                            }
+                            //    }
+                            //    else
+                            //    {
+                            //        MessageBox.Show("Foto NO eliminada'");
+                            //    }
+                            //}
 
                         }
                         else
@@ -90,6 +93,19 @@ namespace WinApp_Homes
             }
         }
 
+        public void BorrarFotos()
+        {
+            dataSetVenta1.Clear();
+            dataSetVenta1.ReadXml(PathFile + "imagenes.xml");
 
+            DataRow[] vectorFotos = dataSetVenta1.TblFoto.Select("CodigoInmueble ='" + txtCodigoImbBuscar.Text + "'");
+        
+            foreach (DataRow row in vectorFotos) {
+                File.Delete(PathImages + row["NombreFoto"]);
+            }
+
+            vectorFotos[0].Delete();
+            dataSetVenta1.WriteXml(PathFile + "imagenes.xml");
+        }
     }
 }
