@@ -19,6 +19,11 @@ namespace WinApp_Homes {
         }
 
         private void TxtCedulaBus_KeyPress(object sender, KeyPressEventArgs e) {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
             if (e.KeyChar == (char)Keys.Enter) {
                 dataSetVenta1.ReadXml(PathFile + "clientes.xml");
                 VecDatos = dataSetVenta1.TblCliente.Select("Cedula = '"+TxtCedulaBus.Text+"'");

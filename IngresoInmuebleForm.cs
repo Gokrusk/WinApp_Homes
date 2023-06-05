@@ -49,15 +49,6 @@ namespace WinApp_Homes
                 }
             }
 
-            try
-            {
-                string ruta = rutasImagenes.First();
-                PbxImagen.Image = Image.FromFile(ruta);
-            }
-            catch (OutOfMemoryException)
-            {
-                MessageBox.Show("No se pudieron procesar todas las imágenes, seleccione menos en cada carga", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
@@ -182,6 +173,10 @@ namespace WinApp_Homes
 
         private void TxtPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;

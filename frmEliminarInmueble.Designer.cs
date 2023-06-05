@@ -30,21 +30,20 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtCodInmueble = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.LblTipoMostrar = new System.Windows.Forms.Label();
             this.LblNombreMostrar = new System.Windows.Forms.Label();
             this.LblDescMostrar = new System.Windows.Forms.Label();
             this.LblUbicacionMostrar = new System.Windows.Forms.Label();
             this.LblPrecioMostrar = new System.Windows.Forms.Label();
             this.LblCodigo = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblCodigoMostrar = new System.Windows.Forms.Label();
             this.txtDescripcionMostrar = new System.Windows.Forms.TextBox();
-            this.PbxImagen = new System.Windows.Forms.PictureBox();
-            this.ListImagenes = new System.Windows.Forms.ListBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.BtnEliminar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.dataSetVenta1 = new WinApp_Homes.DataSetVenta();
+            this.btnVerFotos = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxImagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetVenta1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -52,12 +51,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(155, 21);
+            this.label1.Location = new System.Drawing.Point(41, 23);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(440, 32);
+            this.label1.Size = new System.Drawing.Size(708, 32);
             this.label1.TabIndex = 2;
-            this.label1.Text = "ELIMINACIÓN DE UN INMUEBLE";
+            this.label1.Text = "CONFIRMACIÓN DE ELIMINACIÓN DE UN INMUEBLE";
             // 
             // panel1
             // 
@@ -70,31 +69,12 @@
             this.panel1.Size = new System.Drawing.Size(763, 78);
             this.panel1.TabIndex = 3;
             // 
-            // txtCodInmueble
-            // 
-            this.txtCodInmueble.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.txtCodInmueble.Location = new System.Drawing.Point(258, 96);
-            this.txtCodInmueble.Name = "txtCodInmueble";
-            this.txtCodInmueble.Size = new System.Drawing.Size(194, 26);
-            this.txtCodInmueble.TabIndex = 9;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(68, 99);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 18);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Código del Inmueble:";
-            // 
             // LblTipoMostrar
             // 
             this.LblTipoMostrar.AutoSize = true;
             this.LblTipoMostrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTipoMostrar.ForeColor = System.Drawing.Color.White;
-            this.LblTipoMostrar.Location = new System.Drawing.Point(89, 244);
+            this.LblTipoMostrar.Location = new System.Drawing.Point(88, 175);
             this.LblTipoMostrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblTipoMostrar.Name = "LblTipoMostrar";
             this.LblTipoMostrar.Size = new System.Drawing.Size(131, 18);
@@ -106,7 +86,7 @@
             this.LblNombreMostrar.AutoSize = true;
             this.LblNombreMostrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNombreMostrar.ForeColor = System.Drawing.Color.White;
-            this.LblNombreMostrar.Location = new System.Drawing.Point(89, 208);
+            this.LblNombreMostrar.Location = new System.Drawing.Point(88, 139);
             this.LblNombreMostrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblNombreMostrar.Name = "LblNombreMostrar";
             this.LblNombreMostrar.Size = new System.Drawing.Size(160, 18);
@@ -118,7 +98,7 @@
             this.LblDescMostrar.AutoSize = true;
             this.LblDescMostrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblDescMostrar.ForeColor = System.Drawing.Color.White;
-            this.LblDescMostrar.Location = new System.Drawing.Point(89, 361);
+            this.LblDescMostrar.Location = new System.Drawing.Point(90, 296);
             this.LblDescMostrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblDescMostrar.Name = "LblDescMostrar";
             this.LblDescMostrar.Size = new System.Drawing.Size(109, 18);
@@ -130,7 +110,7 @@
             this.LblUbicacionMostrar.AutoSize = true;
             this.LblUbicacionMostrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUbicacionMostrar.ForeColor = System.Drawing.Color.White;
-            this.LblUbicacionMostrar.Location = new System.Drawing.Point(89, 320);
+            this.LblUbicacionMostrar.Location = new System.Drawing.Point(88, 251);
             this.LblUbicacionMostrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblUbicacionMostrar.Name = "LblUbicacionMostrar";
             this.LblUbicacionMostrar.Size = new System.Drawing.Size(177, 18);
@@ -142,7 +122,7 @@
             this.LblPrecioMostrar.AutoSize = true;
             this.LblPrecioMostrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPrecioMostrar.ForeColor = System.Drawing.Color.White;
-            this.LblPrecioMostrar.Location = new System.Drawing.Point(89, 282);
+            this.LblPrecioMostrar.Location = new System.Drawing.Point(88, 213);
             this.LblPrecioMostrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPrecioMostrar.Name = "LblPrecioMostrar";
             this.LblPrecioMostrar.Size = new System.Drawing.Size(149, 18);
@@ -154,68 +134,92 @@
             this.LblCodigo.AutoSize = true;
             this.LblCodigo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCodigo.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.LblCodigo.Location = new System.Drawing.Point(242, 166);
+            this.LblCodigo.Location = new System.Drawing.Point(241, 97);
             this.LblCodigo.Name = "LblCodigo";
             this.LblCodigo.Size = new System.Drawing.Size(0, 18);
             this.LblCodigo.TabIndex = 40;
             // 
-            // label3
+            // lblCodigoMostrar
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label3.Location = new System.Drawing.Point(89, 166);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 18);
-            this.label3.TabIndex = 39;
-            this.label3.Text = "Código: __________";
+            this.lblCodigoMostrar.AutoSize = true;
+            this.lblCodigoMostrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoMostrar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblCodigoMostrar.Location = new System.Drawing.Point(88, 97);
+            this.lblCodigoMostrar.Name = "lblCodigoMostrar";
+            this.lblCodigoMostrar.Size = new System.Drawing.Size(153, 18);
+            this.lblCodigoMostrar.TabIndex = 39;
+            this.lblCodigoMostrar.Text = "Código: __________";
             // 
             // txtDescripcionMostrar
             // 
-            this.txtDescripcionMostrar.Location = new System.Drawing.Point(206, 358);
+            this.txtDescripcionMostrar.Location = new System.Drawing.Point(207, 293);
             this.txtDescripcionMostrar.Multiline = true;
             this.txtDescripcionMostrar.Name = "txtDescripcionMostrar";
             this.txtDescripcionMostrar.Size = new System.Drawing.Size(246, 104);
             this.txtDescripcionMostrar.TabIndex = 50;
             // 
-            // PbxImagen
+            // BtnEliminar
             // 
-            this.PbxImagen.Location = new System.Drawing.Point(482, 208);
-            this.PbxImagen.Name = "PbxImagen";
-            this.PbxImagen.Size = new System.Drawing.Size(250, 250);
-            this.PbxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PbxImagen.TabIndex = 51;
-            this.PbxImagen.TabStop = false;
+            this.BtnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(3)))), ((int)(((byte)(31)))));
+            this.BtnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.BtnEliminar.FlatAppearance.BorderSize = 0;
+            this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEliminar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEliminar.ForeColor = System.Drawing.Color.White;
+            this.BtnEliminar.Location = new System.Drawing.Point(207, 451);
+            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(155, 43);
+            this.BtnEliminar.TabIndex = 54;
+            this.BtnEliminar.Text = "ELIMINAR";
+            this.BtnEliminar.UseVisualStyleBackColor = false;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
-            // ListImagenes
+            // btnCancelar
             // 
-            this.ListImagenes.FormattingEnabled = true;
-            this.ListImagenes.Location = new System.Drawing.Point(482, 166);
-            this.ListImagenes.Name = "ListImagenes";
-            this.ListImagenes.Size = new System.Drawing.Size(250, 30);
-            this.ListImagenes.TabIndex = 53;
+            this.btnCancelar.BackColor = System.Drawing.Color.White;
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
+            this.btnCancelar.Location = new System.Drawing.Point(405, 451);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(155, 43);
+            this.btnCancelar.TabIndex = 55;
+            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // label5
+            // dataSetVenta1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(571, 145);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 18);
-            this.label5.TabIndex = 52;
-            this.label5.Text = "Imágenes";
+            this.dataSetVenta1.DataSetName = "DataSetVenta";
+            this.dataSetVenta1.EnforceConstraints = false;
+            this.dataSetVenta1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnVerFotos
+            // 
+            this.btnVerFotos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.btnVerFotos.Location = new System.Drawing.Point(543, 322);
+            this.btnVerFotos.Name = "btnVerFotos";
+            this.btnVerFotos.Size = new System.Drawing.Size(155, 43);
+            this.btnVerFotos.TabIndex = 56;
+            this.btnVerFotos.Text = "Ver Fotos";
+            this.btnVerFotos.UseVisualStyleBackColor = true;
+            this.btnVerFotos.Click += new System.EventHandler(this.btnVerFotos_Click);
             // 
             // frmEliminarInmueble
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(58)))), ((int)(((byte)(63)))));
-            this.ClientSize = new System.Drawing.Size(761, 511);
-            this.Controls.Add(this.ListImagenes);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.PbxImagen);
+            this.ClientSize = new System.Drawing.Size(761, 561);
+            this.Controls.Add(this.btnVerFotos);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.txtDescripcionMostrar);
             this.Controls.Add(this.LblTipoMostrar);
             this.Controls.Add(this.LblNombreMostrar);
@@ -223,15 +227,15 @@
             this.Controls.Add(this.LblUbicacionMostrar);
             this.Controls.Add(this.LblPrecioMostrar);
             this.Controls.Add(this.LblCodigo);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtCodInmueble);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblCodigoMostrar);
             this.Controls.Add(this.panel1);
             this.Name = "frmEliminarInmueble";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEliminarInmueble";
+            this.Load += new System.EventHandler(this.frmEliminarInmueble_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbxImagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetVenta1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,18 +245,17 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtCodInmueble;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label LblTipoMostrar;
         private System.Windows.Forms.Label LblNombreMostrar;
         private System.Windows.Forms.Label LblDescMostrar;
         private System.Windows.Forms.Label LblUbicacionMostrar;
         private System.Windows.Forms.Label LblPrecioMostrar;
         private System.Windows.Forms.Label LblCodigo;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblCodigoMostrar;
         private System.Windows.Forms.TextBox txtDescripcionMostrar;
-        private System.Windows.Forms.PictureBox PbxImagen;
-        private System.Windows.Forms.ListBox ListImagenes;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button BtnEliminar;
+        private System.Windows.Forms.Button btnCancelar;
+        private DataSetVenta dataSetVenta1;
+        private System.Windows.Forms.Button btnVerFotos;
     }
 }

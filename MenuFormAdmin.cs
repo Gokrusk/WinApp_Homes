@@ -74,5 +74,16 @@ namespace WinApp_Homes
 
         }
 
+        private void btnEliminarInmueble_Click(object sender, EventArgs e)
+        {
+            frmEliminarXCodigoInmueble formEliminarXCodigoInmueble = new frmEliminarXCodigoInmueble();
+            formEliminarXCodigoInmueble.ShowDialog();
+        }
+
+        private void btnEliminarCliente_Click(object sender, EventArgs e)
+        {
+            frmEliminarXCedulaCliente formEliminarXCedulaCliente = new frmEliminarXCedulaCliente();
+            formEliminarXCedulaCliente.ShowDialog();
+        }
     }
 }

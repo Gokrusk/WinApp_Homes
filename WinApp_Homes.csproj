@@ -89,11 +89,29 @@
     <Compile Include="FormBuscar.Designer.cs">
       <DependentUpon>FormBuscar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEliminarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminarCliente.Designer.cs">
+      <DependentUpon>frmEliminarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEliminarInmueble.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEliminarInmueble.Designer.cs">
       <DependentUpon>frmEliminarInmueble.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEliminarXCedulaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminarXCedulaCliente.Designer.cs">
+      <DependentUpon>frmEliminarXCedulaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEliminarXCodigoInmueble.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminarXCodigoInmueble.Designer.cs">
+      <DependentUpon>frmEliminarXCodigoInmueble.cs</DependentUpon>
     </Compile>
     <Compile Include="IngresoInmuebleForm.cs">
       <SubType>Form</SubType>
@@ -151,8 +169,17 @@
     <EmbeddedResource Include="FormBuscar.resx">
       <DependentUpon>FormBuscar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminarCliente.resx">
+      <DependentUpon>frmEliminarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEliminarInmueble.resx">
       <DependentUpon>frmEliminarInmueble.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminarXCedulaCliente.resx">
+      <DependentUpon>frmEliminarXCedulaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminarXCodigoInmueble.resx">
+      <DependentUpon>frmEliminarXCodigoInmueble.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IngresoInmuebleForm.resx">
       <DependentUpon>IngresoInmuebleForm.cs</DependentUpon>

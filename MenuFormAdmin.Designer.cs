@@ -42,6 +42,7 @@
             this.GbxExtras = new System.Windows.Forms.GroupBox();
             this.BtnReportes = new System.Windows.Forms.Button();
             this.GbxEliminar = new System.Windows.Forms.GroupBox();
+            this.btnEliminarCliente = new System.Windows.Forms.Button();
             this.btnEliminarInmueble = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.GbxRegistro.SuspendLayout();
@@ -201,7 +202,7 @@
             this.GbxExtras.Controls.Add(this.BtnReportes);
             this.GbxExtras.Controls.Add(this.button5);
             this.GbxExtras.ForeColor = System.Drawing.Color.White;
-            this.GbxExtras.Location = new System.Drawing.Point(342, 381);
+            this.GbxExtras.Location = new System.Drawing.Point(445, 381);
             this.GbxExtras.Name = "GbxExtras";
             this.GbxExtras.Size = new System.Drawing.Size(408, 118);
             this.GbxExtras.TabIndex = 9;
@@ -223,24 +224,37 @@
             // 
             // GbxEliminar
             // 
+            this.GbxEliminar.Controls.Add(this.btnEliminarCliente);
             this.GbxEliminar.Controls.Add(this.btnEliminarInmueble);
             this.GbxEliminar.ForeColor = System.Drawing.Color.White;
             this.GbxEliminar.Location = new System.Drawing.Point(37, 381);
             this.GbxEliminar.Name = "GbxEliminar";
-            this.GbxEliminar.Size = new System.Drawing.Size(260, 118);
+            this.GbxEliminar.Size = new System.Drawing.Size(382, 118);
             this.GbxEliminar.TabIndex = 10;
             this.GbxEliminar.TabStop = false;
             this.GbxEliminar.Text = "Eliminación";
             // 
+            // btnEliminarCliente
+            // 
+            this.btnEliminarCliente.BackColor = System.Drawing.Color.Red;
+            this.btnEliminarCliente.Location = new System.Drawing.Point(22, 45);
+            this.btnEliminarCliente.Name = "btnEliminarCliente";
+            this.btnEliminarCliente.Size = new System.Drawing.Size(169, 49);
+            this.btnEliminarCliente.TabIndex = 1;
+            this.btnEliminarCliente.Text = "Eliminar Cliente";
+            this.btnEliminarCliente.UseVisualStyleBackColor = false;
+            this.btnEliminarCliente.Click += new System.EventHandler(this.btnEliminarCliente_Click);
+            // 
             // btnEliminarInmueble
             // 
             this.btnEliminarInmueble.BackColor = System.Drawing.Color.Red;
-            this.btnEliminarInmueble.Location = new System.Drawing.Point(34, 45);
+            this.btnEliminarInmueble.Location = new System.Drawing.Point(202, 45);
             this.btnEliminarInmueble.Name = "btnEliminarInmueble";
             this.btnEliminarInmueble.Size = new System.Drawing.Size(169, 49);
             this.btnEliminarInmueble.TabIndex = 0;
             this.btnEliminarInmueble.Text = "Eliminar Inmueble";
             this.btnEliminarInmueble.UseVisualStyleBackColor = false;
+            this.btnEliminarInmueble.Click += new System.EventHandler(this.btnEliminarInmueble_Click);
             // 
             // MenuFormAdmin
             // 
@@ -290,5 +304,6 @@
         private System.Windows.Forms.Button BtnReportes;
         private System.Windows.Forms.GroupBox GbxEliminar;
         private System.Windows.Forms.Button btnEliminarInmueble;
+        private System.Windows.Forms.Button btnEliminarCliente;
     }
 }
