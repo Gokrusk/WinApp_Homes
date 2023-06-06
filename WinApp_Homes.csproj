@@ -74,6 +74,7 @@
       <DependentUpon>CargaFotosForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ClCliente.cs" />
+    <Compile Include="ClFoInm.cs" />
     <Compile Include="ClInmueble.cs" />
     <Compile Include="ClVentas.cs" />
     <Compile Include="DataSetVenta.cs">
@@ -210,6 +211,7 @@
       <DependentUpon>RegistroClientForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="ReportHomes.rdlc" />
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="ReportesForm.resx">
