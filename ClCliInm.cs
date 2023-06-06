@@ -12,7 +12,9 @@ namespace WinApp_Homes
 
         public string NombreFoto { get; set; }
         
-        public string CodigoInmueble { get; set; }
+        public string NombreInmueble { get; set; }
+        public float precio { get; set; }
+
         
 
     }
