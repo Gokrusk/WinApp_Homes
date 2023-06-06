@@ -67,7 +67,7 @@ namespace WinApp_Homes
                 reportViewer4.Visible = true;
                 reportViewer5.Visible = false;
             }
-            else if (comboBox1.SelectedItem.ToString() == "Gráfico de Inmuebles")
+            else if (comboBox1.SelectedItem.ToString() == "Gráfico de Tipos de Inmuebles")
             {
                 reportViewer1.Visible = false;
                 reportViewer2.Visible = false;
