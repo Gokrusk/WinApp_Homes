@@ -19,12 +19,14 @@ namespace WinApp_Homes
             InitializeComponent();
             dataSetVenta.ReadXml(PathFile + "clientes.xml");
             dataSetVenta.ReadXml(PathFile + "inmuebles.xml");
+            dataSetVenta.ReadXml(PathFile + "ventas.xml");
         }
 
         private void ReportesForm_Load(object sender, EventArgs e)
         {
             this.reportViewer1.RefreshReport();
             this.reportViewer2.RefreshReport();
+            this.reportViewer3.RefreshReport();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -37,6 +39,13 @@ namespace WinApp_Homes
             {
                 reportViewer1.Visible = false;
                 reportViewer2.Visible = true;
+            }
+            else if (comboBox1.SelectedItem.ToString() == "Listado de ventas")
+            {
+                reportViewer1.Visible = false;
+                reportViewer2.Visible = false;
+                reportViewer3.Visible = true;
+
             }
         }
     }
