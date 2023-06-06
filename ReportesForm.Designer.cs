@@ -24,11 +24,12 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource11 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource12 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource13 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource14 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource15 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource21 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource22 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource23 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource24 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource25 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource26 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.tblClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetVenta = new WinApp_Homes.DataSetVenta();
             this.TblInmuebleBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -103,9 +104,9 @@
             // 
             // reportViewer1
             // 
-            reportDataSource11.Name = "DataSet1";
-            reportDataSource11.Value = this.tblClienteBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource11);
+            reportDataSource21.Name = "DataSet1";
+            reportDataSource21.Value = this.tblClienteBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource21);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "WinApp_Homes.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(-1, 69);
             this.reportViewer1.Name = "reportViewer1";
@@ -116,9 +117,9 @@
             // 
             // reportViewer2
             // 
-            reportDataSource12.Name = "DataSet1";
-            reportDataSource12.Value = this.TblInmuebleBindingSource;
-            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource12);
+            reportDataSource22.Name = "DataSet1";
+            reportDataSource22.Value = this.TblInmuebleBindingSource;
+            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource22);
             this.reportViewer2.LocalReport.ReportEmbeddedResource = "WinApp_Homes.ReportHomes.rdlc";
             this.reportViewer2.Location = new System.Drawing.Point(-1, 69);
             this.reportViewer2.Name = "reportViewer2";
@@ -129,9 +130,9 @@
             // 
             // reportViewer3
             // 
-            reportDataSource13.Name = "DataSet1";
-            reportDataSource13.Value = this.TblVentaBindingSource;
-            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource13);
+            reportDataSource23.Name = "DataSet1";
+            reportDataSource23.Value = this.TblVentaBindingSource;
+            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource23);
             this.reportViewer3.LocalReport.ReportEmbeddedResource = "WinApp_Homes.Report2.rdlc";
             this.reportViewer3.Location = new System.Drawing.Point(-1, 69);
             this.reportViewer3.Name = "reportViewer3";
@@ -147,12 +148,12 @@
             // 
             // reportViewer4
             // 
-            reportDataSource14.Name = "DataSet1";
-            reportDataSource14.Value = this.TblInmuebleBindingSource;
-            reportDataSource15.Name = "DataSet2";
-            reportDataSource15.Value = this.fKTblInmuebleTblFotoBindingSource;
-            this.reportViewer4.LocalReport.DataSources.Add(reportDataSource14);
-            this.reportViewer4.LocalReport.DataSources.Add(reportDataSource15);
+            reportDataSource24.Name = "DataSet1";
+            reportDataSource24.Value = this.TblInmuebleBindingSource;
+            reportDataSource25.Name = "DataSet2";
+            reportDataSource25.Value = this.fKTblInmuebleTblFotoBindingSource;
+            this.reportViewer4.LocalReport.DataSources.Add(reportDataSource24);
+            this.reportViewer4.LocalReport.DataSources.Add(reportDataSource25);
             this.reportViewer4.LocalReport.ReportEmbeddedResource = "WinApp_Homes.Report3.rdlc";
             this.reportViewer4.Location = new System.Drawing.Point(-1, 69);
             this.reportViewer4.Name = "reportViewer4";
@@ -163,7 +164,10 @@
             // 
             // reportViewer5
             // 
-            this.reportViewer5.LocalReport.ReportEmbeddedResource = "WinApp_Homes.ReportHomes.rdlc";
+            reportDataSource26.Name = "DataSet1";
+            reportDataSource26.Value = this.TblInmuebleBindingSource;
+            this.reportViewer5.LocalReport.DataSources.Add(reportDataSource26);
+            this.reportViewer5.LocalReport.ReportEmbeddedResource = "WinApp_Homes.Report4.rdlc";
             this.reportViewer5.Location = new System.Drawing.Point(-1, 69);
             this.reportViewer5.Name = "reportViewer5";
             this.reportViewer5.ServerReport.BearerToken = null;
