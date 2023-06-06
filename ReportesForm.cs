@@ -29,24 +29,34 @@ namespace WinApp_Homes
             this.reportViewer2.RefreshReport();
             this.reportViewer3.RefreshReport();
             this.reportViewer4.RefreshReport();
+            this.reportViewer5.RefreshReport();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox1.SelectedItem.ToString() == "Listado de clientes")
             {
-                reportViewer1.Visible = true; 
+                reportViewer1.Visible = true;
+                reportViewer2.Visible = false;
+                reportViewer3.Visible = false;
+                reportViewer4.Visible = false;
+                reportViewer5.Visible = false; 
 
             } else if(comboBox1.SelectedItem.ToString() == "Listado de inmuebles")
             {
                 reportViewer1.Visible = false;
                 reportViewer2.Visible = true;
+                reportViewer3.Visible = false;
+                reportViewer4.Visible = false;
+                reportViewer5.Visible = false;
             }
             else if (comboBox1.SelectedItem.ToString() == "Listado de ventas")
             {
                 reportViewer1.Visible = false;
                 reportViewer2.Visible = false;
                 reportViewer3.Visible = true;
+                reportViewer4.Visible = false;
+                reportViewer5.Visible = false;
 
             }
             else if (comboBox1.SelectedItem.ToString() == "Listado de Inmueble Imagen")
@@ -55,7 +65,15 @@ namespace WinApp_Homes
                 reportViewer2.Visible = false;
                 reportViewer3.Visible = false;
                 reportViewer4.Visible = true;
-
+                reportViewer5.Visible = false;
+            }
+            else if (comboBox1.SelectedItem.ToString() == "Gráfico de Inmuebles")
+            {
+                reportViewer1.Visible = false;
+                reportViewer2.Visible = false;
+                reportViewer3.Visible = false;
+                reportViewer4.Visible = false;
+                reportViewer5.Visible = true;
             }
         }
     }

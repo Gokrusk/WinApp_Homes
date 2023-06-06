@@ -32,19 +32,22 @@
             this.tblClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetVenta = new WinApp_Homes.DataSetVenta();
             this.TblInmuebleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.TblVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fKTblInmuebleTblFotoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.LblIntruccion = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reportViewer3 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.TblVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Grafico = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer4 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.fKTblInmuebleTblFotoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer5 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TblInmuebleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TblVentaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKTblInmuebleTblFotoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Grafico)).BeginInit();
             this.SuspendLayout();
             // 
             // tblClienteBindingSource
@@ -63,6 +66,16 @@
             this.TblInmuebleBindingSource.DataMember = "TblInmueble";
             this.TblInmuebleBindingSource.DataSource = this.dataSetVenta;
             // 
+            // TblVentaBindingSource
+            // 
+            this.TblVentaBindingSource.DataMember = "TblVenta";
+            this.TblVentaBindingSource.DataSource = this.dataSetVenta;
+            // 
+            // fKTblInmuebleTblFotoBindingSource
+            // 
+            this.fKTblInmuebleTblFotoBindingSource.DataMember = "FK_TblInmueble_TblFoto";
+            this.fKTblInmuebleTblFotoBindingSource.DataSource = this.TblInmuebleBindingSource;
+            // 
             // LblIntruccion
             // 
             this.LblIntruccion.AutoSize = true;
@@ -77,13 +90,14 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
+            "Gráfico de Inmuebles",
             "Listado de clientes",
             "Listado de inmuebles",
             "Listado de ventas",
             "Listado de Inmueble Imagen"});
             this.comboBox1.Location = new System.Drawing.Point(211, 24);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(183, 26);
+            this.comboBox1.Size = new System.Drawing.Size(300, 26);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -126,10 +140,10 @@
             this.reportViewer3.TabIndex = 4;
             this.reportViewer3.Visible = false;
             // 
-            // TblVentaBindingSource
+            // Grafico
             // 
-            this.TblVentaBindingSource.DataMember = "TblVenta";
-            this.TblVentaBindingSource.DataSource = this.dataSetVenta;
+            this.Grafico.DataMember = "TblInmueble";
+            this.Grafico.DataSource = this.dataSetVenta;
             // 
             // reportViewer4
             // 
@@ -147,10 +161,15 @@
             this.reportViewer4.TabIndex = 5;
             this.reportViewer4.Visible = false;
             // 
-            // fKTblInmuebleTblFotoBindingSource
+            // reportViewer5
             // 
-            this.fKTblInmuebleTblFotoBindingSource.DataMember = "FK_TblInmueble_TblFoto";
-            this.fKTblInmuebleTblFotoBindingSource.DataSource = this.TblInmuebleBindingSource;
+            this.reportViewer5.LocalReport.ReportEmbeddedResource = "WinApp_Homes.ReportHomes.rdlc";
+            this.reportViewer5.Location = new System.Drawing.Point(-1, 69);
+            this.reportViewer5.Name = "reportViewer5";
+            this.reportViewer5.ServerReport.BearerToken = null;
+            this.reportViewer5.Size = new System.Drawing.Size(887, 443);
+            this.reportViewer5.TabIndex = 6;
+            this.reportViewer5.Visible = false;
             // 
             // ReportesForm
             // 
@@ -158,6 +177,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(58)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(884, 511);
+            this.Controls.Add(this.reportViewer5);
             this.Controls.Add(this.reportViewer4);
             this.Controls.Add(this.reportViewer3);
             this.Controls.Add(this.reportViewer2);
@@ -177,6 +197,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.TblInmuebleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TblVentaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKTblInmuebleTblFotoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Grafico)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,7 +214,9 @@
         private System.Windows.Forms.BindingSource TblInmuebleBindingSource;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer3;
         private System.Windows.Forms.BindingSource TblVentaBindingSource;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer4;
         private System.Windows.Forms.BindingSource fKTblInmuebleTblFotoBindingSource;
+        private System.Windows.Forms.BindingSource Grafico;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer4;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer5;
     }
 }
