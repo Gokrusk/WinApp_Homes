@@ -54,7 +54,7 @@
       • Dormitorio Master, con baño completo, con walk in closet con tragaluz, balcón, pared
       decorativa con luces led, área multifuncional con instalaciones para un jacuzzi.</Descripcion>
     <Ubicacion>San Lorenzo</Ubicacion>
-    <EstadoVenta>VENDIDO</EstadoVenta>
+    <EstadoVenta>DISPONIBLE</EstadoVenta>
     <NombreInmueble>Residencia Épsilon</NombreInmueble>
   </TblInmueble>
   <TblInmueble>
@@ -121,7 +121,7 @@
       Matriz: Naciones Unidas y Nuñez de Vela, Edificio Metropolitan, Piso 10, Oficina 1011
       Sucursal: Calle Polonia y Vancouver Edificio Clifford 3 Local 2</Descripcion>
     <Ubicacion>Montecristi</Ubicacion>
-    <EstadoVenta>VENDIDO</EstadoVenta>
+    <EstadoVenta>DISPONIBLE</EstadoVenta>
     <NombreInmueble>El Batán</NombreInmueble>
   </TblInmueble>
   <TblInmueble>
@@ -225,7 +225,7 @@ PLANTA BAJA
 🔥Área verde compuesta por amplios jardines 
 🔥Zona de Parqueo para 7 vehículos</Descripcion>
     <Ubicacion>Riobamba</Ubicacion>
-    <EstadoVenta>DISPONIBLE</EstadoVenta>
+    <EstadoVenta>VENDIDO</EstadoVenta>
     <NombreInmueble>Casa del Joab</NombreInmueble>
   </TblInmueble>
 </DataSetVenta>

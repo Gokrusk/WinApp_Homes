@@ -153,7 +153,7 @@
             this.lblTitulo.Location = new System.Drawing.Point(396, 23);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(120, 39);
+            this.lblTitulo.Size = new System.Drawing.Size(96, 32);
             this.lblTitulo.TabIndex = 2;
             this.lblTitulo.Text = "MENÚ";
             // 
@@ -237,6 +237,7 @@
             // btnEliminarCliente
             // 
             this.btnEliminarCliente.BackColor = System.Drawing.Color.Red;
+            this.btnEliminarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminarCliente.Location = new System.Drawing.Point(22, 45);
             this.btnEliminarCliente.Name = "btnEliminarCliente";
             this.btnEliminarCliente.Size = new System.Drawing.Size(169, 49);
@@ -248,6 +249,7 @@
             // btnEliminarInmueble
             // 
             this.btnEliminarInmueble.BackColor = System.Drawing.Color.Red;
+            this.btnEliminarInmueble.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminarInmueble.Location = new System.Drawing.Point(202, 45);
             this.btnEliminarInmueble.Name = "btnEliminarInmueble";
             this.btnEliminarInmueble.Size = new System.Drawing.Size(169, 49);
@@ -258,17 +260,17 @@
             // 
             // MenuFormAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(58)))), ((int)(((byte)(63)))));
-            this.ClientSize = new System.Drawing.Size(882, 503);
+            this.ClientSize = new System.Drawing.Size(884, 511);
             this.Controls.Add(this.GbxEliminar);
             this.Controls.Add(this.GbxExtras);
             this.Controls.Add(this.GbxModi);
             this.Controls.Add(this.GbxRegistro);
             this.Controls.Add(this.panel1);
-            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);

@@ -22,6 +22,7 @@ namespace WinApp_Homes
         DataRow[] dataInmuebles;
         DataRow[] dataClientes;
         List<string> clientes = new List<string>();
+        List<string> clientesNom = new List<string>();
 
 
         public VentaForm()
@@ -46,6 +47,7 @@ namespace WinApp_Homes
             {
                 CbxCliente.Items.Add(cliente["Nombre"] + " " + cliente["Apellido"]);
                 clientes.Add(cliente["Cedula"].ToString());
+                clientesNom.Add(cliente["Nombre"].ToString() + " " + cliente["Apellido"].ToString());
             }
         }
 
@@ -53,17 +55,23 @@ namespace WinApp_Homes
         {
             LeerInmueble();
 
-            string inmu = dataInmuebleVenta["Codigo"].ToString();
+            string nomInmu = dataInmuebleVenta["NombreInmueble"].ToString();
+
             string ced = clientes[CbxCliente.SelectedIndex];
+            string nomCli = clientesNom[CbxCliente.SelectedIndex];
+            string precio = dataInmuebleVenta["Precio"].ToString();
 
             dataSetVenta1.Clear();
             dataSetVenta1.Tables["TblVenta"].ReadXml(PathFile + "ventas.xml");
-            object[] dataVenta = new object[4];
+            object[] dataVenta = new object[7];
 
-            dataVenta[0] = inmu;
+            dataVenta[0] = nomInmu.Substring(0,3) + nomCli.Substring(0,3) + "_" + ced[3];
             dataVenta[1] = TxtMensualidad.Text;
             dataVenta[2] = ced;
             dataVenta[3] = TxtMeses.Text;
+            dataVenta[4] = nomCli;
+            dataVenta[5] = nomInmu;
+            dataVenta[6] = precio;
 
             dataSetVenta1.TblVenta.Rows.Add(dataVenta);
             dataSetVenta1.Tables["TblVenta"].WriteXml(PathFile + "ventas.xml");
