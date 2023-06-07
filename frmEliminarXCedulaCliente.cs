@@ -41,7 +41,7 @@ namespace WinApp_Homes
                     }
                     else
                     {
-                        MessageBox.Show($"No existe el cliente con la cédula '{buscarCedula}'", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show($"Se ha cancelado la eliminación del cliente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtCedulaBuscar.Clear();
                     }
 

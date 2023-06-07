@@ -46,6 +46,7 @@ namespace WinApp_Homes
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.No;
             this.Close();
         }
 

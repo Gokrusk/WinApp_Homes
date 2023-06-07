@@ -34,10 +34,12 @@ namespace WinApp_Homes
                 MessageBox.Show($"Cliente Eliminado", "Eliminación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
             }
-            else if (result == DialogResult.No)
-            {
-                MessageBox.Show($"El Cliente no ha sido eliminado", "Eliminación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.No;
+            this.Close();
         }
     }
 }

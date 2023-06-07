@@ -46,10 +46,12 @@ namespace WinApp_Homes
                             dataSetVenta1.WriteXml(PathFile + "inmuebles.xml");
                            
                             BorrarFotos();
+                            MessageBox.Show($"Se ha eliminado correctamento el inmueble con código '{buscarCod}'", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                         }
                         else
                         {
-                            MessageBox.Show($"No existe el inmueble con el código '{buscarCod}'", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show($"Se ha cancelado al eliminación del inmueble", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             txtCodigoImbBuscar.Clear();
                         }
 

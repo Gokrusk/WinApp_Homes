@@ -48,9 +48,9 @@
             this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(936, 96);
+            this.panel1.Size = new System.Drawing.Size(702, 78);
             this.panel1.TabIndex = 4;
             // 
             // lblTitulo
@@ -58,10 +58,10 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(17, 27);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(13, 22);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(868, 39);
+            this.lblTitulo.Size = new System.Drawing.Size(683, 32);
             this.lblTitulo.TabIndex = 2;
             this.lblTitulo.Text = "CONFIRMACIÓN DE ELIMINACIÓN DE UN CLIENTE";
             // 
@@ -70,10 +70,10 @@
             this.lblSexoMostrar.AutoSize = true;
             this.lblSexoMostrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSexoMostrar.ForeColor = System.Drawing.Color.White;
-            this.lblSexoMostrar.Location = new System.Drawing.Point(64, 252);
-            this.lblSexoMostrar.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblSexoMostrar.Location = new System.Drawing.Point(48, 205);
+            this.lblSexoMostrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSexoMostrar.Name = "lblSexoMostrar";
-            this.lblSexoMostrar.Size = new System.Drawing.Size(228, 23);
+            this.lblSexoMostrar.Size = new System.Drawing.Size(184, 18);
             this.lblSexoMostrar.TabIndex = 34;
             this.lblSexoMostrar.Text = "Sexo: ________________";
             // 
@@ -82,10 +82,10 @@
             this.lblCorreoMostrar.AutoSize = true;
             this.lblCorreoMostrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreoMostrar.ForeColor = System.Drawing.Color.White;
-            this.lblCorreoMostrar.Location = new System.Drawing.Point(64, 382);
-            this.lblCorreoMostrar.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblCorreoMostrar.Location = new System.Drawing.Point(48, 310);
+            this.lblCorreoMostrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCorreoMostrar.Name = "lblCorreoMostrar";
-            this.lblCorreoMostrar.Size = new System.Drawing.Size(525, 23);
+            this.lblCorreoMostrar.Size = new System.Drawing.Size(424, 18);
             this.lblCorreoMostrar.TabIndex = 31;
             this.lblCorreoMostrar.Text = "Correo electrónico: ________________________________";
             // 
@@ -94,10 +94,10 @@
             this.lblFechanacimientoMostrar.AutoSize = true;
             this.lblFechanacimientoMostrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechanacimientoMostrar.ForeColor = System.Drawing.Color.White;
-            this.lblFechanacimientoMostrar.Location = new System.Drawing.Point(376, 254);
-            this.lblFechanacimientoMostrar.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblFechanacimientoMostrar.Location = new System.Drawing.Point(282, 206);
+            this.lblFechanacimientoMostrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechanacimientoMostrar.Name = "lblFechanacimientoMostrar";
-            this.lblFechanacimientoMostrar.Size = new System.Drawing.Size(383, 23);
+            this.lblFechanacimientoMostrar.Size = new System.Drawing.Size(311, 18);
             this.lblFechanacimientoMostrar.TabIndex = 30;
             this.lblFechanacimientoMostrar.Text = "Fecha de nacimiento: ________________";
             // 
@@ -106,10 +106,10 @@
             this.lblCiudadMostrar.AutoSize = true;
             this.lblCiudadMostrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCiudadMostrar.ForeColor = System.Drawing.Color.White;
-            this.lblCiudadMostrar.Location = new System.Drawing.Point(64, 318);
-            this.lblCiudadMostrar.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblCiudadMostrar.Location = new System.Drawing.Point(48, 258);
+            this.lblCiudadMostrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCiudadMostrar.Name = "lblCiudadMostrar";
-            this.lblCiudadMostrar.Size = new System.Drawing.Size(251, 23);
+            this.lblCiudadMostrar.Size = new System.Drawing.Size(201, 18);
             this.lblCiudadMostrar.TabIndex = 29;
             this.lblCiudadMostrar.Text = "Ciudad: ________________";
             // 
@@ -118,10 +118,10 @@
             this.lblApellidoMostrar.AutoSize = true;
             this.lblApellidoMostrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellidoMostrar.ForeColor = System.Drawing.Color.White;
-            this.lblApellidoMostrar.Location = new System.Drawing.Point(448, 186);
-            this.lblApellidoMostrar.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblApellidoMostrar.Location = new System.Drawing.Point(336, 151);
+            this.lblApellidoMostrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblApellidoMostrar.Name = "lblApellidoMostrar";
-            this.lblApellidoMostrar.Size = new System.Drawing.Size(260, 23);
+            this.lblApellidoMostrar.Size = new System.Drawing.Size(209, 18);
             this.lblApellidoMostrar.TabIndex = 28;
             this.lblApellidoMostrar.Text = "Apellido: ________________";
             // 
@@ -130,10 +130,10 @@
             this.lblNombreMostrar.AutoSize = true;
             this.lblNombreMostrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreMostrar.ForeColor = System.Drawing.Color.White;
-            this.lblNombreMostrar.Location = new System.Drawing.Point(64, 186);
-            this.lblNombreMostrar.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblNombreMostrar.Location = new System.Drawing.Point(48, 151);
+            this.lblNombreMostrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreMostrar.Name = "lblNombreMostrar";
-            this.lblNombreMostrar.Size = new System.Drawing.Size(260, 23);
+            this.lblNombreMostrar.Size = new System.Drawing.Size(208, 18);
             this.lblNombreMostrar.TabIndex = 27;
             this.lblNombreMostrar.Text = "Nombre: ________________";
             // 
@@ -142,10 +142,10 @@
             this.lblCedulaMostrar.AutoSize = true;
             this.lblCedulaMostrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCedulaMostrar.ForeColor = System.Drawing.Color.White;
-            this.lblCedulaMostrar.Location = new System.Drawing.Point(64, 127);
-            this.lblCedulaMostrar.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblCedulaMostrar.Location = new System.Drawing.Point(48, 103);
+            this.lblCedulaMostrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCedulaMostrar.Name = "lblCedulaMostrar";
-            this.lblCedulaMostrar.Size = new System.Drawing.Size(290, 23);
+            this.lblCedulaMostrar.Size = new System.Drawing.Size(233, 18);
             this.lblCedulaMostrar.TabIndex = 26;
             this.lblCedulaMostrar.Text = "Cédula: ____________________";
             // 
@@ -158,13 +158,14 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Location = new System.Drawing.Point(452, 449);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnCancelar.Location = new System.Drawing.Point(339, 365);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(207, 53);
+            this.btnCancelar.Size = new System.Drawing.Size(155, 43);
             this.btnCancelar.TabIndex = 57;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnEliminar
             // 
@@ -175,10 +176,10 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(188, 449);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnEliminar.Location = new System.Drawing.Point(141, 365);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(207, 53);
+            this.btnEliminar.Size = new System.Drawing.Size(155, 43);
             this.btnEliminar.TabIndex = 56;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -186,11 +187,11 @@
             // 
             // frmEliminarCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(58)))), ((int)(((byte)(63)))));
-            this.ClientSize = new System.Drawing.Size(939, 566);
+            this.ClientSize = new System.Drawing.Size(704, 460);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.lblSexoMostrar);
@@ -201,7 +202,6 @@
             this.Controls.Add(this.lblNombreMostrar);
             this.Controls.Add(this.lblCedulaMostrar);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmEliminarCliente";

@@ -89,7 +89,7 @@
             this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.ForeColor = System.Drawing.Color.Black;
             this.btnBuscar.Location = new System.Drawing.Point(268, 194);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnBuscar.Name = "btnBuscar";

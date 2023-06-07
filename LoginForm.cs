@@ -95,6 +95,7 @@ namespace WinApp_Homes
 
         private void label1_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(Application.StartupPath);
             LoginForm principal = new LoginForm();
             this.Hide();
             MenuFormAdmin obj = new MenuFormAdmin();
