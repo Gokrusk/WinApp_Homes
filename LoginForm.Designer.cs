@@ -71,6 +71,7 @@
             // BtnLogin
             // 
             this.BtnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(198)))), ((int)(((byte)(73)))));
+            this.BtnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnLogin.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

@@ -22,6 +22,11 @@ namespace WinApp_Homes
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            Buscar();
+        }
+
+        private void Buscar()
+        {
             try
             {
                 buscarCedula = txtCedulaBuscar.Text;
@@ -65,6 +70,12 @@ namespace WinApp_Homes
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
+            }
+            
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                Buscar();
             }
         }
     }

@@ -25,49 +25,52 @@ namespace WinApp_Homes
 
         private void btnBuscar_Click_1(object sender, EventArgs e)
         {
+            Buscar();
+        }
+
+        private void Buscar()
+        {
+            try
             {
-                try
+                buscarCod = txtCodigoImbBuscar.Text;
+                dataSetVenta1.ReadXml(PathFile + "inmuebles.xml");
+                //dataSetVenta1.ReadXml(PathImages + "imagenes.xml");
+                System.Data.DataRow[] vecDatosInmueble;
+
+                vecDatosInmueble = dataSetVenta1.TblInmueble.Select("Codigo ='" + txtCodigoImbBuscar.Text + "'");
+
+                if (vecDatosInmueble.Length > 0)
                 {
-                    buscarCod = txtCodigoImbBuscar.Text;
-                    dataSetVenta1.ReadXml(PathFile + "inmuebles.xml");
-                    //dataSetVenta1.ReadXml(PathImages + "imagenes.xml");
-                    System.Data.DataRow[] vecDatosInmueble;
 
-                    vecDatosInmueble = dataSetVenta1.TblInmueble.Select("Codigo ='" + txtCodigoImbBuscar.Text + "'");
-                    
-                    if (vecDatosInmueble.Length > 0)
+                    frmEliminarInmueble objMostarEliminar = new frmEliminarInmueble(vecDatosInmueble, buscarCod);
+
+                    if (objMostarEliminar.ShowDialog() == DialogResult.OK)
                     {
-                            
-                        frmEliminarInmueble objMostarEliminar = new frmEliminarInmueble(vecDatosInmueble, buscarCod);
-                        
-                        if (objMostarEliminar.ShowDialog() == DialogResult.OK)
-                        {
-                            vecDatosInmueble[0].Delete();
-                            dataSetVenta1.WriteXml(PathFile + "inmuebles.xml");
-                           
-                            BorrarFotos();
-                            MessageBox.Show($"Se ha eliminado correctamento el inmueble con código '{buscarCod}'", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        vecDatosInmueble[0].Delete();
+                        dataSetVenta1.WriteXml(PathFile + "inmuebles.xml");
 
-                        }
-                        else
-                        {
-                            MessageBox.Show($"Se ha cancelado al eliminación del inmueble", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            txtCodigoImbBuscar.Clear();
-                        }
+                        BorrarFotos();
+                        MessageBox.Show($"Se ha eliminado correctamento el inmueble con código '{buscarCod}'", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     }
                     else
                     {
-                        MessageBox.Show($"No existe el inmueble con el código '{buscarCod}'", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show($"Se ha cancelado al eliminación del inmueble", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtCodigoImbBuscar.Clear();
                     }
-                }
-                catch (Exception es)
-                {
 
-                    MessageBox.Show(es.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show($"No existe el inmueble con el código '{buscarCod}'", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtCodigoImbBuscar.Clear();
                 }
+            }
+            catch (Exception es)
+            {
+
+                MessageBox.Show(es.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtCodigoImbBuscar.Clear();
             }
         }
 
@@ -83,6 +86,15 @@ namespace WinApp_Homes
                 row.Delete();
             }
             dataSetVenta1.WriteXml(PathFile + "imagenes.xml");
+        }
+
+        private void txtCodigoImbBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                Buscar();
+            }
         }
     }
 }
