@@ -59,7 +59,7 @@ namespace WinApp_Homes
                 reportViewer5.Visible = false;
 
             }
-            else if (comboBox1.SelectedItem.ToString() == "Listado de Inmueble Imagen")
+            else if (comboBox1.SelectedItem.ToString() == "Análisis de Inmuebles por Ubicación")
             {
                 reportViewer1.Visible = false;
                 reportViewer2.Visible = false;
@@ -75,6 +75,11 @@ namespace WinApp_Homes
                 reportViewer4.Visible = false;
                 reportViewer5.Visible = true;
             }
+        }
+
+        private void reportViewer5_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
