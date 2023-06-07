@@ -16,8 +16,8 @@ namespace WinApp_Homes
 {
     public partial class CargaFotosForm : Form
     {
-        string PathFile = Application.StartupPath + "\\assets\\files\\";
-        string PathImages = Application.StartupPath + "\\assets\\images\\";
+        string PathFile = "C:\\assets\\files\\";
+        string PathImages= "C:\\assets\\images\\";
         List<string> Fotos = new List<string>();
 
         int contador = 0;

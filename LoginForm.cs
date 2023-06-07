@@ -17,11 +17,12 @@ namespace WinApp_Homes
         {
             InitializeComponent();
         }
-        string PathFile = Application.StartupPath + "\\assets\\files\\";
+        //string PathFile = Application.StartupPath + "\\..\\..\\assets\\files\\";
+        string PathFile = "C:\\assets\\files\\";
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("BIENVENIDO A NUESTRA APLICATIVO", "BIENVENIDA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("BIENVENIDO A NUESTRO APLICATIVO", "BIENVENIDA", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void BtnLogin_Click(object sender, EventArgs e)
@@ -95,7 +96,7 @@ namespace WinApp_Homes
 
         private void label1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Application.StartupPath);
+            MessageBox.Show(PathFile);
             LoginForm principal = new LoginForm();
             this.Hide();
             MenuFormAdmin obj = new MenuFormAdmin();

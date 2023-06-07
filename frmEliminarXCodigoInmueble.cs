@@ -15,8 +15,8 @@ namespace WinApp_Homes
     public partial class frmEliminarXCodigoInmueble : Form
     {
         string buscarCod;
-        readonly string PathFile = Application.StartupPath + "\\assets\\files\\";
-        string PathImages = Application.StartupPath + "\\assets\\images\\";
+        readonly string PathFile = "C:\\assets\\files\\";
+        string PathImages= "C:\\assets\\images\\";
         public frmEliminarXCodigoInmueble()
         {
             InitializeComponent();
