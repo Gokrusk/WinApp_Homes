@@ -103,5 +103,10 @@ namespace WinApp_Homes
             obj.ShowDialog();
             principal.Show();
         }
+
+        private void BtnAyuda_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(PathFile + "\\help.html");
+        }
     }
 }

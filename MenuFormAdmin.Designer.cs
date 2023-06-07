@@ -32,7 +32,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -56,7 +55,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(169)))), ((int)(((byte)(143)))));
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(34, 40);
+            this.button1.Location = new System.Drawing.Point(33, 40);
             this.button1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(169, 49);
@@ -70,7 +69,7 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(169)))), ((int)(((byte)(143)))));
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(213, 40);
+            this.button2.Location = new System.Drawing.Point(230, 40);
             this.button2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(169, 49);
@@ -98,7 +97,7 @@
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(198)))), ((int)(((byte)(73)))));
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(213, 39);
+            this.button4.Location = new System.Drawing.Point(230, 39);
             this.button4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(169, 49);
@@ -107,25 +106,12 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(3)))), ((int)(((byte)(31)))));
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Location = new System.Drawing.Point(213, 45);
-            this.button5.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(169, 49);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Ayuda";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(169)))), ((int)(((byte)(143)))));
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(392, 40);
+            this.button6.Location = new System.Drawing.Point(426, 40);
             this.button6.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(169, 49);
@@ -150,7 +136,7 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(396, 23);
+            this.lblTitulo.Location = new System.Drawing.Point(395, 23);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(96, 32);
@@ -163,9 +149,9 @@
             this.GbxRegistro.Controls.Add(this.button2);
             this.GbxRegistro.Controls.Add(this.button6);
             this.GbxRegistro.ForeColor = System.Drawing.Color.White;
-            this.GbxRegistro.Location = new System.Drawing.Point(37, 104);
+            this.GbxRegistro.Location = new System.Drawing.Point(117, 95);
             this.GbxRegistro.Name = "GbxRegistro";
-            this.GbxRegistro.Size = new System.Drawing.Size(586, 117);
+            this.GbxRegistro.Size = new System.Drawing.Size(618, 117);
             this.GbxRegistro.TabIndex = 7;
             this.GbxRegistro.TabStop = false;
             this.GbxRegistro.Text = "Registro de datos";
@@ -176,9 +162,9 @@
             this.GbxModi.Controls.Add(this.button3);
             this.GbxModi.Controls.Add(this.button4);
             this.GbxModi.ForeColor = System.Drawing.Color.White;
-            this.GbxModi.Location = new System.Drawing.Point(37, 237);
+            this.GbxModi.Location = new System.Drawing.Point(117, 228);
             this.GbxModi.Name = "GbxModi";
-            this.GbxModi.Size = new System.Drawing.Size(586, 118);
+            this.GbxModi.Size = new System.Drawing.Size(618, 118);
             this.GbxModi.TabIndex = 8;
             this.GbxModi.TabStop = false;
             this.GbxModi.Text = "Modificación y búsqueda";
@@ -188,26 +174,25 @@
             this.btnModificarCli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(198)))), ((int)(((byte)(73)))));
             this.btnModificarCli.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificarCli.ForeColor = System.Drawing.Color.Black;
-            this.btnModificarCli.Location = new System.Drawing.Point(392, 39);
+            this.btnModificarCli.Location = new System.Drawing.Point(426, 39);
             this.btnModificarCli.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnModificarCli.Name = "btnModificarCli";
             this.btnModificarCli.Size = new System.Drawing.Size(169, 49);
             this.btnModificarCli.TabIndex = 9;
-            this.btnModificarCli.Text = "Modificar clientes";
+            this.btnModificarCli.Text = "Modificar Clientes";
             this.btnModificarCli.UseVisualStyleBackColor = false;
             this.btnModificarCli.Click += new System.EventHandler(this.btnModificarCli_Click);
             // 
             // GbxExtras
             // 
             this.GbxExtras.Controls.Add(this.BtnReportes);
-            this.GbxExtras.Controls.Add(this.button5);
             this.GbxExtras.ForeColor = System.Drawing.Color.White;
-            this.GbxExtras.Location = new System.Drawing.Point(445, 381);
+            this.GbxExtras.Location = new System.Drawing.Point(509, 372);
             this.GbxExtras.Name = "GbxExtras";
-            this.GbxExtras.Size = new System.Drawing.Size(408, 118);
+            this.GbxExtras.Size = new System.Drawing.Size(226, 118);
             this.GbxExtras.TabIndex = 9;
             this.GbxExtras.TabStop = false;
-            this.GbxExtras.Text = "Reportes y ayuda";
+            this.GbxExtras.Text = "Reportes";
             // 
             // BtnReportes
             // 
@@ -227,7 +212,7 @@
             this.GbxEliminar.Controls.Add(this.btnEliminarCliente);
             this.GbxEliminar.Controls.Add(this.btnEliminarInmueble);
             this.GbxEliminar.ForeColor = System.Drawing.Color.White;
-            this.GbxEliminar.Location = new System.Drawing.Point(37, 381);
+            this.GbxEliminar.Location = new System.Drawing.Point(117, 372);
             this.GbxEliminar.Name = "GbxEliminar";
             this.GbxEliminar.Size = new System.Drawing.Size(382, 118);
             this.GbxEliminar.TabIndex = 10;
@@ -236,7 +221,7 @@
             // 
             // btnEliminarCliente
             // 
-            this.btnEliminarCliente.BackColor = System.Drawing.Color.Red;
+            this.btnEliminarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(3)))), ((int)(((byte)(31)))));
             this.btnEliminarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminarCliente.Location = new System.Drawing.Point(22, 45);
             this.btnEliminarCliente.Name = "btnEliminarCliente";
@@ -248,7 +233,7 @@
             // 
             // btnEliminarInmueble
             // 
-            this.btnEliminarInmueble.BackColor = System.Drawing.Color.Red;
+            this.btnEliminarInmueble.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(3)))), ((int)(((byte)(31)))));
             this.btnEliminarInmueble.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminarInmueble.Location = new System.Drawing.Point(202, 45);
             this.btnEliminarInmueble.Name = "btnEliminarInmueble";
@@ -298,7 +283,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTitulo;
