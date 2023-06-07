@@ -38,6 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dataSetVenta1 = new WinApp_Homes.DataSetVenta();
             this.tblUsuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.BtnAyuda = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetVenta1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblUsuariosBindingSource)).BeginInit();
@@ -70,11 +71,12 @@
             // BtnLogin
             // 
             this.BtnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(198)))), ((int)(((byte)(73)))));
+            this.BtnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnLogin.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLogin.ForeColor = System.Drawing.Color.White;
-            this.BtnLogin.Location = new System.Drawing.Point(430, 294);
+            this.BtnLogin.ForeColor = System.Drawing.Color.Black;
+            this.BtnLogin.Location = new System.Drawing.Point(435, 299);
             this.BtnLogin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnLogin.Name = "BtnLogin";
             this.BtnLogin.Size = new System.Drawing.Size(155, 43);
@@ -135,12 +137,28 @@
             this.tblUsuariosBindingSource.DataMember = "TblUsuarios";
             this.tblUsuariosBindingSource.DataSource = this.dataSetVenta1;
             // 
+            // BtnAyuda
+            // 
+            this.BtnAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(3)))), ((int)(((byte)(31)))));
+            this.BtnAyuda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnAyuda.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAyuda.ForeColor = System.Drawing.Color.White;
+            this.BtnAyuda.Location = new System.Drawing.Point(701, 449);
+            this.BtnAyuda.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.BtnAyuda.Name = "BtnAyuda";
+            this.BtnAyuda.Size = new System.Drawing.Size(169, 49);
+            this.BtnAyuda.TabIndex = 7;
+            this.BtnAyuda.Text = "AYUDA";
+            this.BtnAyuda.UseVisualStyleBackColor = false;
+            this.BtnAyuda.Click += new System.EventHandler(this.BtnAyuda_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(58)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(884, 511);
+            this.Controls.Add(this.BtnAyuda);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TxtPsw);
@@ -174,5 +192,6 @@
         private System.Windows.Forms.Label label3;
         private DataSetVenta dataSetVenta1;
         private System.Windows.Forms.BindingSource tblUsuariosBindingSource;
+        private System.Windows.Forms.Button BtnAyuda;
     }
 }

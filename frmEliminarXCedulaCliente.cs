@@ -13,7 +13,7 @@ namespace WinApp_Homes
     public partial class frmEliminarXCedulaCliente : Form
     {
         string buscarCedula;
-        readonly string PathFile = Application.StartupPath + "\\assets\\files\\";
+        readonly string PathFile = "C:\\assets\\files\\";
 
         public frmEliminarXCedulaCliente()
         {
@@ -21,6 +21,11 @@ namespace WinApp_Homes
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            Buscar();
+        }
+
+        private void Buscar()
         {
             try
             {
@@ -41,7 +46,7 @@ namespace WinApp_Homes
                     }
                     else
                     {
-                        MessageBox.Show($"No existe el cliente con la cédula '{buscarCedula}'", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show($"Se ha cancelado la eliminación del cliente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtCedulaBuscar.Clear();
                     }
 
@@ -65,6 +70,12 @@ namespace WinApp_Homes
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
+            }
+            
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                Buscar();
             }
         }
     }

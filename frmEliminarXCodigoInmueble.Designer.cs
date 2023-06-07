@@ -55,27 +55,28 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(90)))), ((int)(((byte)(108)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(3, 1);
+            this.panel1.Location = new System.Drawing.Point(-1, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(723, 96);
+            this.panel1.Size = new System.Drawing.Size(551, 96);
             this.panel1.TabIndex = 4;
             // 
             // txtCodigoImbBuscar
             // 
             this.txtCodigoImbBuscar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoImbBuscar.Location = new System.Drawing.Point(365, 122);
+            this.txtCodigoImbBuscar.Location = new System.Drawing.Point(269, 112);
             this.txtCodigoImbBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigoImbBuscar.Name = "txtCodigoImbBuscar";
             this.txtCodigoImbBuscar.Size = new System.Drawing.Size(257, 32);
             this.txtCodigoImbBuscar.TabIndex = 8;
+            this.txtCodigoImbBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoImbBuscar_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(91, 126);
+            this.label2.Location = new System.Drawing.Point(41, 115);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(191, 24);
@@ -89,11 +90,11 @@
             this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(268, 194);
+            this.btnBuscar.ForeColor = System.Drawing.Color.Black;
+            this.btnBuscar.Location = new System.Drawing.Point(199, 177);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(207, 53);
+            this.btnBuscar.Size = new System.Drawing.Size(155, 43);
             this.btnBuscar.TabIndex = 56;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -109,7 +110,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(58)))), ((int)(((byte)(63)))));
-            this.ClientSize = new System.Drawing.Size(728, 287);
+            this.ClientSize = new System.Drawing.Size(546, 233);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtCodigoImbBuscar);
             this.Controls.Add(this.label2);
