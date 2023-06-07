@@ -46,7 +46,7 @@
             this.label1.Location = new System.Drawing.Point(27, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(635, 39);
+            this.label1.Size = new System.Drawing.Size(500, 32);
             this.label1.TabIndex = 2;
             this.label1.Text = "BUSCAR PARA ELIMINAR INMUEBLE";
             // 
@@ -67,7 +67,7 @@
             this.txtCodigoImbBuscar.Location = new System.Drawing.Point(365, 122);
             this.txtCodigoImbBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigoImbBuscar.Name = "txtCodigoImbBuscar";
-            this.txtCodigoImbBuscar.Size = new System.Drawing.Size(257, 38);
+            this.txtCodigoImbBuscar.Size = new System.Drawing.Size(257, 32);
             this.txtCodigoImbBuscar.TabIndex = 8;
             // 
             // label2
@@ -78,19 +78,18 @@
             this.label2.Location = new System.Drawing.Point(91, 126);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(242, 32);
+            this.label2.Size = new System.Drawing.Size(191, 24);
             this.label2.TabIndex = 7;
             this.label2.Text = "Código Inmueble:";
             // 
             // btnBuscar
             // 
-            this.btnBuscar.BackColor = System.Drawing.Color.White;
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(198)))), ((int)(((byte)(73)))));
             this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.Black;
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Location = new System.Drawing.Point(268, 194);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnBuscar.Name = "btnBuscar";
