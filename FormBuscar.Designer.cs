@@ -71,7 +71,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(352, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 38);
+            this.label1.Size = new System.Drawing.Size(171, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "BÚSQUEDA";
             // 
@@ -85,7 +85,7 @@
             " "});
             this.comboBox1.Location = new System.Drawing.Point(146, 121);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(175, 31);
+            this.comboBox1.Size = new System.Drawing.Size(175, 26);
             this.comboBox1.TabIndex = 1;
             // 
             // label2
@@ -94,7 +94,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label2.Location = new System.Drawing.Point(48, 129);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 23);
+            this.label2.Size = new System.Drawing.Size(92, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "Filtrar por:";
             // 
@@ -102,6 +102,7 @@
             // 
             this.BtnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(198)))), ((int)(((byte)(73)))));
             this.BtnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBuscar.ForeColor = System.Drawing.Color.White;
             this.BtnBuscar.Location = new System.Drawing.Point(641, 112);
@@ -210,7 +211,7 @@
             // 
             this.TxtItem.Location = new System.Drawing.Point(490, 121);
             this.TxtItem.Name = "TxtItem";
-            this.TxtItem.Size = new System.Drawing.Size(118, 31);
+            this.TxtItem.Size = new System.Drawing.Size(118, 26);
             this.TxtItem.TabIndex = 7;
             this.TxtItem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtItem_KeyPress);
             // 
@@ -220,7 +221,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label3.Location = new System.Drawing.Point(350, 129);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(166, 23);
+            this.label3.Size = new System.Drawing.Size(134, 18);
             this.label3.TabIndex = 8;
             this.label3.Text = "Palabra de filtro";
             // 
@@ -231,7 +232,7 @@
             // 
             // FormBuscar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(58)))), ((int)(((byte)(63)))));
