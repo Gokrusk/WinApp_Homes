@@ -17,8 +17,7 @@ namespace WinApp_Homes
         {
             InitializeComponent();
         }
-        //string PathFile = Application.StartupPath + "\\..\\..\\assets\\files\\";
-        string PathFile = "C:\\assets\\files\\";
+        string PathFile = Application.StartupPath + "\\..\\..\\assets\\files\\";
 
         private void LoginForm_Load(object sender, EventArgs e)
         {

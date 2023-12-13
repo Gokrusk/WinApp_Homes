@@ -17,7 +17,7 @@ namespace WinApp_Homes
         {
             InitializeComponent();
         }
-        string PathFile = "C:\\assets\\files\\";
+        string PathFile = Application.StartupPath + "\\..\\..\\assets\\files\\";
 
         private void FormBuscar_Load(object sender, EventArgs e)
         {

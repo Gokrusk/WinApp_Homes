@@ -17,7 +17,7 @@ namespace WinApp_Homes
         {
             InitializeComponent();
         }
-        string PathFile = "C:\\assets\\files\\";
+        string PathFile = Application.StartupPath + "\\assets\\files\\";
 
         private void button1_Click(object sender, EventArgs e)
         {

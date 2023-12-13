@@ -13,7 +13,7 @@ namespace WinApp_Homes
     public partial class frmEliminarXCedulaCliente : Form
     {
         string buscarCedula;
-        readonly string PathFile = "C:\\assets\\files\\";
+        string PathFile = Application.StartupPath + "\\..\\..\\assets\\files\\";
 
         public frmEliminarXCedulaCliente()
         {

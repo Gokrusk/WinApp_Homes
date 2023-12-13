@@ -12,7 +12,7 @@ namespace WinApp_Homes
 {
     public partial class ReportesForm : Form
     {
-        readonly string PathFile = "C:\\assets\\files\\";
+        readonly string PathFile = Application.StartupPath + "\\assets\\files\\";
 
         public ReportesForm()
         {

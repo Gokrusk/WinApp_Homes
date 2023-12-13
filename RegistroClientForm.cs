@@ -21,7 +21,7 @@ namespace WinApp_Homes
         private bool ModApe;
         private bool ModCor;
 
-        string PathFile = "C:\\assets\\files\\";
+        string PathFile = Application.StartupPath + "\\assets\\files\\";
 
         public RegistroClientForm()
         {

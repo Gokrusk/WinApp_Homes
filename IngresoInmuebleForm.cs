@@ -18,7 +18,7 @@ namespace WinApp_Homes
         ClInmueble InmuebleObj = new ClInmueble();
 
         readonly string PathImage = Application.StartupPath + "\\assets\\images\\";
-        readonly string PathFile = "C:\\assets\\files\\";
+        readonly string PathFile = Application.StartupPath + "\\assets\\files\\";
 
         private List<string> rutasImagenes = new List<string>();
 

@@ -15,7 +15,7 @@ namespace WinApp_Homes
 {
     public partial class VentaForm : Form
     {
-        readonly string PathFile = "C:\\assets\\files\\";
+        readonly string PathFile = Application.StartupPath + "\\assets\\files\\";
 
         DataRow dataInmuebleVenta;
 
