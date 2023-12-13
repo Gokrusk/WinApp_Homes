@@ -18,7 +18,7 @@ namespace WinApp_Homes
 
         DataRow[] vector; //otra forma de declarar un vector
 
-        readonly string PathFile = "C:\\assets\\files\\";
+        readonly string PathFile = Application.StartupPath + "\\assets\\files\\";
 
         public ModificarInmuebleForm()
         {
